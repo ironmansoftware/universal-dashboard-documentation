@@ -33,6 +33,7 @@
   * [Formatting](components/formatting.md)
   * [HTML](components/html.md)
   * [Inputs](components/inputs.md)
+  * [Modal](components/modal.md)
   * [Monitors](components/monitors.md)
   * [Navigation](components/navigation.md)
   * [Pages](components/pages.md)

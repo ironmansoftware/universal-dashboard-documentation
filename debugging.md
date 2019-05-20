@@ -2,6 +2,10 @@
 
 When developing a dashboard it may become necessary to debug an endpoint. Endpoints are run within the Universal Dashboard server in a different runspace than the runspace you used to start the dashboard. Because of this, it can become difficult to determine an error that may be preventing data from appearing in your dashboard. Terminating errors should result in the UD card displaying the error message but non-terminating errors or unexpected behavior may not be reflected at all in the user interface.
 
+## Logging 
+
+You can enable logging using `Enable-UDLogging`. Logging will output the internals of Universal Dashboard. If you set the log level to `Verbose` you will see all output from all the Endpoint script blocks that you run within Universal Dashboard. 
+
 ## Debugging Endpoints
 
 Since Endpoints run in a different runspace than the runspace used to start the dashboard, it can be difficult to see what is going on. The best way to debug endpoints is to include a call to `Wait-Debugger` within your endpoint.
@@ -38,11 +42,11 @@ Once you have a launch.json file created, you can then setup the configuration t
 
 The next step is to set the runspaceId to the runspace that is currently InBreakpoint. In the `launch.json` file, edit the PowerShell Attach to Host Process configuration's runspaceId property to contain the runspace ID listed in the console. 
 
-![Setting the Runspace ID](.gitbook/assets/image%20%2846%29.png)
+![Setting the Runspace ID](.gitbook/assets/image%20%2849%29.png)
 
 After this is done, press F5 to start a debugging session. A select box will allow you to pick the PowerShell process. Select the process running UD. 
 
-![Selecting the PowerShell Process](.gitbook/assets/image%20%2828%29.png)
+![Selecting the PowerShell Process](.gitbook/assets/image%20%2830%29.png)
 
 After selecting the process, VS Code will break into the endpoint's script block. 
 
@@ -50,7 +54,7 @@ After selecting the process, VS Code will break into the endpoint's script block
 
 From here, you'll be able to step through the script, evaluate variables and run any command in the integrated terminal from within the endpoint's runspace. 
 
-![Evaluating the $Request Variable](.gitbook/assets/image%20%2847%29.png)
+![Evaluating the $Request Variable](.gitbook/assets/image%20%2850%29.png)
 
 **Attaching via the Console**
 
