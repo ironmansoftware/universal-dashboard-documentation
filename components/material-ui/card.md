@@ -12,7 +12,7 @@ New-UDMuCard -Body (
 )
 ```
 
-![Card with body](../../.gitbook/assets/image%20%2842%29.png)
+![Card with body](../../.gitbook/assets/image%20%2846%29.png)
 
 ## Card Header
 
@@ -28,5 +28,5 @@ New-UDMuCard -Header (
 )
 ```
 
-![Card with header media](../../.gitbook/assets/image%20%2834%29.png)
+![Card with header media](../../.gitbook/assets/image%20%2838%29.png)
 

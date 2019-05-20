@@ -20,7 +20,7 @@ New-UDMuTypography -Variant subtitle1 -Text "Subtitle"
 New-UDMuTypography -NoWrap -Text "This is a very long line that does not wrap. This is a very long line that does not wrap.This is a very long line that does not wrap.This is a very long line that does not wrap.This is a very long line that does not wrap.This is a very long line that does not wrap.This is a very long line that does not wrap.This is a very long line that does not wrap.This is a very long line that does not wrap."
 ```
 
-![Long line that does not wrap](../../.gitbook/assets/image%20%2814%29.png)
+![Long line that does not wrap](../../.gitbook/assets/image%20%2815%29.png)
 
 ## Alignment
 
@@ -28,5 +28,5 @@ New-UDMuTypography -NoWrap -Text "This is a very long line that does not wrap. T
 New-UDMuTypography -Align right -Text "Alignment"
 ```
 
-![Text aligned right](../../.gitbook/assets/image%20%2824%29.png)
+![Text aligned right](../../.gitbook/assets/image%20%2826%29.png)
 

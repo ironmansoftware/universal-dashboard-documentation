@@ -28,6 +28,7 @@
       * [Calendar](components/data-visualizations/nivo/calendar.md)
       * [Heatmap](components/data-visualizations/nivo/heatmap.md)
   * [Grids](components/grids.md)
+  * [Grid Layout](components/grid-layout.md)
   * [Favicon](components/favicon.md)
   * [Floating Action Button](components/floating-action-button.md)
   * [Formatting](components/formatting.md)
