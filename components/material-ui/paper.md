@@ -8,5 +8,5 @@ New-UDMuPaper -Content {
 } -Elevation 4
 ```
 
-![Simple Page with Heading](../../.gitbook/assets/image%20%2850%29.png)
+![Simple Page with Heading](../../.gitbook/assets/image%20%2854%29.png)
 

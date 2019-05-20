@@ -33,6 +33,7 @@
   * [Floating Action Button](components/floating-action-button.md)
   * [Formatting](components/formatting.md)
   * [HTML](components/html.md)
+  * [Icons](components/icons.md)
   * [Inputs](components/inputs.md)
   * [Modal](components/modal.md)
   * [Monitors](components/monitors.md)
