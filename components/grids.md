@@ -2,6 +2,20 @@
 
 Grids output data similar to tables but allow for paging and sorting the data in the grid. Grids are produced using the [Griddle ](https://griddlegriddle.github.io/Griddle/docs/)library. Grids are created with the New-UDGrid cmdlet and data for the grid is output using the Out-UDGridData cmdlet.
 
+## Simple Grid
+
+To create a simple grid, pass data from a cmdlet to Out-UDGridData from within the New-UDGrid's Endpoint script block. 
+
+```text
+New-UdGrid -Title "Processes" -Endpoint {
+    Get-Process | Select Name,ID,WorkingSet,CPU | Out-UDGridData
+}
+```
+
+## Custom Headers
+
+To specify custom headers, use the -Headers parameter of New-UDGrid. 
+
 The below script selects the Name, Id, WorkingSet and CPU of ProcessInfo objects returned by Get-Process. The gird auto refreshes every minute.
 
 ```text
