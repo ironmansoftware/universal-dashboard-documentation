@@ -73,7 +73,7 @@ New-UDNivoChart -Colors 'dark2' -Bar -Data $Data -Height 400 -Width 900 -Keys @(
 
 The above script produces the following chart. 
 
-![Bar chart with the dark2 color palette](../../../.gitbook/assets/image%20%2818%29.png)
+![Bar chart with the dark2 color palette](../../../.gitbook/assets/image%20%2820%29.png)
 
 ## Patterns
 
@@ -125,7 +125,7 @@ New-UDNivoChart -Definitions $Pattern -Fill $Fill -Bar -Data $Data -Height 400 -
 
 The above script results in the following chart. 
 
-![Bar chart with a pattern](../../../.gitbook/assets/image%20%2817%29.png)
+![Bar chart with a pattern](../../../.gitbook/assets/image%20%2819%29.png)
 
 ## Interactive Charts
 
