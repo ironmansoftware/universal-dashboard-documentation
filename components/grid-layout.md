@@ -22,7 +22,13 @@ You can move the cards using the handles in the top right corner of each card. T
 
 ![](../.gitbook/assets/image%20%2821%29.png)
 
+You can use the `-Persist` cmdlet to store the layout in the browser's local storage. 
+
 ## Saving Layouts
+
+{% hint style="info" %}
+Design mode is only available in the Enterprise Version
+{% endhint %}
 
 The layout JSON format is documented on the [React Grid Layout GitHub](https://github.com/strml/react-grid-layout) repository. In order to avoid generating this JSON yourself, you can use the design mode of Universal Dashboard. To do this, specify the `-Design` parameter of `Start-UDDashboard`. 
 
