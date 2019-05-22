@@ -26,6 +26,9 @@ Universal Dashboard Community edition is open source and available for free. Uni
 | Rest API Authentication | ❌  | ✅ |
 | **Branding** |  |  |
 | Customize Footer | ❌ | ✅ |
+| **Design Mode** |  |  |
+| In-Browser Terminal | ❌ | ✅ |
+| Drag and Drop Layout | ❌ | ✅ |
 
 
 
