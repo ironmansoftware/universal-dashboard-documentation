@@ -8,7 +8,7 @@ Endpoints within Universal Dashboard are run using a shared runspace pool. Runsp
 
 ## Passing Variables to Endpoints
 
-Much like `global:` scope variables, variables that you pass to endpoints are available in all endpoints. To pas a variable, simply provide the name of the variable to the initialization cmdlet. 
+Much like `global:` scope variables, variables that you pass to endpoints are available in all endpoints. To pass a variable, simply provide the name of the variable to the initialization cmdlet. 
 
 ```text
 $MyVariable = "Hi, there!"
