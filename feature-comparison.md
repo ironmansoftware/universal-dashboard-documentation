@@ -14,6 +14,7 @@ Universal Dashboard Community edition is open source and available for free. Uni
 | **Components** |  |  |
 | Basic Components | ✅ | ✅ |
 | Charts | ✅ | ✅ |
+| Maps | ❌  | ✅ |
 | [Nivo Charts](http://nivo.rocks/) | ❌  | ✅ |
 | Grids | ✅ | ✅ |
 | Input Forms | ✅ | ✅ |
