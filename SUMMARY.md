@@ -35,6 +35,7 @@
   * [HTML](components/html.md)
   * [Icons](components/icons.md)
   * [Inputs](components/inputs.md)
+  * [Map](components/map.md)
   * [Modal](components/modal.md)
   * [Monitors](components/monitors.md)
   * [Navigation](components/navigation.md)
