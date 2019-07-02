@@ -12,6 +12,7 @@
   * [IIS](running-dashboards/iis.md)
   * [Windows Service](running-dashboards/windows-service.md)
   * [Containers](running-dashboards/containers.md)
+  * [AWS Elastic Beanstalk](https://poshsea.blogspot.com/2019/06/powershell-universal-dashboard-and-aws.html)
 * [Components](components/README.md)
   * [Button](components/button.md)
   * [Card](components/card.md)
