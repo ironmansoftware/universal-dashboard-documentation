@@ -79,6 +79,7 @@
 * [Licensing](licensing.md)
 * [API](https://github.com/ironmansoftware/universal-dashboard-documentation/blob/master/api)
 * [Updates](updates/README.md)
+  * [v2.5.1](updates/v2.5.1.md)
   * [v2.5.0](updates/2.5.0.md)
   * [v2.4.1](updates/v2.4.1.md)
   * [v2.4.0](updates/v2.4.0.md)
