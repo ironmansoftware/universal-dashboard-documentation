@@ -81,7 +81,7 @@
 * [Updates](updates/README.md)
   * [v2.5.2](updates/v2.5.2.md)
   * [v2.5.1](updates/v2.5.1.md)
-  * [v2.5.0](updates/2.5.0.md)
+  * [v2.5.0](updates/v2.5.0.md)
   * [v2.4.1](updates/v2.4.1.md)
   * [v2.4.0](updates/v2.4.0.md)
   * [v2.3.2](updates/v2.3.2.md)
