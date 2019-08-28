@@ -30,7 +30,7 @@ New-UDMuButton -Text 'Submit' -Variant outlined
 New-UDMuButton -Text 'Buy' -Variant contained -Icon (New-UDMuIcon -Icon bitcoin -Size '4x')
 ```
 
-![Icon Button](../../.gitbook/assets/image%20%2856%29.png)
+![Icon Button](../../.gitbook/assets/image%20%2857%29.png)
 
 ## Full Width
 
