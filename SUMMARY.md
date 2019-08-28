@@ -17,6 +17,7 @@
   * [Button](components/button.md)
   * [Card](components/card.md)
   * [Checkbox](components/checkbox.md)
+  * [Code Editor](components/code-editor.md)
   * [Collapsible](components/collapsible.md)
   * [Counter](components/counter.md)
   * [Custom Components](components/custom-components/README.md)
