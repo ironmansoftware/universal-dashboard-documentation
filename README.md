@@ -6,10 +6,10 @@ PowerShell Universal Dashboard is a web framework for PowerShell developers. Cre
 
 ## Installation
 
-**Enterprise Edition**
+**Premium Edition**
 
 {% hint style="info" %}
-Enterprise Edition enables all the features of Community Edition with added charts, authorization and authentication. You can purchase a license [here](https://ironmansoftware.com/collections/powershell/products/powershell-universal-dashboard).
+Premium Edition enables all the features of Community Edition with added charts, authorization and authentication. You can purchase a license [here](https://ironmansoftware.com/collections/powershell/products/powershell-universal-dashboard).
 {% endhint %}
 
 `Install-Module UniversalDashboard -AcceptLicense`
@@ -22,5 +22,5 @@ Universal Dashboard also features a free Community Edition. This edition is [ope
 
 `Install-Module UniversalDashboard.Community -AcceptLicense`
 
-For a full list of the differences between Community and Enterprise, visit the [Feature Comparison](feature-comparison.md) page.
+For a full list of the differences between Community and Premium, visit the [Feature Comparison](feature-comparison.md) page.
 

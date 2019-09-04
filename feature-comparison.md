@@ -2,7 +2,7 @@
 
 Universal Dashboard Community edition is open source and available for free. Universal Dashboard provides additional features. A license for [Universal Dashboard can be purchased on our store](https://ironmansoftware.com/product/powershell-universal-dashboard/). 
 
-| Feature | Community | Enterprise |
+| Feature | Community | Premium |
 | :--- | :--- | :--- |
 | Web-based Dashboards |  ✅ |  ✅ |
 | REST APIs |  ✅ |  ✅ |
@@ -13,7 +13,9 @@ Universal Dashboard Community edition is open source and available for free. Uni
 | Windows Service | ✅ | ✅ |
 | **Components** |  |  |
 | Basic Components | ✅ | ✅ |
+| [Code Editor](https://github.com/ironmansoftware/ud-codeeditor) | ❌  | ✅ |
 | Charts | ✅ | ✅ |
+| [Diagrams](https://github.com/ironmansoftware/ud-diagrams) | ❌  | ✅ |
 | Maps | ❌  | ✅ |
 | [Nivo Charts](http://nivo.rocks/) | ❌  | ✅ |
 | Grids | ✅ | ✅ |

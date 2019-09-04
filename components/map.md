@@ -1,7 +1,7 @@
 # Map
 
 {% hint style="info" %}
-This component is only available in [Enterprise](https://ironmansoftware.com/product/powershell-universal-dashboard/)
+This component is only available in [Premium](https://ironmansoftware.com/product/powershell-universal-dashboard/)
 {% endhint %}
 
 UDMap is a component to display interactive maps with all kinds of customizations. You’ll be able to add markers, draw routes and other polygons, toggle layers and even create heatmaps.
