@@ -13,7 +13,7 @@ New-UDIcon -Icon palette  -Size 5x
 New-UDIcon -Icon apple -Size 5x
 ```
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2826%29.png)
 
 ## Size 
 
@@ -25,7 +25,7 @@ Many icon sizes are available. You can create larger icons by specifying sizes f
 }
 ```
 
-![Icon Sizes](../.gitbook/assets/image%20%2846%29.png)
+![Icon Sizes](../.gitbook/assets/image%20%2849%29.png)
 
 ## Colors 
 
@@ -35,7 +35,7 @@ You can use standard HTML and color names for colors.
 New-UDIcon -Icon socks -Size 5x -Color red
 ```
 
-![](../.gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/image%20%2817%29.png)
 
 ## Spinning Icons
 
@@ -45,5 +45,5 @@ You can create spinning icons. These can be useful as loading icons.
 New-UDIcon -Spin -Icon linux -Size 5x
 ```
 
-![](../.gitbook/assets/image%20%2811%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 

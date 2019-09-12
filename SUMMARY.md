@@ -68,6 +68,7 @@
     * [AzureAD](security/authentication/azuread.md)
     * [Forms](security/authentication/forms.md)
     * [Windows](security/authentication/windows.md)
+    * [WS-Federation](security/authentication/ws-federation.md)
   * [Authorization](security/authorization/README.md)
     * [Claims-Based](security/authorization/claims-based.md)
     * [Role-Based](security/authorization/role-based.md)
