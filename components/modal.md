@@ -16,7 +16,7 @@ New-UDButton -Text "Show Modal" -OnClick {
 
 Clicking the button will bring up a modal that looks like this. 
 
-![Modal with a Heading in the Content](../.gitbook/assets/image%20%2854%29.png)
+![Modal with a Heading in the Content](../.gitbook/assets/image%20%2858%29.png)
 
 ## Hiding Modals
 
@@ -46,7 +46,7 @@ New-UDButton -Text "Show Modal" -OnClick {
 }
 ```
 
-![Large modal](../.gitbook/assets/image%20%2830%29.png)
+![Large modal](../.gitbook/assets/image%20%2831%29.png)
 
 ## Color
 
@@ -60,5 +60,5 @@ New-UDButton -Text "Show Modal" -OnClick {
 }
 ```
 
-![Green Modal](../.gitbook/assets/image%20%2831%29.png)
+![Green Modal](../.gitbook/assets/image%20%2832%29.png)
 
