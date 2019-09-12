@@ -6,7 +6,7 @@
 New-UDMuAvatar -Image 'https://avatars2.githubusercontent.com/u/34351424?s=460&v=4' -Alt 'alon gvili avatar'
 ```
 
-![Image avatar](../../.gitbook/assets/image%20%2842%29.png)
+![Image avatar](../../.gitbook/assets/image%20%2844%29.png)
 
 ## Image Avatar with Custom Style
 
@@ -14,7 +14,7 @@ New-UDMuAvatar -Image 'https://avatars2.githubusercontent.com/u/34351424?s=460&v
 New-UDMuAvatar -Image 'https://avatars2.githubusercontent.com/u/34351424?s=460&v=4' -Alt 'alon gvili avatar'  -Style @{width = 80; height = 80}
 ```
 
-![Image Avatar with Custom Style](../../.gitbook/assets/image%20%287%29.png)
+![Image Avatar with Custom Style](../../.gitbook/assets/image%20%288%29.png)
 
 ## Square Image Avatar
 
@@ -28,5 +28,5 @@ New-UDMuAvatar -Image 'https://avatars2.githubusercontent.com/u/34351424?s=460&v
 New-UDMuAvatar @AvatarProps
 ```
 
-![Square Avatar](../../.gitbook/assets/image%20%2828%29.png)
+![Square Avatar](../../.gitbook/assets/image%20%2829%29.png)
 
