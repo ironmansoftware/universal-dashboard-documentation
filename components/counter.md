@@ -10,7 +10,7 @@ New-UDCounter -Title "Basic" -Endpoint {
 }
 ```
 
-![](../.gitbook/assets/image%20%2848%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 ## Auto refreshing a counter
 
@@ -32,7 +32,7 @@ UDCards use [NumeralJS ](http://numeraljs.com/)to format numbers. You can use an
  }
 ```
 
-![](../.gitbook/assets/image%20%2837%29.png)
+![](../.gitbook/assets/image%20%2839%29.png)
 
 ## Showing an icon
 
@@ -42,5 +42,5 @@ New-UDCounter -Title "Icon" -Format '$0,0.00' -Endpoint {
 } -Icon dollar
 ```
 
-![](../.gitbook/assets/image%20%2832%29.png)
+![](../.gitbook/assets/image%20%2833%29.png)
 
