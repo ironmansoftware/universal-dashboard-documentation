@@ -1,6 +1,7 @@
 ---
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -19,7 +20,8 @@ New-UDEndpoint -Endpoint <ScriptBlock> [-ArgumentList <Object[]>] [-Id <String>]
 ### Rest
 ```
 New-UDEndpoint -Endpoint <ScriptBlock> [-ArgumentList <Object[]>] [-Id <String>] -Url <String>
- [-Method <String>] [-EvaluateUrlAsRegex] [-AuthorizedRole <String[]>] [<CommonParameters>]
+ [-EvaluateUrlAsRegex] [-Method <String>] [-AcceptFileUpload] [-AuthorizedRole <String[]>]
+ [-AuthorizationPolicy <String[]>] [<CommonParameters>]
 ```
 
 ### Scheduled
@@ -68,6 +70,21 @@ Creates a REST API endpoint that accepts a HTTP POST with a name parameter in th
 
 ## PARAMETERS
 
+### -AcceptFileUpload
+Enabled uploading files to this REST API endpoint. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Rest
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ArgumentList
 Arguments to pass to the endpoint. They will be available via the $ArgumentList variable.
 
@@ -83,13 +100,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AuthorizationPolicy
+The authorization policy to enforce for this endpoint .
+
+```yaml
+Type: String[]
+Parameter Sets: Rest
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AuthorizedRole
 The roles authorized to access this endpoint.
 
 ```yaml
 Type: String[]
 Parameter Sets: Rest
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -203,7 +235,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
-
 

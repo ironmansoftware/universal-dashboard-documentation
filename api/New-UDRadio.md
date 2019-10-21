@@ -1,6 +1,6 @@
 ---
-external help file: UniversalDashboard.Community-help.xml
-Module Name: UniversalDashboard.Community
+external help file: UniversalDashboard-help.xml
+Module Name: UniversalDashboard
 online version: https://github.com/ironmansoftware/universal-dashboard/blob/master/src/UniversalDashboard/Help/New-UDRadio.md
 schema: 2.0.0
 ---
@@ -39,7 +39,6 @@ New-UDRadio -Label 'Option 3' -Group 'Group 1' -OnChange { Show-UDToast -Message
 ```
 
 Creates three options for a radio group with onChange event handlers.
-
 
 ### Multiple groupos
 ```
@@ -175,6 +174,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

@@ -5,28 +5,28 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-UDLicense
+# Clear-UDCache
 
 ## SYNOPSIS
-Gets the installed license
+Clears the Universal Dashboard cache scope. 
 
 ## SYNTAX
 
 ```
-Get-UDLicense [<CommonParameters>]
+Clear-UDCache [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets the installed license
+Clears the Universal Dashboard cache scope. Existing $Cache variables will no longer be present.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> Get-License
+PS C:\> Clear-UDCache
 ```
 
-Gets the installed license
+Clears the UD cache. 
 
 ## PARAMETERS
 

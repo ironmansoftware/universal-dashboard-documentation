@@ -1,6 +1,6 @@
 ---
-external help file: UniversalDashboard.Community-help.xml
-Module Name: UniversalDashboard.Community
+external help file: UniversalDashboard.dll-Help.xml
+Module Name: UniversalDashboard
 online version: 
 schema: 2.0.0
 ---
@@ -74,5 +74,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

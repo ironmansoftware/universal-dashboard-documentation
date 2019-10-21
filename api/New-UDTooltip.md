@@ -5,54 +5,57 @@ online version:
 schema: 2.0.0
 ---
 
-# New-UDMuAvatar
+# New-UDTooltip
 
 ## SYNOPSIS
-Creates a Material UI avatar.
+Creates a tooltip around a control.
 
 ## SYNTAX
 
 ```
-New-UDMuAvatar [[-Id] <String>] [[-Image] <String>] [[-Alt] <String>] [[-ClassName] <String>]
- [[-Style] <Hashtable>] [<CommonParameters>]
+New-UDTooltip [[-Id] <String>] [[-Place] <String>] [[-Type] <String>] [[-Effect] <String>]
+ [-TooltipContent] <ScriptBlock> [-Content] <ScriptBlock> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates a Material UI avatar.
+Creates a tooltip around a control.
 
 ## EXAMPLES
 
-### Example 1
+### A basic tool tip
 ```
-PS C:\> {{ Add example code here }}
+New-UDTooltip -TooltipContent { "Hello, there!" } -Content { 
+    New-UDIcon -Icon 'user'
+}
 ```
 
-{{ Add example description here }}
+Creates a basic tool tip
 
 ## PARAMETERS
 
-### -Alt
-{{ Fill Alt Description }}
+### -Content
+The content that is hovered that will display the tooltip.
 
 ```yaml
-Type: String
+Type: ScriptBlock
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: 2
+Required: True
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClassName
-{{ Fill ClassName Description }}
+### -Effect
+Float or solid effect
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: float, solid
 
 Required: False
 Position: 3
@@ -62,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+Id of the tooltip
 
 ```yaml
 Type: String
@@ -76,13 +79,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Image
-{{ Fill Image Description }}
+### -Place
+Where to place the tooltip.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: top, bottom, left, right
 
 Required: False
 Position: 1
@@ -91,16 +95,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Style
-{{ Fill Style Description }}
+### -TooltipContent
+The content within the tooltip
 
 ```yaml
-Type: Hashtable
+Type: ScriptBlock
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+The style of the tooltype
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: dark, success, warning, error, info, light
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

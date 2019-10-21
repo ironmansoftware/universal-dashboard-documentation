@@ -1,5 +1,5 @@
 ---
-external help file: UniversalDashboard.dll-Help.xml
+external help file: classes.dll-Help.xml
 Module Name: UniversalDashboard
 online version: https://go.microsoft.com/fwlink/?LinkID=217032
 schema: 2.0.0
@@ -14,70 +14,72 @@ Creates a Nivo chart.
 
 ### Bar
 ```
-New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-BorderWidth <Int32>]
- [-BorderColor <String>] [-IndexBy <String>] [-MinValue <Int32>] [-MaxValue <Int32>] [-Padding <Single>]
- [-Responsive] [-Width <Int32>] [-Height <Int32>] [-Colors <Object>] [-ColorBy <Object>] [-UseDataColor]
- [-DisableInteractive] [-OnClick <Object>] [-MarginTop <Int32>] [-MarginBottom <Int32>] [-MarginLeft <Int32>]
- [-MarginRight <Int32>] [-LabelSkipWidth <Int32>] [-LabelSkipHeight <Int32>] [-EnableGridX]
- [-GridXValues <Object[]>] [-EnableGridY] [-GridYValues <Object[]>] [-DisableAnimations]
- [-MotionStiffness <Int32>] [-MotionDamping <Int32>] -Keys <String[]> [-Layers <String[]>] [-AxisTop <Object>]
- [-AxisBottom <Object>] [-AxisLeft <Object>] [-AxisRight <Object>] [-Bar] [-GroupMode <String>]
- [-Layout <String>] [-Reverse] [-InnerPadding <Single>] [-BorderRadius <Int32>] [-DisableLabel]
- [<CommonParameters>]
+New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-Theme <Hashtable>]
+ [-BorderWidth <Int32>] [-BorderColor <String>] [-IndexBy <String>] [-MinValue <Int32>] [-MaxValue <Int32>]
+ [-Padding <Single>] [-Responsive] [-Width <Int32>] [-Height <Int32>] [-Colors <Object>] [-ColorBy <Object>]
+ [-UseDataColor] [-DisableInteractive] [-OnClick <Object>] [-MarginTop <Int32>] [-MarginBottom <Int32>]
+ [-MarginLeft <Int32>] [-MarginRight <Int32>] [-LabelSkipWidth <Int32>] [-LabelSkipHeight <Int32>]
+ [-LabelTextColor <String>] [-EnableGridX] [-GridXValues <Object[]>] [-EnableGridY] [-GridYValues <Object[]>]
+ [-DisableAnimations] [-MotionStiffness <Int32>] [-MotionDamping <Int32>] -Keys <String[]> [-Layers <String[]>]
+ [-AxisTop <Object>] [-AxisBottom <Object>] [-AxisLeft <Object>] [-AxisRight <Object>] [-Bar]
+ [-GroupMode <String>] [-Layout <String>] [-Reverse] [-InnerPadding <Single>] [-BorderRadius <Int32>]
+ [-DisableLabel] [<CommonParameters>]
 ```
 
 ### Pie
 ```
-New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-BorderWidth <Int32>]
- [-BorderColor <String>] [-Responsive] [-Width <Int32>] [-Height <Int32>] [-Colors <Object>]
- [-ColorBy <Object>] [-UseDataColor] [-DisableInteractive] [-OnClick <Object>] [-MarginTop <Int32>]
- [-MarginBottom <Int32>] [-MarginLeft <Int32>] [-MarginRight <Int32>] [-Pie] [-StartAngle <Int32>]
- [-EndAngle <Int32>] [-Fit <Boolean>] [-InnerRadius <Int32>] [-PadAngle <Int32>] [-CornerRadius <Int32>]
- [-SortByValue] [-DisableRadiusLabels] [-RadiusLabelSkipAngle <Int32>] [-RadiusLabelsLinkOffset <Int32>]
- [-RadialLabelsLinkDiagonalLength <Int32>] [-RadialLabelsLinkHorizontalLength <Int32>]
- [-RadialLabelsTextXOffset <Int32>] [-RadialLabelsLinkStrokeWidth <Int32>] [-DisableSliceLabels]
- [-SlicesLabelsSkipAngle <Int32>] [-SlicesLabelsTextColor <Int32>] [<CommonParameters>]
+New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-Theme <Hashtable>]
+ [-BorderWidth <Int32>] [-BorderColor <String>] [-Responsive] [-Width <Int32>] [-Height <Int32>]
+ [-Colors <Object>] [-ColorBy <Object>] [-UseDataColor] [-DisableInteractive] [-OnClick <Object>]
+ [-MarginTop <Int32>] [-MarginBottom <Int32>] [-MarginLeft <Int32>] [-MarginRight <Int32>] [-Pie]
+ [-StartAngle <Int32>] [-EndAngle <Int32>] [-Fit <Boolean>] [-InnerRadius <Single>] [-PadAngle <Int32>]
+ [-CornerRadius <Int32>] [-SortByValue] [-DisableRadiusLabels] [-RadiusLabelSkipAngle <Int32>]
+ [-RadiusLabelsLinkOffset <Int32>] [-RadialLabelsLinkDiagonalLength <Int32>]
+ [-RadialLabelsLinkHorizontalLength <Int32>] [-RadialLabelsTextXOffset <Int32>]
+ [-RadialLabelsLinkStrokeWidth <Int32>] [-DisableSliceLabels] [-SlicesLabelsSkipAngle <Int32>]
+ [-SlicesLabelsTextColor <Int32>] [<CommonParameters>]
 ```
 
 ### Stream
 ```
-New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-BorderWidth <Int32>]
- [-BorderColor <String>] [-Responsive] [-Width <Int32>] [-Height <Int32>] [-Colors <Object>]
- [-ColorBy <Object>] [-UseDataColor] [-DisableInteractive] [-OnClick <Object>] [-MarginTop <Int32>]
- [-MarginBottom <Int32>] [-MarginLeft <Int32>] [-MarginRight <Int32>] [-EnableGridX] [-GridXValues <Object[]>]
- [-EnableGridY] [-GridYValues <Object[]>] [-DisableAnimations] [-MotionStiffness <Int32>]
- [-MotionDamping <Int32>] [-Keys <String[]>] [-DotSize <Int32>] [-DotBorderWidth <Int32>]
- [-DisableStackTooltip] [-AxisTop <Object>] [-AxisBottom <Object>] [-AxisLeft <Object>] [-AxisRight <Object>]
- [-Stream] [-OffsetType <String>] [-Order <String>] [-Curve <String>] [-FillOpactiy <Single>]
- [-DotColor <String>] [<CommonParameters>]
+New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-Theme <Hashtable>]
+ [-BorderWidth <Int32>] [-BorderColor <String>] [-Responsive] [-Width <Int32>] [-Height <Int32>]
+ [-Colors <Object>] [-ColorBy <Object>] [-UseDataColor] [-DisableInteractive] [-OnClick <Object>]
+ [-MarginTop <Int32>] [-MarginBottom <Int32>] [-MarginLeft <Int32>] [-MarginRight <Int32>] [-EnableGridX]
+ [-GridXValues <Object[]>] [-EnableGridY] [-GridYValues <Object[]>] [-DisableAnimations]
+ [-MotionStiffness <Int32>] [-MotionDamping <Int32>] [-Keys <String[]>] [-DotSize <Int32>]
+ [-DotBorderWidth <Int32>] [-DisableStackTooltip] [-AxisTop <Object>] [-AxisBottom <Object>]
+ [-AxisLeft <Object>] [-AxisRight <Object>] [-Stream] [-OffsetType <String>] [-Order <String>]
+ [-Curve <String>] [-FillOpactiy <Single>] [-DotColor <String>] [<CommonParameters>]
 ```
 
 ### Treemap
 ```
-New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-BorderWidth <Int32>]
- [-BorderColor <String>] [-Responsive] [-Width <Int32>] [-Height <Int32>] [-Colors <Object>]
- [-ColorBy <Object>] [-UseDataColor] [-DisableInteractive] [-OnClick <Object>] [-MarginTop <Int32>]
- [-MarginBottom <Int32>] [-MarginLeft <Int32>] [-MarginRight <Int32>] [-InnerPadding <Single>] [-DisableLabel]
- [-Treemap] [-Identity <String>] [-Value <String>] [-Tile <String>] [-LeavesOnly] [-OuterPadding <Int32>]
- [<CommonParameters>]
+New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-Theme <Hashtable>]
+ [-BorderWidth <Int32>] [-BorderColor <String>] [-Responsive] [-Width <Int32>] [-Height <Int32>]
+ [-Colors <Object>] [-ColorBy <Object>] [-UseDataColor] [-DisableInteractive] [-OnClick <Object>]
+ [-MarginTop <Int32>] [-MarginBottom <Int32>] [-MarginLeft <Int32>] [-MarginRight <Int32>]
+ [-InnerPadding <Single>] [-DisableLabel] [-Treemap] [-Identity <String>] [-Value <String>] [-Tile <String>]
+ [-LeavesOnly] [-OuterPadding <Int32>] [<CommonParameters>]
 ```
 
 ### Heatmap
 ```
-New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-IndexBy <String>]
- [-MinValue <Int32>] [-MaxValue <Int32>] [-Padding <Single>] [-Responsive] [-Width <Int32>] [-Height <Int32>]
- [-Colors <Object>] [-ColorBy <Object>] [-UseDataColor] [-DisableInteractive] [-OnClick <Object>]
- [-MarginTop <Int32>] [-MarginBottom <Int32>] [-MarginLeft <Int32>] [-MarginRight <Int32>]
- [-LabelSkipWidth <Int32>] [-LabelSkipHeight <Int32>] [-EnableGridX] [-GridXValues <Object[]>] [-EnableGridY]
- [-GridYValues <Object[]>] [-DisableAnimations] [-MotionStiffness <Int32>] [-MotionDamping <Int32>]
- [-Keys <String[]>] [-CellOpacity <Single>] [-CellBorderWidth <Int32>] [-Heatmap] [-ForceSquare]
- [-SizeVariation <Int32>] [-DisableLabels] [<CommonParameters>]
+New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-Theme <Hashtable>]
+ [-IndexBy <String>] [-MinValue <Int32>] [-MaxValue <Int32>] [-Padding <Single>] [-Responsive] [-Width <Int32>]
+ [-Height <Int32>] [-Colors <Object>] [-ColorBy <Object>] [-UseDataColor] [-DisableInteractive]
+ [-OnClick <Object>] [-MarginTop <Int32>] [-MarginBottom <Int32>] [-MarginLeft <Int32>] [-MarginRight <Int32>]
+ [-LabelSkipWidth <Int32>] [-LabelSkipHeight <Int32>] [-LabelTextColor <String>] [-EnableGridX]
+ [-GridXValues <Object[]>] [-EnableGridY] [-GridYValues <Object[]>] [-DisableAnimations]
+ [-MotionStiffness <Int32>] [-MotionDamping <Int32>] [-Keys <String[]>] [-CellOpacity <Single>]
+ [-CellBorderWidth <Int32>] [-Heatmap] [-ForceSquare] [-SizeVariation <Int32>] [-DisableLabels]
+ [<CommonParameters>]
 ```
 
 ### Line
 ```
-New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-Responsive]
- [-Width <Int32>] [-Height <Int32>] [-Colors <Object>] [-ColorBy <Object>] [-UseDataColor]
+New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-Theme <Hashtable>]
+ [-Responsive] [-Width <Int32>] [-Height <Int32>] [-Colors <Object>] [-ColorBy <Object>] [-UseDataColor]
  [-DisableInteractive] [-OnClick <Object>] [-MarginTop <Int32>] [-MarginBottom <Int32>] [-MarginLeft <Int32>]
  [-MarginRight <Int32>] [-EnableGridX] [-GridXValues <Object[]>] [-EnableGridY] [-GridYValues <Object[]>]
  [-Layers <String[]>] [-DotSize <Int32>] [-DotBorderWidth <Int32>] [-DisableStackTooltip] [-AxisTop <Object>]
@@ -89,8 +91,8 @@ New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Ob
 
 ### Calendar
 ```
-New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-Responsive]
- [-Width <Int32>] [-Height <Int32>] [-Colors <Object>] [-ColorBy <Object>] [-UseDataColor]
+New-UDNivoChart [-Id <String>] -Data <Object> [-Definitions <Object>] [-Fill <Object>] [-Theme <Hashtable>]
+ [-Responsive] [-Width <Int32>] [-Height <Int32>] [-Colors <Object>] [-ColorBy <Object>] [-UseDataColor]
  [-DisableInteractive] [-OnClick <Object>] [-MarginTop <Int32>] [-MarginBottom <Int32>] [-MarginLeft <Int32>]
  [-MarginRight <Int32>] [-Calendar] -From <DateTime> -To <DateTime> [-Domain <Object>] [-EmptyColor <Object>]
  [-YearSpacing <Int32>] [-YearLegendOffset <Int32>] [-MonthSpacing <Int32>] [-MonthLegendOffset <Int32>]
@@ -103,7 +105,7 @@ Creates a Nivo chart.
 ## EXAMPLES
 
 ### Simple Bar Chart
-```powershell
+```
 $Data = @(
     @{
         state = "idaho"
@@ -129,7 +131,7 @@ New-UDNivoChart -Bar -Data $Data -Keys 'population' -IndexBy 'state' -Height 500
 This is a simple Nivo bar chart. The data must be in a key value format such as the one defined below. This particular chart is indexed by state and the y-axis is the population. 
 
 ### Multiple Data Keys
-```powershell
+```
 $Data = @(
     @{
         state = "idaho"
@@ -159,7 +161,7 @@ New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'sta
 This bar chart provides multiple data points per indexed bar. 
 
 ### Grouped Layout
-```powershell
+```
 $Data = @(
     @{
         state = "idaho"
@@ -187,7 +189,7 @@ New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'sta
 ```
 
 ### Horizontal Layout
-```powershell
+```
 $Data = @(
     @{
         state = "idaho"
@@ -214,8 +216,8 @@ $Data = @(
 New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'state' -Height 500 -Width 1000 -MarginTop 50 -MarginRight 130 -MarginBottom 50 -MarginLeft 60 -Padding 0.3 -Layout horizontal
 ```
 
-### Simple Calendar 
-```powershell
+### Simple Calendar
+```
 $Data = @()
 for($i = 365; $i -gt 0; $i--) {
     $Data += @{
@@ -232,8 +234,8 @@ New-UDNivoChart -Calendar -Data $Data -From $From -To $To -Height 500 -Width 100
 
 The data needs to be an array of day and value hashtables. The day should be formatted in year, month, day format. For example: 2019-04-07 . You will need to set the start date and end date using the -To and -From values. 
 
-### Heatmap 
-```powershell
+### Heatmap
+```
 $Data = @(
     @{
         state = "idaho"
@@ -277,7 +279,7 @@ Define the value to be used for area baseline. Please note that this value isn't
 ```yaml
 Type: String
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -292,7 +294,7 @@ Defines CSS mix-blend-mode property for areas.
 ```yaml
 Type: String
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -307,7 +309,7 @@ Area opacity (0~1), depends on EnableArea.
 ```yaml
 Type: Single
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -322,7 +324,7 @@ Bottom axis configuration. Use New-UDNivoChartAxisOptions to create the object f
 ```yaml
 Type: Object
 Parameter Sets: Bar, Stream, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -337,7 +339,7 @@ Left axis configuration. Use New-UDNivoChartAxisOptions to create the object for
 ```yaml
 Type: Object
 Parameter Sets: Bar, Stream, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -352,7 +354,7 @@ Right axis configuration. Use New-UDNivoChartAxisOptions to create the object fo
 ```yaml
 Type: Object
 Parameter Sets: Bar, Stream, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -367,7 +369,7 @@ Top axis configuration. Use New-UDNivoChartAxisOptions to create the object for 
 ```yaml
 Type: Object
 Parameter Sets: Bar, Stream, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -382,7 +384,7 @@ Creates a Bar chart.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Bar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -397,7 +399,7 @@ Border color.
 ```yaml
 Type: String
 Parameter Sets: Bar, Pie, Stream, Treemap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -412,7 +414,7 @@ The rounding of the border in pixels.
 ```yaml
 Type: Int32
 Parameter Sets: Bar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -427,7 +429,7 @@ The width of the border in pixels.
 ```yaml
 Type: Int32
 Parameter Sets: Bar, Pie, Stream, Treemap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -442,7 +444,7 @@ Creates a calendar chart.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -457,7 +459,7 @@ Cell border width (px).
 ```yaml
 Type: Int32
 Parameter Sets: Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -472,7 +474,7 @@ Cell opacity (0~1).
 ```yaml
 Type: Single
 Parameter Sets: Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -487,7 +489,7 @@ Property to use to determine node color.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -502,7 +504,7 @@ Defines color range.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -517,7 +519,7 @@ Rounded slices.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -532,7 +534,7 @@ Curve interpolation.
 ```yaml
 Type: String
 Parameter Sets: Stream, Line
-Aliases:
+Aliases: 
 Accepted values: basis, cardinal, catmullRom, linear, monotoneX, monotoneY, natural, step, stepAfter, stepBefore
 
 Required: False
@@ -548,7 +550,7 @@ The data for the chart. Each chart has a different data shape requirement. Visit
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -563,7 +565,7 @@ define offset from day edge to its label.
 ```yaml
 Type: Int32
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -578,7 +580,7 @@ define spacing between each day cell.
 ```yaml
 Type: Int32
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -593,7 +595,7 @@ Pattern or gradient definitions. Use New-UDNivoPattern to create a new pattern o
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -608,7 +610,7 @@ Disables chart animations.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Bar, Stream, Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -623,7 +625,7 @@ Disables dots on the line chart.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -638,7 +640,7 @@ Disables interaction. OnClick handlers will not be fired.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -653,7 +655,7 @@ Disables labels.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Bar, Treemap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -668,7 +670,7 @@ Disables labels
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -683,7 +685,7 @@ Disables labels on the radius of the pie chart.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -698,7 +700,7 @@ Disables labels on the slices of the pie chart.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -713,7 +715,7 @@ Disables the stacked tool tip.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Stream, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -728,7 +730,7 @@ define min/max value (eg. @(0, 300) to compute colors, if set to auto, it extrac
 ```yaml
 Type: Object
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -743,7 +745,7 @@ Width of the dots border (px).
 ```yaml
 Type: Int32
 Parameter Sets: Stream, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -753,12 +755,10 @@ Accept wildcard characters: False
 ```
 
 ### -DotColor
-
-
 ```yaml
 Type: String
 Parameter Sets: Stream
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -773,7 +773,7 @@ Label Y offset from dot shape (px).
 ```yaml
 Type: Int32
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -788,7 +788,7 @@ Size of the dots (px).
 ```yaml
 Type: Int32
 Parameter Sets: Stream, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -803,7 +803,7 @@ color to use to fill days without available value.
 ```yaml
 Type: Object
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -818,7 +818,7 @@ Enable/disable area below each line.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -833,7 +833,7 @@ Enable/disable dots label.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -848,7 +848,7 @@ Enable/disable x grid.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Bar, Stream, Heatmap, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -863,7 +863,7 @@ Enable/disable y grid.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Bar, Stream, Heatmap, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -878,7 +878,7 @@ End angle (deg.) useful to make gauges for example.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -893,7 +893,7 @@ Assigns patterns and gardients to elements. Use New-UDNivoFill to create objects
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -908,7 +908,7 @@ Layers fill opacity.
 ```yaml
 Type: Single
 Parameter Sets: Stream
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -923,7 +923,7 @@ If 'true', pie will be omptimized to occupy more space when using partial pie.
 ```yaml
 Type: Boolean
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -938,7 +938,7 @@ Force square cells (width = height).
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -953,7 +953,7 @@ start date
 ```yaml
 Type: DateTime
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -968,7 +968,7 @@ Specify values to use for vertical grid lines.
 ```yaml
 Type: Object[]
 Parameter Sets: Bar, Stream, Heatmap, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -983,7 +983,7 @@ Specify values to use for horizontal grid lines.
 ```yaml
 Type: Object[]
 Parameter Sets: Bar, Stream, Heatmap, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -993,13 +993,12 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMode
-
 How to group bars, must be one of: 'grouped', 'stacked'.
 
 ```yaml
 Type: String
 Parameter Sets: Bar
-Aliases:
+Aliases: 
 Accepted values: grouped, stacked
 
 Required: False
@@ -1015,7 +1014,7 @@ Creates a heatmap.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1031,7 +1030,7 @@ Also note that width exclude top/bottom axes, please add margin to make sure the
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1046,7 +1045,7 @@ Id for this chart.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1061,7 +1060,7 @@ The key used to get the node's identity.
 ```yaml
 Type: String
 Parameter Sets: Treemap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1076,7 +1075,7 @@ Key to use to index the data, this key must exist in each data item.
 ```yaml
 Type: String
 Parameter Sets: Bar, Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1091,7 +1090,7 @@ Padding between elements in the chart.
 ```yaml
 Type: Single
 Parameter Sets: Bar, Treemap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1104,9 +1103,9 @@ Accept wildcard characters: False
 Padding between slices.
 
 ```yaml
-Type: Int32
+Type: Single
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1121,7 +1120,7 @@ Keys to use to determine each serie.
 ```yaml
 Type: String[]
 Parameter Sets: Bar
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -1133,7 +1132,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String[]
 Parameter Sets: Stream, Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1148,7 +1147,7 @@ Skip label if bar height is lower than provided value, ignored if 0 (px).
 ```yaml
 Type: Int32
 Parameter Sets: Bar, Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1163,7 +1162,22 @@ Skip label if bar width is lower than provided value, ignored if 0 (px).
 ```yaml
 Type: Int32
 Parameter Sets: Bar, Heatmap
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabelTextColor
+{{Fill LabelTextColor Description}}
+
+```yaml
+Type: String
+Parameter Sets: Bar, Heatmap
+Aliases: 
 
 Required: False
 Position: Named
@@ -1178,7 +1192,7 @@ Defines the order of layers, available layers are:grid, axes, bars, markers, leg
 ```yaml
 Type: String[]
 Parameter Sets: Bar, Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1193,7 +1207,7 @@ How to display bars, must be one of: 'horizontal', 'vertical'.
 ```yaml
 Type: String
 Parameter Sets: Bar
-Aliases:
+Aliases: 
 Accepted values: vertical, horizontal
 
 Required: False
@@ -1204,13 +1218,12 @@ Accept wildcard characters: False
 ```
 
 ### -LeavesOnly
-
 Only render leaf nodes (no parent).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Treemap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1225,7 +1238,7 @@ Creates a line chart.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -1240,7 +1253,7 @@ Line width (px).
 ```yaml
 Type: Int32
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1255,7 +1268,7 @@ Margin on the bottom of the chart.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1270,7 +1283,7 @@ Margin on the left of the chart.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1285,7 +1298,7 @@ Margin on the right of the chart.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1300,7 +1313,7 @@ Margin on the top of the chart.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1315,7 +1328,7 @@ Maximum value, if 'auto', will use max value from the provided data.
 ```yaml
 Type: Int32
 Parameter Sets: Bar, Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1330,7 +1343,7 @@ Minimum value, if 'auto', will use min value from the provided data.
 ```yaml
 Type: Int32
 Parameter Sets: Bar, Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1345,7 +1358,7 @@ define offset from month edge to its label.
 ```yaml
 Type: Int32
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1355,11 +1368,10 @@ Accept wildcard characters: False
 ```
 
 ### -MonthSpacing
-
 ```yaml
 Type: Int32
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1374,7 +1386,7 @@ Motion damping.
 ```yaml
 Type: Int32
 Parameter Sets: Bar, Stream, Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1389,7 +1401,7 @@ Motion stiffness.
 ```yaml
 Type: Int32
 Parameter Sets: Bar, Stream, Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1399,11 +1411,10 @@ Accept wildcard characters: False
 ```
 
 ### -OffsetType
-
 ```yaml
 Type: String
 Parameter Sets: Stream
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1419,7 +1430,7 @@ chart that was clicked. OnClick does not work when -DisableInteraction is specif
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1434,7 +1445,7 @@ Layers order.
 ```yaml
 Type: String
 Parameter Sets: Stream
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1449,7 +1460,7 @@ Padding on the outside of blocks.
 ```yaml
 Type: Int32
 Parameter Sets: Treemap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1464,7 +1475,7 @@ Padding (deg.) between each pie slice.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1479,7 +1490,7 @@ Padding between each bar (ratio).
 ```yaml
 Type: Single
 Parameter Sets: Bar, Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1494,7 +1505,7 @@ Creates a pie chart.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -1509,7 +1520,7 @@ Link diagonal length.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1524,7 +1535,7 @@ Links horizontal length.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1539,7 +1550,7 @@ Links stroke width.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1554,7 +1565,7 @@ X offset from links' end.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1569,7 +1580,7 @@ Skip label if corresponding slice's angle is lower than provided value.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1584,7 +1595,7 @@ Link offset from pie outer radius, useful to have links overlapping pie slices.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1599,7 +1610,7 @@ The height and width of the chart will automatically adjust to fit its parent.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1614,7 +1625,7 @@ Reverses the data.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Bar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1629,7 +1640,7 @@ Size variation (0~1), if value is 0 size won't be affected. If you use for examp
 ```yaml
 Type: Int32
 Parameter Sets: Heatmap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1644,7 +1655,7 @@ Skip label if corresponding slice's angle is lower than provided value.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1654,11 +1665,10 @@ Accept wildcard characters: False
 ```
 
 ### -SlicesLabelsTextColor
-
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1673,7 +1683,7 @@ If 'true', arcs will be ordered according to their associated value.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1688,7 +1698,7 @@ Start angle (deg.) useful to make gauges for example.
 ```yaml
 Type: Int32
 Parameter Sets: Pie
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1703,9 +1713,24 @@ Creates a stream chart.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Stream
-Aliases:
+Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Theme
+{{Fill Theme Description}}
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1718,7 +1743,7 @@ valid values are: 'squarify', 'slice', 'dice', 'slice-dice',
 ```yaml
 Type: String
 Parameter Sets: Treemap
-Aliases:
+Aliases: 
 Accepted values: squarify, slice, dice, slice-dice
 
 Required: False
@@ -1734,7 +1759,7 @@ End date
 ```yaml
 Type: DateTime
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -1749,7 +1774,7 @@ Creates a treemap
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Treemap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1764,7 +1789,7 @@ Specifies whether to use the color defined in the data as the color that is used
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1779,7 +1804,7 @@ The key to use to retrieve nodes value.
 ```yaml
 Type: String
 Parameter Sets: Treemap
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1794,7 +1819,7 @@ The width of the chart in pixels.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1809,7 +1834,7 @@ The max value for the y axis.
 ```yaml
 Type: Int32
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1824,7 +1849,7 @@ The min value for the y axis.
 ```yaml
 Type: Int32
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1839,7 +1864,7 @@ Whether to stack the y scale.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Line
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1854,7 +1879,7 @@ Offset for the year legend.
 ```yaml
 Type: Int32
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1869,7 +1894,7 @@ Spacing around the years.
 ```yaml
 Type: Int32
 Parameter Sets: Calendar
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -1879,8 +1904,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -1889,6 +1913,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+

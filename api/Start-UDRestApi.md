@@ -1,6 +1,7 @@
 ---
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -15,7 +16,8 @@ Starts a REST API server.
 Start-UDRestApi [-Endpoint <Endpoint[]>] [-Name <String>] [-Port <Int32>] [-Wait]
  [-Certificate <X509Certificate2>] [-CertificateFile <String>] [-CertificateFilePassword <SecureString>]
  [-EndpointInitialization <InitialSessionState>] [-AuthenticationMethod <AuthenticationMethod[]>] [-AutoReload]
- [-PublishedFolder <PublishedFolder[]>] [<CommonParameters>]
+ [-PublishedFolder <PublishedFolder[]>] [-Force] [-ListenAddress <IPAddress>] [-DisableTelemetry]
+ [-AuthorizationPolicy <AuthorizationPolicy[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +45,22 @@ Authentication methods for this REST API.
 ```yaml
 Type: AuthenticationMethod[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthorizationPolicy
+The authorization policies that are avaialble to enforce.
+
+```yaml
+Type: AuthorizationPolicy[]
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
@@ -112,6 +129,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableTelemetry
+Disables telemetry collection.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Endpoint
 An array of endpoints created with New-UDEndpoint. 
 
@@ -132,6 +164,36 @@ The initial session state for endpoints of this dashboard. Use New-UDEndpointIni
 
 ```yaml
 Type: InitialSessionState
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Starts a REST API and stops any servers listening on that port. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListenAddress
+The IP Address to listen on.
+
+```yaml
+Type: IPAddress
 Parameter Sets: (All)
 Aliases: 
 
@@ -216,6 +278,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

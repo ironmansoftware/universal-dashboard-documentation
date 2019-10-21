@@ -1,6 +1,7 @@
 ---
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -12,7 +13,7 @@ Forces an element to update its state.
 ## SYNTAX
 
 ```
-Sync-UDElement -Id <String> [-Broadcast] [<CommonParameters>]
+Sync-UDElement -Id <String[]> [-Broadcast] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +60,7 @@ Accept wildcard characters: False
 The element to force to update .
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -84,6 +85,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

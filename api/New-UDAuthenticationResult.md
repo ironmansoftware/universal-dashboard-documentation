@@ -1,7 +1,7 @@
 ---
-external help file: UniversalDashboard.Community-help.xml
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -14,7 +14,7 @@ Returns a result of authentication.
 
 ```
 New-UDAuthenticationResult [-Success] [-UserName <String>] [-RedirectUrl <String>] [-ErrorMessage <String>]
- [-Role <String[]>] [<CommonParameters>]
+ [-Role <String[]>] [-Token <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +45,7 @@ An error message to return for an unsuccessful authentication.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -60,7 +60,7 @@ Redirects to a URL after login.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -75,7 +75,7 @@ The role or roles for the user being authenticated.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -90,7 +90,22 @@ Whether this authentication was a success.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Token
+The JSON web token to provide the user. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
@@ -105,7 +120,7 @@ The username for the authenticated user.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -128,3 +143,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

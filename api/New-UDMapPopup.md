@@ -14,7 +14,7 @@ Creates a popup that can be assigned to vectors, markers and feature groups.
 
 ```
 New-UDMapPopup [[-Id] <String>] [[-Content] <ScriptBlock>] [[-Longitude] <Single>] [[-Latitude] <Single>]
- [[-MaxWidth] <Int32>]
+ [[-MaxWidth] <Int32>] [[-MinWidth] <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,10 +110,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MinWidth
+{{Fill MinWidth Description}}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

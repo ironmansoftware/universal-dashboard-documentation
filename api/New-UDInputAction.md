@@ -1,6 +1,7 @@
 ---
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -11,6 +12,11 @@ Returns an action to execute after processing input with New-UDInput.
 
 ## SYNTAX
 
+### clear (Default)
+```
+New-UDInputAction [-ClearInput] [<CommonParameters>]
+```
+
 ### toast
 ```
 New-UDInputAction -Toast <String> [-Duration <Int32>] [-ClearInput] [<CommonParameters>]
@@ -18,12 +24,12 @@ New-UDInputAction -Toast <String> [-Duration <Int32>] [-ClearInput] [<CommonPara
 
 ### redirect
 ```
-New-UDInputAction -RedirectUrl <String> [<CommonParameters>]
+New-UDInputAction -RedirectUrl <String> [-ClearInput] [<CommonParameters>]
 ```
 
 ### content
 ```
-New-UDInputAction -Content <Component[]> [<CommonParameters>]
+New-UDInputAction -Content <Object> [-ClearInput] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +62,7 @@ Clears the input fields after a toast message.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: toast
+Parameter Sets: (All)
 Aliases: 
 
 Required: False
@@ -70,7 +76,7 @@ Accept wildcard characters: False
 Specify one or more components (New-UDCard, New-UDChart, etc) to replace the input form with.
 
 ```yaml
-Type: Component[]
+Type: Object
 Parameter Sets: content
 Aliases: 
 
@@ -140,6 +146,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

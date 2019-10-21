@@ -13,7 +13,7 @@ A feature group is a collection of map features that can be toggled together.
 ## SYNTAX
 
 ```
-New-UDMapFeatureGroup [[-Id] <String>] [[-Popup] <Hashtable>] [-Content] <ScriptBlock>
+New-UDMapFeatureGroup [[-Id] <String>] [[-Popup] <Hashtable>] [-Content] <ScriptBlock> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +27,7 @@ New-UDMapFeatureGroup -Id 'Feature-Group' -Content {
     New-UDMapMarker -Id 'marker' -Latitude 51.505 -Longitude -0.09
     New-UDMapMarker -Id 'marker' -Latitude 51.515 -Longitude -0.19
     New-UDMapMarker -Id 'marker' -Latitude 51.555 -Longitude -0.11
-} 
+}
 ```
 
 Creates a feature group with three markers that are part of the group. 
@@ -79,10 +79,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

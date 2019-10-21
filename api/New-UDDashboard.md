@@ -1,6 +1,7 @@
 ---
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -15,20 +16,22 @@ Creates a new dashboard. The result of this cmdlet should be passed to Start-UDD
 ```
 New-UDDashboard [-Title <String>] -Content <ScriptBlock> [-NavBarColor <DashboardColor>]
  [-NavBarFontColor <DashboardColor>] [-BackgroundColor <DashboardColor>] [-FontColor <DashboardColor>]
- [-FontIconStyle <String>] [-NavbarLinks <Link[]>] [-Scripts <String[]>] [-Stylesheets <String[]>]
- [-CyclePages] [-CyclePagesInterval <Int32>] [-Footer <Footer>] [-NavBarLogo <Element>]
- [-EndpointInitialization <InitialSessionState>] [-Theme <Theme>] [-GeoLocation] [-IdleTimeout <TimeSpan>]
- [-Navigation <SideNav>] [<CommonParameters>]
+ [-NavbarLinks <Hashtable[]>] [-Scripts <String[]>] [-Stylesheets <String[]>] [-CyclePages]
+ [-CyclePagesInterval <Int32>] [-LoginPage <LoginPage>] [-LoadingScreen <LoadingScreen>] [-Footer <Footer>]
+ [-NavBarLogo <Element>] [-EndpointInitialization <InitialSessionState>] [-Theme <Theme>] [-GeoLocation]
+ [-IdleTimeout <TimeSpan>] [-Navigation <SideNav>] [-AdminModeAuthorizationPolicy <String[]>]
+ [-AdminModeRole <String[]>] [<CommonParameters>]
 ```
 
 ### Pages
 ```
 New-UDDashboard [-Title <String>] -Pages <Page[]> [-NavBarColor <DashboardColor>]
  [-NavBarFontColor <DashboardColor>] [-BackgroundColor <DashboardColor>] [-FontColor <DashboardColor>]
- [-FontIconStyle <String>] [-NavbarLinks <Link[]>] [-Scripts <String[]>] [-Stylesheets <String[]>]
- [-CyclePages] [-CyclePagesInterval <Int32>] [-Footer <Footer>] [-NavBarLogo <Element>]
- [-EndpointInitialization <InitialSessionState>] [-Theme <Theme>] [-GeoLocation] [-IdleTimeout <TimeSpan>]
- [-Navigation <SideNav>] [<CommonParameters>]
+ [-NavbarLinks <Hashtable[]>] [-Scripts <String[]>] [-Stylesheets <String[]>] [-CyclePages]
+ [-CyclePagesInterval <Int32>] [-LoginPage <LoginPage>] [-LoadingScreen <LoadingScreen>] [-Footer <Footer>]
+ [-NavBarLogo <Element>] [-EndpointInitialization <InitialSessionState>] [-Theme <Theme>] [-GeoLocation]
+ [-IdleTimeout <TimeSpan>] [-Navigation <SideNav>] [-AdminModeAuthorizationPolicy <String[]>]
+ [-AdminModeRole <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,6 +70,36 @@ PS C:\> $Dashboard = New-UDDashboard -Color "blue" -Pages @($Page1, $Page2)
 Creates a multi-page dashboard. The will show a navigation pane on the left side of the dashboard to navigate to different pages.
 
 ## PARAMETERS
+
+### -AdminModeAuthorizationPolicy
+The admin mode authorization policy to enforce for users to access admin mode. 
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdminModeRole
+The user roles that are required to access admin mode.  
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -BackgroundColor
 Background color.
@@ -158,22 +191,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FontIconStyle
-Choose the style of the icons, filled or line.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Accepted values: FontAwesome, LineAwesome
-
-Required: False
-Position: Named
-Default value: FontAwesome
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Footer
 Configuration options for the footer. Use New-UDFooter to create the object for these options.
 
@@ -206,13 +223,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IdleTimeout
+The idle time out for login and session state. 
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LoadingScreen
 Loading screen for the dashboard. Use New-UDLoadingScreen to customize the loading screen. 
 
 ```yaml
 Type: LoadingScreen
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -285,7 +317,7 @@ Accept wildcard characters: False
 Links to present on the dashboard. Use New-UDLink to create links.
 
 ```yaml
-Type: Link[]
+Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -400,6 +432,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

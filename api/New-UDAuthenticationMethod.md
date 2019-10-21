@@ -1,7 +1,7 @@
 ---
-external help file: UniversalDashboard.Community-help.xml
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -19,13 +19,29 @@ New-UDAuthenticationMethod [-Audience <String>] [-Issuer <String>] [-SigningKey 
 
 ### Forms
 ```
-New-UDAuthenticationMethod [-Endpoint <ScriptBlock>] [<CommonParameters>]
+New-UDAuthenticationMethod [-Endpoint <Object>] [<CommonParameters>]
+```
+
+### AzureActiveDirectory
+```
+New-UDAuthenticationMethod [-AppId <String>] [-Instance <String>] [-Domain <String>] [-TenantId <String>]
+ [<CommonParameters>]
 ```
 
 ### OAuth
 ```
 New-UDAuthenticationMethod [-AppId <String>] [-AppSecret <String>] [-Provider <OAuthProvider>]
  [<CommonParameters>]
+```
+
+### Windows
+```
+New-UDAuthenticationMethod [-Windows] [<CommonParameters>]
+```
+
+### WSFed
+```
+New-UDAuthenticationMethod -Wtrealm <String> -MetadataAddress <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,7 +79,7 @@ The AppId for OAuth authentication.
 
 ```yaml
 Type: String
-Parameter Sets: OAuth
+Parameter Sets: AzureActiveDirectory, OAuth
 Aliases: ConsumerKey, ClientId, ApplicationId
 
 Required: False
@@ -96,7 +112,22 @@ See: https://self-issued.info/docs/draft-ietf-oauth-json-web-token.html#rfc.sect
 ```yaml
 Type: String
 Parameter Sets: JWT
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Domain
+The domain for Azure Active Directory.
+
+```yaml
+Type: String
+Parameter Sets: AzureActiveDirectory
+Aliases: 
 
 Required: False
 Position: Named
@@ -109,9 +140,24 @@ Accept wildcard characters: False
 An endpoint used to validate a user's credentials.
 
 ```yaml
-Type: ScriptBlock
+Type: Object
 Parameter Sets: Forms
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Instance
+The instance for Azure Active Directory.
+
+```yaml
+Type: String
+Parameter Sets: AzureActiveDirectory
+Aliases: 
 
 Required: False
 Position: Named
@@ -128,9 +174,24 @@ See: https://self-issued.info/docs/draft-ietf-oauth-json-web-token.html#rfc.sect
 ```yaml
 Type: String
 Parameter Sets: JWT
-Aliases:
+Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MetadataAddress
+The metadata address for WS-Federation
+
+```yaml
+Type: String
+Parameter Sets: WSFed
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -143,8 +204,8 @@ The OAuth provider to use.
 ```yaml
 Type: OAuthProvider
 Parameter Sets: OAuth
-Aliases:
-Accepted values: Facebook, Twitter, Google, Microsoft
+Aliases: 
+Accepted values: Facebook, Twitter, Google, Microsoft, AzureActiveDirectory
 
 Required: False
 Position: Named
@@ -159,9 +220,54 @@ The secret key used to sign the web token. This should be treated as a password.
 ```yaml
 Type: String
 Parameter Sets: JWT
-Aliases:
+Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantId
+The tenant ID for Azure Active Directory.
+
+```yaml
+Type: String
+Parameter Sets: AzureActiveDirectory
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Windows
+Turns on Windows single-sign on for IIS.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Windows
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Wtrealm
+The wtrealm for WS-Federation.
+
+```yaml
+Type: String
+Parameter Sets: WSFed
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -182,3 +288,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

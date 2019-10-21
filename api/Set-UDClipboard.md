@@ -1,106 +1,75 @@
 ---
-external help file: UniversalDashboard-help.xml
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version: 
+online version: https://go.microsoft.com/fwlink/?LinkID=217032
 schema: 2.0.0
 ---
 
-# New-UDMuAvatar
+# Set-UDClipboard
 
 ## SYNOPSIS
-Creates a Material UI avatar.
+Sets the contents of the clipboard.
 
 ## SYNTAX
 
 ```
-New-UDMuAvatar [[-Id] <String>] [[-Image] <String>] [[-Alt] <String>] [[-ClassName] <String>]
- [[-Style] <Hashtable>] [<CommonParameters>]
+Set-UDClipboard -Data <String> [-toastOnSuccess] [-toastOnError] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates a Material UI avatar.
+Sets the contents of the clipboard.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-UDClipboard -Data 'Some text'
 ```
 
-{{ Add example description here }}
+Sets 'Some text' into the clipboard.
 
 ## PARAMETERS
 
-### -Alt
-{{ Fill Alt Description }}
+### -Data
+The text to set into the clipboard.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: 2
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClassName
-{{ Fill ClassName Description }}
+### -toastOnError
+Creates a toast when it fails to set the clipboard text.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 3
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-{{ Fill Id Description }}
+### -toastOnSuccess
+Creates a toast when it succeeds to set the clipboard text.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Image
-{{ Fill Image Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Style
-{{ Fill Style Description }}
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

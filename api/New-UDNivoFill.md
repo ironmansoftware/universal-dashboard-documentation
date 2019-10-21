@@ -1,5 +1,5 @@
 ---
-external help file: UniversalDashboard.dll-Help.xml
+external help file: classes.dll-Help.xml
 Module Name: UniversalDashboard
 online version: https://go.microsoft.com/fwlink/?LinkID=217032
 schema: 2.0.0
@@ -22,7 +22,7 @@ Assigns a pattern or gradient to an element.
 ## EXAMPLES
 
 ### Example 1
-```powershell
+```
 PS C:\> $Pattern = New-UDNivoPattern -Dots -Id 'fill'
 ```
 
@@ -36,7 +36,7 @@ The element or serie id to assign the pattern to.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -61,8 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -71,6 +70,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+

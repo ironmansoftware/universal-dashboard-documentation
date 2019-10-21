@@ -14,7 +14,7 @@ Creates a heatmap layer.
 
 ```
 New-UDMapHeatmapLayer [-Points] <Object> [[-Id] <String>] [[-MaxIntensity] <Double>] [[-Radius] <Double>]
- [[-MaxZoom] <Int32>] [[-MinOpacity] <Double>] [[-Blur] <Int32>] [[-Gradient] <Hashtable>] [-FitMapBounds]
+ [[-MaxZoom] <Int32>] [[-MinOpacity] <Double>] [[-Blur] <Int32>] [[-Gradient] <Hashtable>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +36,7 @@ New-UDMapHeatmapLayer -Id 'heatmap' -Points @(
     @(51.505567, -0.02349, "625"),
     @(51.50545654, -0.092342, "625"),
     @(51.5045645, -0.09342, "625")
-) 
+)
 ```
 
 Creates a heatmap based on ten points with varying latitude, longitude and intensity.
@@ -53,21 +53,6 @@ Aliases:
 
 Required: False
 Position: 6
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FitMapBounds
-Automatically zooms and pans the map to the location containing this heatmap.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -178,10 +163,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

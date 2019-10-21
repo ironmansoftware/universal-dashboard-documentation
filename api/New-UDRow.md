@@ -1,6 +1,6 @@
 ---
-external help file: UniversalDashboard.Community-help.xml
-Module Name: UniversalDashboard.Community
+external help file: UniversalDashboard-help.xml
+Module Name: UniversalDashboard
 online version: https://github.com/ironmansoftware/universal-dashboard/blob/master/src/UniversalDashboard/Help/New-UDRow.md
 schema: 2.0.0
 ---
@@ -153,6 +153,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

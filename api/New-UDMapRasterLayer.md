@@ -15,13 +15,13 @@ Creates a raster layer that is typically used as a base layer.
 ### Generic
 ```
 New-UDMapRasterLayer [-Id <String>] [-TileServer <String>] [-Attribution <String>] [-Opacity <Int32>]
- [-ZIndex <Int32>] [-Name <String>]
+ [-ZIndex <Int32>] [-Name <String>] [<CommonParameters>]
 ```
 
 ### Bing
 ```
 New-UDMapRasterLayer [-Id <String>] -ApiKey <String> [-Type <String>] [-Bing] [-Attribution <String>]
- [-Opacity <Int32>] [-ZIndex <Int32>] [-Name <String>]
+ [-Opacity <Int32>] [-ZIndex <Int32>] [-Name <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +31,7 @@ Creates a raster layer that is typically used as a base layer. Base layers are u
 
 ### Open Tile Server
 ```
-New-UDMapRasterLayer -TileServer 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png' 
+New-UDMapRasterLayer -TileServer 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
 ```
 
 Creates a raster layer using the wmflabs tile server.
@@ -181,10 +181,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

@@ -1,5 +1,5 @@
 ---
-external help file: UniversalDashboard.Community-help.xml
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
 online version: 
 schema: 2.0.0
@@ -12,16 +12,9 @@ Grants a JSON web token for the specified user or application.
 
 ## SYNTAX
 
-### user
 ```
-Grant-UDJsonWebToken [-Audience <String>] [-Issuer <String>] [-SigningKey <String>] -UserName <String>
- [-Subject <String>] [-Expiry <DateTime>] [<CommonParameters>]
-```
-
-### app
-```
-Grant-UDJsonWebToken [-Audience <String>] [-Issuer <String>] [-SigningKey <String>] -Application <String>
- [-Subject <String>] [-Expiry <DateTime>] [<CommonParameters>]
+Grant-UDJsonWebToken [-Audience <String>] [-Issuer <String>] [-SigningKey <String>] -Identity <String>
+ [-Subject <String>] [-Expiry <DateTime>] [-Role <String[]>] [-Payload <Hashtable>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,21 +31,6 @@ PS C:\> Invoke-RestMethod http://localhost/api/resource -Headers @{ Authorizatio
 Creates a JSON web token for Adam and then uses that token to access a protected resource on the API.
 
 ## PARAMETERS
-
-### -Application
-The name of the application granted the token.
-
-```yaml
-Type: String
-Parameter Sets: app
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Audience
 The aud (audience) claim identifies the recipients that the JWT is intended for.  
@@ -88,6 +66,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Identity
+The identity of the user or applicaiton. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: UserName, Application
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Issuer
 The iss (issuer) claim identifies the principal that issued the JWT. 
 
@@ -95,6 +88,36 @@ See: https://self-issued.info/docs/draft-ietf-oauth-json-web-token.html#rfc.sect
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Payload
+{{Fill Payload Description}}
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Role
+The roles to provide the user of the JSON web token. 
+
+```yaml
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -131,21 +154,6 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserName
-The user name of the user the token is granted to.
-
-```yaml
-Type: String
-Parameter Sets: user
-Aliases: 
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

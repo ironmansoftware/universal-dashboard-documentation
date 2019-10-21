@@ -1,5 +1,5 @@
 ---
-external help file: UniversalDashboard.dll-Help.xml
+external help file: classes.dll-Help.xml
 Module Name: UniversalDashboard
 online version: https://go.microsoft.com/fwlink/?LinkID=217032
 schema: 2.0.0
@@ -36,7 +36,7 @@ New-UDNivoPattern -Id <String> [-Squares] [-Size <Int32>] [-Padding <Int32>] [-S
 ## EXAMPLES
 
 ### Example 1
-```powershell
+```
 PS C:\> {{ Add example code here }}
 ```
 
@@ -50,7 +50,7 @@ PS C:\> {{ Add example code here }}
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: dots
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: lines
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: lines
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: dots, squares
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: lines
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: dots, squares
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: lines
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: squares
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: dots, squares
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -225,8 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -235,6 +234,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+

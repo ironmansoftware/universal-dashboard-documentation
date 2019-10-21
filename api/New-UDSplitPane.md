@@ -1,38 +1,51 @@
 ---
 external help file: UniversalDashboard-help.xml
 Module Name: UniversalDashboard
-online version: https://github.com/ironmansoftware/universal-dashboard/blob/master/src/UniversalDashboard/Help/New-UDSelect.md
+online version: 
 schema: 2.0.0
 ---
 
 # New-UDSplitPane
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a split pane between two controls that you can adjust the size of.
 
 ## SYNTAX
 
 ```
 New-UDSplitPane [[-Id] <String>] [-Content] <ScriptBlock> [[-Direction] <String>] [[-MinimumSize] <Int32>]
- [[-DefaultSize] <Int32>]
+ [[-DefaultSize] <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates a split pane between two controls that you can adjust the size of.
 
 ## EXAMPLES
 
-### Example 1
+### Vertical Pane
 ```
-PS C:\> {{ Add example code here }}
+New-UDSplitPane -Content {
+    New-UDCard -Title 'Side 1' -Content {}
+    New-UDCard -Title 'Side 2' -Content {}
+}
 ```
 
-{{ Add example description here }}
+Creates a vertical split pane. 
+
+### Horizontal Pane
+```
+New-UDSplitPane -Content {
+    New-UDCard -Title 'Side 1' -Content {}
+    New-UDCard -Title 'Side 2' -Content {}
+} -Direction horizontal
+```
+
+Creates a horizontal split pane. 
 
 ## PARAMETERS
 
 ### -Content
-{{Fill Content Description}}
+The controls to create the split pane for. This is should contain exactly two controls.
 
 ```yaml
 Type: ScriptBlock
@@ -47,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSize
-{{Fill DefaultSize Description}}
+The default size in pixels of the top or left component.
 
 ```yaml
 Type: Int32
@@ -62,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-{{Fill Direction Description}}
+Whether you want a split panel that is vertical or horizontal
 
 ```yaml
 Type: String
@@ -78,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+Id of the split pane. 
 
 ```yaml
 Type: String
@@ -93,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumSize
-{{Fill MinimumSize Description}}
+Minimum size in pixels of the panes. 
 
 ```yaml
 Type: Int32
@@ -107,10 +120,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

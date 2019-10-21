@@ -1,6 +1,6 @@
 ---
-external help file: UniversalDashboard.Community-help.xml
-Module Name: UniversalDashboard.Community
+external help file: UniversalDashboard-help.xml
+Module Name: UniversalDashboard
 online version: https://github.com/ironmansoftware/universal-dashboard/blob/master/src/UniversalDashboard/Help/New-UDTable.md
 schema: 2.0.0
 ---
@@ -15,14 +15,14 @@ Creates a new table of data within the dashboard.
 ### endpoint
 ```
 New-UDTable [-Id <String>] [-Title <String>] -Headers <String[]> [-BackgroundColor <DashboardColor>]
- [-FontColor <DashboardColor>] [-Style <String>] [-Links <Link[]>] -Endpoint <Object> [-AutoRefresh]
+ [-FontColor <DashboardColor>] [-Style <String>] [-Links <Hashtable[]>] -Endpoint <Object> [-AutoRefresh]
  [-RefreshInterval <Int32>] [-ArgumentList <Object[]>] [<CommonParameters>]
 ```
 
 ### content
 ```
 New-UDTable [-Id <String>] [-Title <String>] -Headers <String[]> [-BackgroundColor <DashboardColor>]
- [-FontColor <DashboardColor>] [-Style <String>] [-Links <Link[]>] [-ArgumentList <Object[]>]
+ [-FontColor <DashboardColor>] [-Style <String>] [-Links <Hashtable[]>] [-ArgumentList <Object[]>]
  [-Content <ScriptBlock>] [<CommonParameters>]
 ```
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 Links to display on the bottom of the table. Use New-UDLink to generate a link.
 
 ```yaml
-Type: Link[]
+Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -243,6 +243,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

@@ -1,62 +1,45 @@
 ---
-external help file: UniversalDashboard-help.xml
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version: 
+online version: https://go.microsoft.com/fwlink/?LinkID=217032
 schema: 2.0.0
 ---
 
-# New-UDSpan
+# Select-UDElement
 
 ## SYNOPSIS
-Creates a span of content.
+Selects an element. 
 
 ## SYNTAX
 
 ```
-New-UDSpan [[-Id] <String>] [[-Content] <Object>] [<CommonParameters>]
+Select-UDElement -ID <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates a span of content.
+Selects an element. 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> New-UDSpan -Content {
-    New-UDHeading -Text "Header"
-}
+PS C:\> Select-UDElement -Id 'textbox'
 ```
 
-Creates a header within a span. 
+Selects the text box with the ID 'textbox'
 
 ## PARAMETERS
 
-### -Content
-Content for this span.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Id
-The ID for this span.
+### -ID
+The ID of the element to select.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: 0
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
