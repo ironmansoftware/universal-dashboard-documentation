@@ -2,6 +2,8 @@
 
 PowerShell Universal Dashboard is a web framework for PowerShell developers. Create websites, REST APIs and dashboards with only PowerShell script. The client and server side code for the dashboard is authored completely in PowerShell. Charts, monitors, tables and grids can easily be created with the cmdlets included with the module.The module is cross-platform and will run anywhere Windows PowerShell or PowerShell Core can run.
 
+Want a quick overview of PowerShell Universal Dashboard? Check out this [short video](https://youtu.be/_ckxYyDv4cg).
+
 ![Live data from InfluxDB shown in Universal Dashboard](.gitbook/assets/influxdb.gif)
 
 ## Installation

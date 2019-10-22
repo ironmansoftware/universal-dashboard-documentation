@@ -1,7 +1,7 @@
 # AzureAD
 
 {% hint style="info" %}
-Not available in Community Edition. 
+Not available in Community Edition.
 {% endhint %}
 
 You can use `New-UDAuthenticationMethod` to configure Azure Active Directory authentication.

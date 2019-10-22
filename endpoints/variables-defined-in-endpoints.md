@@ -13,7 +13,7 @@
 
 ## Types available
 
-###  Location
+### Location
 
 ```text
 @{

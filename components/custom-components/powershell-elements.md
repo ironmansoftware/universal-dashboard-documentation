@@ -71,8 +71,6 @@ Set-UDElement -Id "txtName" -Attributes @{
 
 The above call sets the width of the txtName to 100 pixels.
 
-
-
 ```text
 Set-UDElement -Id "txtName" -Content {"Hello World"}
 ```

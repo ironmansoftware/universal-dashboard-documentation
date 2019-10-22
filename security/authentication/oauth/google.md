@@ -1,7 +1,7 @@
 # Google
 
 {% hint style="info" %}
-Not available in Community Edition. 
+Not available in Community Edition.
 {% endhint %}
 
 To enable login with Google OAuth authentication, you can use the New-UDAuthenticationMethod cmdlet to allow users to enter their Google credentials to login to your dashboard.

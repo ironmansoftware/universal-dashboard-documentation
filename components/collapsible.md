@@ -4,7 +4,7 @@ Collapsibles are accordion elements that expand when clicked on. They allow you 
 
 ## Creating a Collapsible
 
-`New-UDCollapsible` can be used to create a new group of collapsible items. `New-UDCollapsibleItem` defines a new collapsible item that can contain any other control. The icon and title are customizable. 
+`New-UDCollapsible` can be used to create a new group of collapsible items. `New-UDCollapsibleItem` defines a new collapsible item that can contain any other control. The icon and title are customizable.
 
 ```text
  New-UDCollapsible -Items {
@@ -15,7 +15,4 @@ Collapsibles are accordion elements that expand when clicked on. They allow you 
 ```
 
 ![Collapsible](../.gitbook/assets/collapsible%20%282%29.gif)
-
-  
-
 

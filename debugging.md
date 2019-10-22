@@ -2,9 +2,9 @@
 
 When developing a dashboard it may become necessary to debug an endpoint. Endpoints are run within the Universal Dashboard server in a different runspace than the runspace you used to start the dashboard. Because of this, it can become difficult to determine an error that may be preventing data from appearing in your dashboard. Terminating errors should result in the UD card displaying the error message but non-terminating errors or unexpected behavior may not be reflected at all in the user interface.
 
-## Logging 
+## Logging
 
-You can enable logging using `Enable-UDLogging`. Logging will output the internals of Universal Dashboard. If you set the log level to `Verbose` you will see all output from all the Endpoint script blocks that you run within Universal Dashboard. 
+You can enable logging using `Enable-UDLogging`. Logging will output the internals of Universal Dashboard. If you set the log level to `Verbose` you will see all output from all the Endpoint script blocks that you run within Universal Dashboard.
 
 ## Debugging Endpoints
 
@@ -34,25 +34,25 @@ If I ran a `Get-Runspace` call, I would see that I have a couple runspaces and o
 
 ### **Debugging in VS Code**
 
-To debug an endpoint in VS Code, you can use the PowerShell Attach to Host Process debug configuration. From the debug pane, create a new debug configuration if you do not have one. 
+To debug an endpoint in VS Code, you can use the PowerShell Attach to Host Process debug configuration. From the debug pane, create a new debug configuration if you do not have one.
 
 ![Adding a launch configuration](.gitbook/assets/image%20%2825%29.png)
 
-Once you have a launch.json file created, you can then setup the configuration to connect to the remote runspace that is currently InBreakpoint. You will need the process ID of the PowerShell process running UD. You can find this by evaluating the `$PID` variable in the PowerShell console. 
+Once you have a launch.json file created, you can then setup the configuration to connect to the remote runspace that is currently InBreakpoint. You will need the process ID of the PowerShell process running UD. You can find this by evaluating the `$PID` variable in the PowerShell console.
 
-The next step is to set the runspaceId to the runspace that is currently InBreakpoint. In the `launch.json` file, edit the PowerShell Attach to Host Process configuration's runspaceId property to contain the runspace ID listed in the console. 
+The next step is to set the runspaceId to the runspace that is currently InBreakpoint. In the `launch.json` file, edit the PowerShell Attach to Host Process configuration's runspaceId property to contain the runspace ID listed in the console.
 
 ![Setting the Runspace ID](.gitbook/assets/image%20%2863%29.png)
 
-After this is done, press F5 to start a debugging session. A select box will allow you to pick the PowerShell process. Select the process running UD. 
+After this is done, press F5 to start a debugging session. A select box will allow you to pick the PowerShell process. Select the process running UD.
 
 ![Selecting the PowerShell Process](.gitbook/assets/image%20%2836%29.png)
 
-After selecting the process, VS Code will break into the endpoint's script block. 
+After selecting the process, VS Code will break into the endpoint's script block.
 
 ![VS Code debugging an Endpoint](.gitbook/assets/image%20%289%29.png)
 
-From here, you'll be able to step through the script, evaluate variables and run any command in the integrated terminal from within the endpoint's runspace. 
+From here, you'll be able to step through the script, evaluate variables and run any command in the integrated terminal from within the endpoint's runspace.
 
 ![Evaluating the $Request Variable](.gitbook/assets/image%20%2864%29.png)
 

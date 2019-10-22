@@ -18,9 +18,9 @@ $Dashboard = New-UDDashboard -Title "Hello, World!" -Content {
 }
 ```
 
-## 3. Start the Dashboard 
+## 3. Start the Dashboard
 
-Start the dashboard. Make sure to select an open port. 
+Start the dashboard. Make sure to select an open port.
 
 ```text
 Start-UDDashboard -Dashboard $Dashboard -Port 10001

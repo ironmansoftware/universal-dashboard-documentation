@@ -22,7 +22,7 @@ New-UDMonitor -Title "Downloads per second" -Type Line -Endpoint {
 }
 ```
 
-Endpoints are PowerShell script blocks that run within the Universal Dashboard server. Components that support server-side data have Endpoint properties that are executed when data is requested by the client. Endpoints are hosted as part of an isolated runspace pool and not in the same execution environment as the PowerShell session that started the dashboard. 
+Endpoints are PowerShell script blocks that run within the Universal Dashboard server. Components that support server-side data have Endpoint properties that are executed when data is requested by the client. Endpoints are hosted as part of an isolated runspace pool and not in the same execution environment as the PowerShell session that started the dashboard.
 
 ## Pages
 

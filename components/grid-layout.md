@@ -1,8 +1,8 @@
 # Grid Layout
 
-The `New-UDGridLayout` provides the ability to layout controls on your UD page using JSON instead of deeply nesting controls in `New-UDRow` and `New-UDColumn` controls. It also provides the ability to drag and drop the layout of the page. This eliminates the need to write as much code and provides a much cleaner looking dashboard. 
+The `New-UDGridLayout` provides the ability to layout controls on your UD page using JSON instead of deeply nesting controls in `New-UDRow` and `New-UDColumn` controls. It also provides the ability to drag and drop the layout of the page. This eliminates the need to write as much code and provides a much cleaner looking dashboard.
 
-## Getting Started with New-UDGridLayout 
+## Getting Started with New-UDGridLayout
 
 To use `New-UDGridLayout`, simply put components you'd like to layout in the `-Content` script block. It is required that all components you wish to layout have an ID set.
 
@@ -11,18 +11,18 @@ New-UDGridLayout -Content {
     New-UDCard -Title "Card 1" -Id 'Card1' 
     New-UDCard -Title "Card 2" -Id 'Card2'
     New-UDCard -Title "Card 3" -Id 'Card3'
-} 
+}
 ```
 
-When no layout is provided, the cards will just be stacked on the page. 
+When no layout is provided, the cards will just be stacked on the page.
 
 ![](../.gitbook/assets/image%20%2840%29.png)
 
-You can move the cards using the handles in the top right corner of each card. This allows you to resize and move each card. 
+You can move the cards using the handles in the top right corner of each card. This allows you to resize and move each card.
 
 ![](../.gitbook/assets/image%20%2822%29.png)
 
-You can use the `-Persist` cmdlet to store the layout in the browser's local storage. 
+You can use the `-Persist` cmdlet to store the layout in the browser's local storage.
 
 ## Saving Layouts
 
@@ -30,7 +30,7 @@ You can use the `-Persist` cmdlet to store the layout in the browser's local sto
 Design mode is only available in the Enterprise Version
 {% endhint %}
 
-The layout JSON format is documented on the [React Grid Layout GitHub](https://github.com/strml/react-grid-layout) repository. In order to avoid generating this JSON yourself, you can use the design mode of Universal Dashboard. To do this, specify the `-Design` parameter of `Start-UDDashboard`. 
+The layout JSON format is documented on the [React Grid Layout GitHub](https://github.com/strml/react-grid-layout) repository. In order to avoid generating this JSON yourself, you can use the design mode of Universal Dashboard. To do this, specify the `-Design` parameter of `Start-UDDashboard`.
 
 ```text
 $Dashboard = New-UDDashboard -Title "New-UDGridLayout" -Content {
@@ -43,7 +43,7 @@ $Dashboard = New-UDDashboard -Title "New-UDGridLayout" -Content {
 Start-UDDashboard -Dashboard $Dashboard -Port 10001 -Design
 ```
 
-Now, when you start your dashboard, a floating action button in the bottom right of the dashboard will be shown. Adjust your page as you see fit and then click the Copy Layout button. This will store the JSON in the clipboard which you can copy to your script. 
+Now, when you start your dashboard, a floating action button in the bottom right of the dashboard will be shown. Adjust your page as you see fit and then click the Copy Layout button. This will store the JSON in the clipboard which you can copy to your script.
 
 ![Copy Layout Button](../.gitbook/assets/image%20%2842%29.png)
 
@@ -60,7 +60,7 @@ $Dashboard = New-UDDashboard -Title "New-UDGridLayout" -Content {
 Start-UDDashboard -Dashboard $Dashboard -Port 10001 -Design
 ```
 
-Once you are satisfied with your layout, you can remove the design switch.The controls will be laid out as you have defined and the handles will no longer be visible. 
+Once you are satisfied with your layout, you can remove the design switch.The controls will be laid out as you have defined and the handles will no longer be visible.
 
 ![](../.gitbook/assets/image%20%2816%29.png)
 

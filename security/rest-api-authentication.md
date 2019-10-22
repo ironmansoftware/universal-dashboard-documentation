@@ -3,7 +3,7 @@
 Updated: 3/3/2018 Required Version: 1.5.0
 
 {% hint style="info" %}
-Not available in Community Edition. 
+Not available in Community Edition.
 {% endhint %}
 
 ## JSON Web Tokens

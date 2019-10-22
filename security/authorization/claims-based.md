@@ -1,7 +1,7 @@
 # Claims-Based
 
 {% hint style="info" %}
-Not available in Community Edition. 
+Not available in Community Edition.
 {% endhint %}
 
 Claims-based authorization allows for even more control of which users have access to which results. You can create a new claim policy with the `New-UDAuthorizationPolicy` cmdlet.
@@ -30,9 +30,9 @@ This works well with authentication methods that provide claims, like Azure Acti
 
 ## Hiding Controls based on Policies
 
-You can use the `Get-UDAuthorizationPolicy` cmdlet to return the list of policies that a user has been granted. 
+You can use the `Get-UDAuthorizationPolicy` cmdlet to return the list of policies that a user has been granted.
 
-```
+```text
 New-UDCard -Title "Authorized Card" -Endpoint {
     $Policies = Get-UDAuthorizationPolicy 
     if ($Policies -contains "Admin")
@@ -41,3 +41,4 @@ New-UDCard -Title "Authorized Card" -Endpoint {
     }
 }
 ```
+

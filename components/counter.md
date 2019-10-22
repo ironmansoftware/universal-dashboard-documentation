@@ -1,6 +1,6 @@
 # Counter
 
-Counters allow you to show numbers in a card with icons and formatting. 
+Counters allow you to show numbers in a card with icons and formatting.
 
 ## Creating a basic counter
 

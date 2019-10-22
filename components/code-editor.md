@@ -5,14 +5,14 @@ description: Documentation for the Code Editor component.
 # Code Editor
 
 {% hint style="info" %}
-This component requires a [Universal Dashboard Enterprise License](https://ironmansoftware.com/powershell-universal-dashboard/). 
+This component requires a [Universal Dashboard Enterprise License](https://ironmansoftware.com/powershell-universal-dashboard/).
 {% endhint %}
 
 ![Code Editor Control in Universal Dashboard.](../.gitbook/assets/image%20%2853%29.png)
 
-## Installation 
+## Installation
 
-The Code Editor component is published to the PowerShell Gallery. You can install it with the following command line. 
+The Code Editor component is published to the PowerShell Gallery. You can install it with the following command line.
 
 ```text
 Install-Module UniversalDashboard.CodeEditor -AllowPrerelease

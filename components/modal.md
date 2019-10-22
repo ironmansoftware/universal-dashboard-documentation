@@ -1,10 +1,10 @@
 # Modal
 
-Modals are popup windows that appear above the website. You can show a modal from an endpoint using `Show-UDModal`. 
+Modals are popup windows that appear above the website. You can show a modal from an endpoint using `Show-UDModal`.
 
 ## Displaying Modals
 
-In the below example, when you click the button a modal will be shown that contains the text specified. You can place any UD controls within the header and content script blocks. 
+In the below example, when you click the button a modal will be shown that contains the text specified. You can place any UD controls within the header and content script blocks.
 
 ```text
 New-UDButton -Text "Show Modal" -OnClick {
@@ -14,7 +14,7 @@ New-UDButton -Text "Show Modal" -OnClick {
 }
 ```
 
-Clicking the button will bring up a modal that looks like this. 
+Clicking the button will bring up a modal that looks like this.
 
 ![Modal with a Heading in the Content](../.gitbook/assets/image%20%2858%29.png)
 
@@ -34,9 +34,9 @@ New-UDButton -Text "Show Modal" -OnClick {
 
 ## Adjusting Modal Size
 
-You can adjust the height and width of a modal using the `-Height` and `-Width` parameters of `Show-UDModal`. These parameters accept any valid HTML\CSS sizing such as px or em. 
+You can adjust the height and width of a modal using the `-Height` and `-Width` parameters of `Show-UDModal`. These parameters accept any valid HTML\CSS sizing such as px or em.
 
-Here is an example of setting a modal to a certain pixel size. 
+Here is an example of setting a modal to a certain pixel size.
 
 ```text
 New-UDButton -Text "Show Modal" -OnClick {
@@ -50,7 +50,7 @@ New-UDButton -Text "Show Modal" -OnClick {
 
 ## Color
 
-You can change the color of a modal using the `-BackgroundColor` and `-FontColor` parameters of `Show-UDModal`. 
+You can change the color of a modal using the `-BackgroundColor` and `-FontColor` parameters of `Show-UDModal`.
 
 ```text
 New-UDButton -Text "Show Modal" -OnClick {

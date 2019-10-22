@@ -1,7 +1,7 @@
 # Role-Based
 
 {% hint style="info" %}
-Not available in Community Edition. 
+Not available in Community Edition.
 {% endhint %}
 
 You can setup roll-based authorization by specifying the role a user is granted during login with `New-UDAuthenticationResult`.

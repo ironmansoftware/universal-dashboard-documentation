@@ -4,7 +4,7 @@ Universal Dashboard uses the [Font Awesome](https://fontawesome.com/icons?from=i
 
 ## Basic Icon
 
-You can specify an icon name. Tab complete is available for icon names. 
+You can specify an icon name. Tab complete is available for icon names.
 
 ```text
 New-UDIcon -Icon rocket -Size 5x
@@ -15,7 +15,7 @@ New-UDIcon -Icon apple -Size 5x
 
 ![](../.gitbook/assets/image%20%2826%29.png)
 
-## Size 
+## Size
 
 Many icon sizes are available. You can create larger icons by specifying sizes from 2x to 10x.
 
@@ -27,9 +27,9 @@ Many icon sizes are available. You can create larger icons by specifying sizes f
 
 ![Icon Sizes](../.gitbook/assets/image%20%2849%29.png)
 
-## Colors 
+## Colors
 
-You can use standard HTML and color names for colors. 
+You can use standard HTML and color names for colors.
 
 ```text
 New-UDIcon -Icon socks -Size 5x -Color red
@@ -39,7 +39,7 @@ New-UDIcon -Icon socks -Size 5x -Color red
 
 ## Spinning Icons
 
-You can create spinning icons. These can be useful as loading icons. 
+You can create spinning icons. These can be useful as loading icons.
 
 ```text
 New-UDIcon -Spin -Icon linux -Size 5x

@@ -2,9 +2,7 @@
 
 To run a dashboard in IIS, you will need to configure an application pool and website just as you would with any other IIS web application. IIS requires that the [.NET Core Runtime and Hosting Bundle ](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.5-windows-hosting-bundle-installer)is installed to run Universal Dashboard. Once installed, you will have to configure your website for Universal Dashboard.
 
-Note: You will need to:
-Install.Net 4.72 on the computer hosting IIS
-Enable the WebSocket Protocol feature of IIS in order to use features of Universal Dashboard. Event handlers, such as OnClick, require this feature. The following cmdlets take advantage of WebSockets. 
+Note: You will need to: Install.Net 4.72 on the computer hosting IIS Enable the WebSocket Protocol feature of IIS in order to use features of Universal Dashboard. Event handlers, such as OnClick, require this feature. The following cmdlets take advantage of WebSockets.
 
 * Add-UDElement
 * Sync-UDElement
@@ -45,13 +43,13 @@ Navigate to the IIS website in your browser and you should see Universal Dashboa
 Requires Universal Dashboard 2.3 or later
 {% endhint %}
 
-To create a nested IIS site, follow the same steps as above but nest your UD site beneath another site. You will have to make one change to the UD installation in this type of configuration. Within the UD folder, find the `index.html` file in the `client` folder. 
+To create a nested IIS site, follow the same steps as above but nest your UD site beneath another site. You will have to make one change to the UD installation in this type of configuration. Within the UD folder, find the `index.html` file in the `client` folder.
 
 Within this file, change the `base` 's `href` attribute to match the relative URL of your UD installation. If you wanted to have the URL resolve to `http://myServer:8080/dashboards/dashboard`you would set the value of the `href` attribute to `/dashboards/dashboard/`.
 
 For the URL of the two script files, you will need to remove the preceding `/` .
 
-An example `index.html` looks like this. 
+An example `index.html` looks like this.
 
 ```text
 <!DOCTYPE html>
@@ -73,6 +71,6 @@ An example `index.html` looks like this.
 The license should be named license.lic and placed in the `net472` folder within `wwwroot`. This will ensure that the license is persistent throughout restarts.
 
 ## Troubleshooting
-Check the Application Log in the Event Viewer for .NET runtime errors
-Universal Dashboard also writes to the Applicaiton Event log
+
+Check the Application Log in the Event Viewer for .NET runtime errors Universal Dashboard also writes to the Applicaiton Event log
 
