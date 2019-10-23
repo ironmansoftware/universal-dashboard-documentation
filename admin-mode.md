@@ -21,7 +21,7 @@ Start-UDDashboard -Port 10000 -Dashboard $Dashboard -AdminMode
 
 Once enabled, any user visiting the site will have access to the admin mode controls by using the fab button located in the bottom right of the web site. 
 
-![](.gitbook/assets/adminmode.png)
+![](.gitbook/assets/adminmode.PNG)
 
 # Admin Terminal 
 
@@ -29,11 +29,11 @@ The Admin Terminal is an in-browser terminal that you can use to execute PowerSh
 
 You can open the Admin Terminal by clicking the terminal icon within the Admin Tools. 
 
-![](.gitbook/assets/open-admin-terminal.png)
+![](.gitbook/assets/open-admin-terminal.PNG)
 
 The terminal will open within a modal. You can type commands within the text field and it will issue them within the UD runspaces. Command completetion is not available within the terminal. Be careful when exposing the terminal to any user as there is no limit to what commands they can run. 
 
-![](.gitbook/assets/admin-terminal.png)
+![](.gitbook/assets/admin-terminal.PNG)
 
 # Copying Grid Layout
 
@@ -43,7 +43,7 @@ See the [Grid Layout documentation](./components/grid-layout.md) to learn how to
 
 The diagnostics page can be accessed by clicking the chart button within the Admin Tools. 
 
-![](.gitbook/assets/open-diagnostics.png)
+![](.gitbook/assets/open-diagnostics.PNG)
 
 The diagnostics pages shows lots of information about the currently running dashboard. This includes the number of sessions, endpoints, runspaces and memory usage. There is additional information about the variables currently in the cache, the endpoints that have been defined and registered with UD as well as any running sessions that you have within your dashboard. 
 
