@@ -27,10 +27,10 @@ You can use the `-Persist` cmdlet to store the layout in the browser's local sto
 ## Saving Layouts
 
 {% hint style="info" %}
-Design mode is only available in the Enterprise Version
+AdminMode mode is only available in the Enterprise Version
 {% endhint %}
 
-The layout JSON format is documented on the [React Grid Layout GitHub](https://github.com/strml/react-grid-layout) repository. In order to avoid generating this JSON yourself, you can use the design mode of Universal Dashboard. To do this, specify the `-Design` parameter of `Start-UDDashboard`.
+The layout JSON format is documented on the [React Grid Layout GitHub](https://github.com/strml/react-grid-layout) repository. In order to avoid generating this JSON yourself, you can use the admin mode mode of Universal Dashboard. To do this, specify the `-AdminMode` parameter of `Start-UDDashboard`.
 
 ```text
 $Dashboard = New-UDDashboard -Title "New-UDGridLayout" -Content {
@@ -40,7 +40,7 @@ $Dashboard = New-UDDashboard -Title "New-UDGridLayout" -Content {
         New-UDCard -Title "Card 3" -Id 'Card3'
     } 
 } 
-Start-UDDashboard -Dashboard $Dashboard -Port 10001 -Design
+Start-UDDashboard -Dashboard $Dashboard -Port 10001 -AdminMode
 ```
 
 Now, when you start your dashboard, a floating action button in the bottom right of the dashboard will be shown. Adjust your page as you see fit and then click the Copy Layout button. This will store the JSON in the clipboard which you can copy to your script.
@@ -57,10 +57,10 @@ $Dashboard = New-UDDashboard -Title "New-UDGridLayout" -Content {
         New-UDCard -Title "Card 3" -Id 'Card3'
     } 
 } 
-Start-UDDashboard -Dashboard $Dashboard -Port 10001 -Design
+Start-UDDashboard -Dashboard $Dashboard -Port 10001 -AdminMode
 ```
 
-Once you are satisfied with your layout, you can remove the design switch.The controls will be laid out as you have defined and the handles will no longer be visible.
+Once you are satisfied with your layout, you can remove the AdminMe switch.The controls will be laid out as you have defined and the handles will no longer be visible.
 
 ![](../.gitbook/assets/image%20%2816%29.png)
 

@@ -123,3 +123,22 @@ New-UDEndpoint -Url "project" -Method "GET" -Endpoint {
 }
 ```
 
+## Uploading Files 
+
+REST APIs support uploading files. You need to enable file uploads via the `New-UDEndpoint` cmdlet. Be careful when accepting files as it can pose a security risk. The file is provided to an endpoint as an array of bytes that you can then output and process how ever you like. You should accept a `$File` parameter to gain access to the upload byte array. 
+
+In this example, we upload a file and save it to disk using `Set-Content`.
+
+```
+ New-UDEndpoint -Url "project" -Method "POST" -AcceptFileUpload -Endpoint {
+    param($File)
+    $filepath = "C:\temp\dev\testdash\"
+    $filename = New-Item -Path $filepath -Name "$(get-random).txt"
+
+    if (!($File)) {
+        throw "file is empty."
+    }
+
+    Set-Content -Path $filename -Value $File -Encoding Byte
+ }
+```

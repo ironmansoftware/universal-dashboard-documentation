@@ -113,4 +113,5 @@
   * [v1.2.2](updates/v1.2.2.md)
 * [How to](how-to/README.md)
   * [Get the user email address when using OAuth](how-to/get-the-user-email-address-when-using-oauth.md)
+* [Docs Changelog](CHANGELOG.md)
 
