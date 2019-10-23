@@ -57,6 +57,7 @@
   * [Scheduled Endpoints](endpoints/scheduled-endpoints.md)
   * [Variables Defined in Endpoints](endpoints/variables-defined-in-endpoints.md)
 * [REST APIs](rest-apis.md)
+* [Admin Mode](admin-mode.md)
 * [Debugging](debugging.md)
 * [Security](security/README.md)
   * [Authentication](security/authentication/README.md)
