@@ -8,7 +8,7 @@ Install-Module UniversalDashboard.Forge
 
 UDForge accepts either a ps1 file or path to include in the desktop app. You can specify the version of PowerShell to run, icons to use, name of the application and output path. 
 
-![](.gitbook/assets/forge.gif)
+![](./../.gitbook/assets/forge.gif)
 
 ## Requirements
 
