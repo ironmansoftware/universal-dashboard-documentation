@@ -40,3 +40,10 @@ $Request = Invoke-WebRequest https://localhost:10002/dashboard
 $Request.StatusCode | Should be 200
 ```
 
+### Listening Address
+
+By default, the web server will listen on all available addresses. You can adjust the listen addresses by using the `-ListenAddress` parameter and passing in a valid IP Address. This is helpful when building desktop apps, like `UDForge`, that should not open a web server to listen beyond the local machine. 
+
+```
+Start-UDDashboard -Port 10000 -ListenAddress '127.0.0.1'
+```
