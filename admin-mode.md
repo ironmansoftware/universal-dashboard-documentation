@@ -57,7 +57,7 @@ The licensing page contains information about the currently installed license. T
 
 # Authorization
 
-If you want to enable admin mode on your production systems, you will want to employ authorization policies for the feature. You can select which authorization policy enforces the ability to use admin mode by defining the `-AdminModeAuthorizationPolicy` parameter on `Start-UDDashboard`. Only users that meet this authorization policy will be granted access to Admin Mode. 
+If you want to enable admin mode on your production systems, you will want to employ [authorization policies](./security/authorization/claims-based.md) for the feature. You can select which authorization policy enforces the ability to use admin mode by defining the `-AdminModeAuthorizationPolicy` parameter on `Start-UDDashboard`. Only users that meet this authorization policy will be granted access to Admin Mode. 
 
 ```
 $AuthorizationPolicy = New-UDAuthorizationPolicy -Name 'Admin' -Endpoint {
