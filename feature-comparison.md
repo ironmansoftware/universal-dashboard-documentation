@@ -35,4 +35,3 @@ Universal Dashboard Community edition is open source and available for free. Uni
 | Diagnostics Page | ❌ | ✅ |
 | Licensing Page | ❌ | ✅ |
 
-

@@ -25,3 +25,4 @@ Universal Dashboard also features a free Community Edition. This edition is [ope
 For a full list of the differences between Community and Premium, visit the [Feature Comparison](feature-comparison.md) page.
 
 ![Live data from InfluxDB shown in Universal Dashboard](.gitbook/assets/influxdb.gif)
+

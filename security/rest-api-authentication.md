@@ -86,9 +86,9 @@ $users = Invoke-RestMethod -Uri http://localhost:10001/api/user/me -Headers @{ A
 $Token = Grant-UDJsonWebToken -UserName 'Adam' -Expiry (Get-Date).AddDays(10)
 ```
 
-Web tokens can include any set of information that you want to include with the user's token by specifying a hashtable and providing it to the `-Payload` parameter. You can then use the `ConvertTo-UDJsonWebToken` to convert a string representation of a JSON web token to an object. 
+Web tokens can include any set of information that you want to include with the user's token by specifying a hashtable and providing it to the `-Payload` parameter. You can then use the `ConvertTo-UDJsonWebToken` to convert a string representation of a JSON web token to an object.
 
-```
+```text
 PS F:\universal-dashboard-documentation> $Token = Grant-UDJsonWebToken -Identity 'Adam' -Payload @{Account = 'Billing'}
 PS F:\universal-dashboard-documentation> ConvertTo-UDJsonWebToken -Token $Token
 

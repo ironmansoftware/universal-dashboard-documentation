@@ -17,11 +17,11 @@ Note: You will need to: Install.Net 4.72 on the computer hosting IIS Enable the 
 
 For this example we will look at the Default Web Site. In IIS Manager, right click on your Web Site and click Explore.
 
-![](../.gitbook/assets/explore-iis.png)
+![](../../.gitbook/assets/explore-iis.png)
 
 Copy the entire contents of the UniversalDashboard module to the wwwroot of the Default Web Site.
 
-![](../.gitbook/assets/copy-iis.png)
+![](../../.gitbook/assets/copy-iis.png)
 
 Create a `dashboard.ps1` file and place it in the `wwwroot` folder. The dashboard should contain a dashboard definition and a call to `Start-UDDashboard` with the `-Wait` parameter specified.
 
@@ -35,7 +35,7 @@ Create a `dashboard.ps1` file and place it in the `wwwroot` folder. The dashboar
 
 Navigate to the IIS website in your browser and you should see Universal Dashboard running.
 
-![](../.gitbook/assets/iis-running.png)
+![](../../.gitbook/assets/iis-running.png)
 
 ## Creating Nested IIS Sites
 

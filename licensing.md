@@ -12,6 +12,14 @@ This page does not apply to Universal Dashboard Community Edition
 Set-UDLicense -License (Get-Content .\license.txt -Raw)
 ```
 
+## Install via Environment Variable
+
+If you set the `%UDLICENSE%` environment variable, UD will load the license from it. This is good for cloud-based deployments. 
+
+```text
+$Env:UDLICENSE = (Get-Content .\license.txt -Raw)
+```
+
 ## Install via ApplicationData deployment
 
 One of the places that UD will attempt to load a license is from the ApplicationData folder. This folder is different depending on the operating system you are running. You will have to create the following folder and file structure. The contents of `license.lic` should be the license contents you received after purchase.
