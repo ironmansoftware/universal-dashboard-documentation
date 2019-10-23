@@ -72,6 +72,7 @@
   * [REST API Authentication](security/rest-api-authentication.md)
 * [REST APIs](rest-apis.md)
 * [Utilities](./utilities/README.md)
+  * [UDForge](./utilities/udforge.md)
 * [Web Server](./webserver/README.md)
   * [Published Folders](published-folders.md)
   * [Running Dashboards](running-dashboards/README.md)
