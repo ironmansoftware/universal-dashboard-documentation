@@ -54,3 +54,21 @@ The diagnostics pages shows lots of information about the currently running dash
 The licensing page contains information about the currently installed license. This includes when the license will expire and how many dashboards the license is valid for. 
 
 ![](.gitbook/assets/licensing-page.png)
+
+# Authorization
+
+If you want to enable admin mode on your production systems, you will want to employ authorization policies for the feature. You can select which authorization policy enforces the ability to use admin mode by defining the `-AdminModeAuthorizationPolicy` parameter on `Start-UDDashboard`. Only users that meet this authorization policy will be granted access to Admin Mode. 
+
+```
+$AuthorizationPolicy = New-UDAuthorizationPolicy -Name 'Admin' -Endpoint {
+    param($User)
+
+    $User.Identity.Name -eq 'Admin'
+}
+
+$Dashboard = New-UDDashboard -Title "Admin" -Content {} -LoginPage (
+    New-UDLoginPage -AuthenticationMethod $Methods -AuthorizationPolicy $AuthorizationPolicy
+)
+
+Start-UDDashboard -Port 10000 -Dashboard $Dashboard -AdminMode -AdminModeAuthorizationPolicy 'Admin'
+```
