@@ -16,11 +16,11 @@ New-UDGridLayout -Content {
 
 When no layout is provided, the cards will just be stacked on the page.
 
-![](../.gitbook/assets/image%20%2841%29.png)
+![](../.gitbook/assets/image%20%2842%29.png)
 
 You can move the cards using the handles in the top right corner of each card. This allows you to resize and move each card.
 
-![](../.gitbook/assets/image%20%2822%29.png)
+![](../.gitbook/assets/image%20%2823%29.png)
 
 You can use the `-Persist` cmdlet to store the layout in the browser's local storage.
 
@@ -45,7 +45,7 @@ Start-UDDashboard -Dashboard $Dashboard -Port 10001 -AdminMode
 
 Now, when you start your dashboard, a floating action button in the bottom right of the dashboard will be shown. Adjust your page as you see fit and then click the Copy Layout button. This will store the JSON in the clipboard which you can copy to your script.
 
-![Copy Layout Button](../.gitbook/assets/image%20%2843%29.png)
+![Copy Layout Button](../.gitbook/assets/image%20%2844%29.png)
 
 To include the layout in your script, place the JSON string as a value to the `-Layout` property of `New-UDGridLayout`.
 
@@ -62,5 +62,5 @@ Start-UDDashboard -Dashboard $Dashboard -Port 10001 -AdminMode
 
 Once you are satisfied with your layout, you can remove the AdminMe switch.The controls will be laid out as you have defined and the handles will no longer be visible.
 
-![](../.gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/image%20%2817%29.png)
 

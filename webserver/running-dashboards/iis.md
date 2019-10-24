@@ -74,5 +74,37 @@ The license should be named license.lic and placed in the `net472` folder within
 
 Check the Application Log in the Event Viewer for .NET runtime errors Universal Dashboard also writes to the Application Event log
 
-![Error when starting dashboard in IIS](../../.gitbook/assets/image%20%2840%29.png)
+![Error when starting dashboard in IIS](../../.gitbook/assets/image%20%2841%29.png)
+
+### Logging
+
+You can enable logging by specifying a path in the `web.config` file. You can change the `stdoutLogFile` path to a location that IIS has the permissions to write to. You can then add `Enable-UDLogging` to the top of your `dashboard.ps1` file to turn on console logging for Universal Dashboard. This is a complete `web.config` example
+
+```text
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <!--
+    Configure your application settings in appsettings.json. Learn more at http://go.microsoft.com/fwlink/?LinkId=786380
+  -->
+  <system.webServer>
+    <security>
+      <!-- <requestFiltering removeServerHeader ="true" /> -->
+    </security>
+    <handlers>
+      <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />
+    </handlers>
+    <aspNetCore processPath=".\net472\universaldashboard.server.exe" arguments="" stdoutLogEnabled="true" stdoutLogFile="C:\LogFiles\stdout" forwardWindowsAuthToken="false" />
+    <httpProtocol>
+      <customHeaders>
+        <remove name="X-Powered-By" />
+      </customHeaders>
+    </httpProtocol>  
+  </system.webServer>
+</configuration>
+
+```
+
+Log files will then be written and timestamped to the directory and name you select. 
+
+![](../../.gitbook/assets/image%20%289%29.png)
 

@@ -21,5 +21,5 @@ $To = Get-Date
 New-UDNivoChart -Calendar -Data $Data -From $From -To $To -Height 500 -Width 1000 -MarginTop 50 -MarginRight 130 -MarginBottom 50 -MarginLeft 60
 ```
 
-![Simple Calendar Chart](../../../.gitbook/assets/image%20%2815%29.png)
+![Simple Calendar Chart](../../../.gitbook/assets/image%20%2816%29.png)
 
