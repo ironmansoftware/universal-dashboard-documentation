@@ -8,7 +8,7 @@ description: Documentation for the Code Editor component.
 This component requires a [Universal Dashboard Enterprise License](https://ironmansoftware.com/powershell-universal-dashboard/). 
 {% endhint %}
 
-![Code Editor Control in Universal Dashboard.](../.gitbook/assets/image%20%2854%29.png)
+![Code Editor Control in Universal Dashboard.](../.gitbook/assets/image%20%2855%29.png)
 
 ## Installation 
 
