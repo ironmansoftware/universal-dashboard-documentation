@@ -38,7 +38,7 @@ Once you have a launch.json file created, you can then setup the configuration t
 
 The next step is to set the runspaceId to the runspace that is currently InBreakpoint. In the `launch.json` file, edit the PowerShell Attach to Host Process configuration's runspaceId property to contain the runspace ID listed in the console. 
 
-![Setting the Runspace ID](.gitbook/assets/image%20%2863%29.png)
+![Setting the Runspace ID](.gitbook/assets/image%20%2864%29.png)
 
 After this is done, press F5 to start a debugging session. A select box will allow you to pick the PowerShell process. Select the process running UD. 
 
@@ -50,7 +50,7 @@ After selecting the process, VS Code will break into the endpoint's script block
 
 From here, you'll be able to step through the script, evaluate variables and run any command in the integrated terminal from within the endpoint's runspace. 
 
-![Evaluating the $Request Variable](.gitbook/assets/image%20%2864%29.png)
+![Evaluating the $Request Variable](.gitbook/assets/image%20%2865%29.png)
 
 **Attaching via the Console**
 
