@@ -71,6 +71,7 @@
   * [Login Pages](security/login-pages.md)
   * [REST API Authentication](security/rest-api-authentication.md)
 * [REST APIs](rest-apis.md)
+* [UDStudio](udstudio/README.md)
 * [Utilities](utilities/README.md)
   * [UDForge](utilities/udforge.md)
 * [Web Server](webserver/README.md)

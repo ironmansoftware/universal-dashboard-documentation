@@ -1,5 +1,9 @@
 # Docs Changelog
 
+10/24/2019
+
+* Added [UDStudio page](./udstudio/README.md)
+
 10/23/2019
 
 * Added Set via Environment Variable section to the [Licensing ](licensing.md)page.
