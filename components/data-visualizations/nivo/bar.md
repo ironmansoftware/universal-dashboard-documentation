@@ -61,7 +61,7 @@ New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'sta
 
 ```
 
-![Bar chart with multiple data keys](../../../.gitbook/assets/image%20%2827%29.png)
+![Bar chart with multiple data keys](../../../.gitbook/assets/image%20%2828%29.png)
 
 ## Grouped Layout
 
@@ -95,7 +95,7 @@ New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'sta
         
 ```
 
-![Grouped bar chart](../../../.gitbook/assets/image%20%2810%29.png)
+![Grouped bar chart](../../../.gitbook/assets/image%20%2811%29.png)
 
 ## Horizontal Layout
 
