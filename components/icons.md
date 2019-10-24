@@ -25,7 +25,7 @@ Many icon sizes are available. You can create larger icons by specifying sizes f
 }
 ```
 
-![Icon Sizes](../.gitbook/assets/image%20%2849%29.png)
+![Icon Sizes](../.gitbook/assets/image%20%2850%29.png)
 
 ## Colors 
 
