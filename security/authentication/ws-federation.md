@@ -14,13 +14,13 @@ You first need to configure ADFS or AzureAD to support Universal Dashboard.
 
 These are the current Federation Service settings for our domain.
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2848%29.png)
 
 ### Relying Parties
 
 You need to configure the following Relying Parties settings for Universal Dashboard. On the Identifiers tab, provide the URL to the Universal Dashboard website. HTTPS is required.
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
 On the Endpoints tab. You'll need to include a WS-Federation Passive Endpoint. Make sure to include the trailing slash.
 
@@ -28,7 +28,7 @@ On the Endpoints tab. You'll need to include a WS-Federation Passive Endpoint. M
 
 Finally, you'll need to configure a Claim Issuance Policy for the Relying Party Trust. Create an Issuance Transform Rule that sends at least the Name and Name ID to Universal Dashboard.
 
-![](../../.gitbook/assets/image%20%2860%29.png)
+![](../../.gitbook/assets/image%20%2861%29.png)
 
 You can configure additional claims you'd like to use if you are using Claims-based Authorization in Universal Dashboard.
 

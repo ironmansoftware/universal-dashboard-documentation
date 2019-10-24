@@ -72,5 +72,7 @@ The license should be named license.lic and placed in the `net472` folder within
 
 ## Troubleshooting
 
-Check the Application Log in the Event Viewer for .NET runtime errors Universal Dashboard also writes to the Applicaiton Event log
+Check the Application Log in the Event Viewer for .NET runtime errors Universal Dashboard also writes to the Application Event log
+
+![Error when starting dashboard in IIS](../../.gitbook/assets/image%20%2840%29.png)
 
