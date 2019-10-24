@@ -15,7 +15,7 @@ $Icon = New-UDMuIcon -Icon 'user' -Size sm -Style @{color = '#fff'}
 New-UDMuChip -Label "Demo User" -Icon $Icon
 ```
 
-![Chip with Icon](../../.gitbook/assets/image%20%2850%29.png)
+![Chip with Icon](../../.gitbook/assets/image%20%2851%29.png)
 
 ## OnClick
 
