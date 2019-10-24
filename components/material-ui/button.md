@@ -6,7 +6,7 @@
 New-UDMuButton -Text 'Submit' -Variant contained
 ```
 
-![Contained Button](../../.gitbook/assets/image%20%2845%29.png)
+![Contained Button](../../.gitbook/assets/image%20%2846%29.png)
 
 ## Flat
 
@@ -30,7 +30,7 @@ New-UDMuButton -Text 'Submit' -Variant outlined
 New-UDMuButton -Text 'Buy' -Variant contained -Icon (New-UDMuIcon -Icon bitcoin -Size '4x')
 ```
 
-![Icon Button](../../.gitbook/assets/image%20%2862%29.png)
+![Icon Button](../../.gitbook/assets/image%20%2863%29.png)
 
 ## Full Width
 
@@ -38,7 +38,7 @@ New-UDMuButton -Text 'Buy' -Variant contained -Icon (New-UDMuIcon -Icon bitcoin 
 New-UDMuButton -Text 'Submit' -Variant contained -FullWidth
 ```
 
-![Full Width Button](../../.gitbook/assets/image%20%2846%29.png)
+![Full Width Button](../../.gitbook/assets/image%20%2847%29.png)
 
 ## OnClick Handler
 
