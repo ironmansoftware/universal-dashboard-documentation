@@ -107,4 +107,5 @@ You can enable logging by specifying a path in the `web.config` file. You can ch
 Log files will then be written and timestamped to the directory and name you select. 
 
 ![](../../.gitbook/assets/image%20%289%29.png)
+Check the Application Log in the Event Viewer for .NET runtime errors Universal Dashboard also writes to the Applicaiton Event log
 
