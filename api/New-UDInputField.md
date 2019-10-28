@@ -1,6 +1,7 @@
 ---
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -142,7 +143,7 @@ The type of field.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Accepted values: textbox, checkbox, select, radioButtons, password, textarea, switch, date, file
+Accepted values: textbox, checkbox, select, radioButtons, password, textarea, switch, date, file, time, binaryFile
 
 Required: False
 Position: Named
@@ -180,6 +181,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

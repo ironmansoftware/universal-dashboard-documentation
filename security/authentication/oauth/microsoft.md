@@ -1,7 +1,7 @@
 # Microsoft
 
 {% hint style="info" %}
-Not available in Community Edition. 
+Not available in Community Edition.
 {% endhint %}
 
 To enable login with Microsoft OAuth authentication, you can use the New-UDAuthenticationMethod cmdlet to allow users to enter their Microsoft credentials to login to your dashboard.

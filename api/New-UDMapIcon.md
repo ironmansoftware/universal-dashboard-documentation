@@ -14,7 +14,7 @@ Creates a map icon for a marker.
 
 ```
 New-UDMapIcon [-Url] <String> [[-Height] <Int32>] [[-Width] <Int32>] [[-AnchorX] <Int32>] [[-AnchorY] <Int32>]
- [[-PopupAnchorX] <Int32>] [[-PopupAnchorY] <Int32>]
+ [[-PopupAnchorX] <Int32>] [[-PopupAnchorY] <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -136,10 +136,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

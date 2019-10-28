@@ -6,7 +6,7 @@ This component is only available in [Premium](https://ironmansoftware.com/produc
 
 UDMap is a component to display interactive maps with all kinds of customizations. You’ll be able to add markers, draw routes and other polygons, toggle layers and even create heatmaps.
 
-#### Map Features
+## Map Features
 
 To create a map, you’ll use the `New-UDMap` cmdlet and then define different features of that map. Maps support interactively adding and removing features so you can integrate into other Universal Dashboard components. Below are some of the components available in a map.
 
@@ -151,6 +151,4 @@ The UDMap components support many of the standard UD interactivity cmdlets. You 
         )
     } -Height '100ch'
 ```
-
-
 

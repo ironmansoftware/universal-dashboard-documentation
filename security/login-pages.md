@@ -1,7 +1,7 @@
 # Login Pages
 
 {% hint style="info" %}
-Not available in Community Edition. 
+Not available in Community Edition.
 {% endhint %}
 
 Login pages allow you to create dashboards that require authentication to access. You can define your own authentication endpoint to perform the authentication yourself or use a third party OAuth provider to do so. To create your login page, you can use the New-UDLoginPage and LoginPage parameter of New-UDDashboard.

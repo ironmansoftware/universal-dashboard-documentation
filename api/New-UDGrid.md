@@ -1,6 +1,7 @@
 ---
+external help file: UniversalDashboard-help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -12,11 +13,11 @@ Creates a grid in the dashboard.
 ## SYNTAX
 
 ```
-New-UDGrid [-Title <String>] -Headers <String[]> -Properties <String[]> [-DefaultSortColumn <String>]
- [-DefaultSortDescending] [-BackgroundColor <DashboardColor>] [-FontColor <DashboardColor>] [-Links <Link[]>]
- [-ServerSideProcessing] [-DateTimeFormat <String>] [-PageSize <Int32>] [-NoPaging] [-FilterText <String>]
- [-Endpoint <ScriptBlock>] [-ArgumentList <Object[]>] [-AutoRefresh] [-RefreshInterval <Int32>] [-Id <String>]
- [<CommonParameters>]
+New-UDGrid [[-Id] <String>] [[-Title] <String>] [[-Headers] <String[]>] [[-Properties] <String[]>]
+ [[-DefaultSortColumn] <String>] [-DefaultSortDescending] [[-BackgroundColor] <DashboardColor>]
+ [[-FontColor] <DashboardColor>] [[-Links] <Hashtable[]>] [-ServerSideProcessing] [[-DateTimeFormat] <String>]
+ [[-PageSize] <Int32>] [-NoPaging] [[-FilterText] <String>] [-NoFilter] [-Endpoint] <Object>
+ [[-ArgumentList] <Object[]>] [-AutoRefresh] [[-RefreshInterval] <Int32>] [-NoExport] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,7 +94,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 12
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -123,7 +124,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -138,7 +139,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -153,7 +154,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -178,12 +179,12 @@ Accept wildcard characters: False
 The endpoint that returns the grid data.
 
 ```yaml
-Type: ScriptBlock
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 11
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -198,7 +199,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 10
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -213,7 +214,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 6
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -227,8 +228,8 @@ Type: String[]
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: Named
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -243,7 +244,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -253,7 +254,37 @@ Accept wildcard characters: False
 Links to display on the bottom of the grid. Use New-UDLink to generate a link.
 
 ```yaml
-Type: Link[]
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoExport
+Removes the export button from the grid. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoFilter
+Removes the filter text box from the grid.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -288,7 +319,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 9
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -302,8 +333,8 @@ Type: String[]
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: Named
+Required: False
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -318,7 +349,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 13
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -348,7 +379,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -368,6 +399,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

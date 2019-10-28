@@ -1,6 +1,7 @@
 ---
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -32,7 +33,6 @@ New-UDInput -Title "User Information" -Endpoint {
 ```
 
 Accepts user input and a toast message to the client.
-
 
 ### Custom Input Fields
 ```
@@ -204,6 +204,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

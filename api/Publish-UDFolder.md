@@ -1,6 +1,6 @@
 ---
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
 online version: https://go.microsoft.com/fwlink/?LinkID=217032
 schema: 2.0.0
 ---
@@ -72,5 +72,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

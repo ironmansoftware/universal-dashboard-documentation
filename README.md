@@ -4,8 +4,6 @@ PowerShell Universal Dashboard is a web framework for PowerShell developers. Cre
 
 Want a quick overview of PowerShell Universal Dashboard? Check out this [short video](https://youtu.be/_ckxYyDv4cg).
 
-![Live data from InfluxDB shown in Universal Dashboard](.gitbook/assets/influxdb.gif)
-
 ## Installation
 
 **Premium Edition**
@@ -25,4 +23,6 @@ Universal Dashboard also features a free Community Edition. This edition is [ope
 `Install-Module UniversalDashboard.Community -AcceptLicense`
 
 For a full list of the differences between Community and Premium, visit the [Feature Comparison](feature-comparison.md) page.
+
+![Live data from InfluxDB shown in Universal Dashboard](.gitbook/assets/influxdb.gif)
 

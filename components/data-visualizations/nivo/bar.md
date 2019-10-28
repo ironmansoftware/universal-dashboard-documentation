@@ -2,7 +2,7 @@
 
 ## Simple Bar Chart
 
-This is a simple Nivo bar chart. The data must be in a key value format such as the one defined below. This particular chart is indexed by state and the y-axis is the population. 
+This is a simple Nivo bar chart. The data must be in a key value format such as the one defined below. This particular chart is indexed by state and the y-axis is the population.
 
 ```text
 $Data = @(
@@ -31,7 +31,7 @@ New-UDNivoChart -Bar -Data $Data -Keys 'population' -IndexBy 'state' -Height 500
 
 ## Multiple Data Keys
 
-This bar chart provides multiple data points per indexed bar. 
+This bar chart provides multiple data points per indexed bar.
 
 ```text
 $Data = @(
@@ -58,14 +58,13 @@ $Data = @(
 )
 
 New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'state' -Height 500 -Width 1000 -MarginTop 50 -MarginRight 130 -MarginBottom 50 -MarginLeft 60 -Padding 0.3
-
 ```
 
 ![Bar chart with multiple data keys](../../../.gitbook/assets/image%20%2828%29.png)
 
 ## Grouped Layout
 
-This bar chart is grouped rather than stacked. 
+This bar chart is grouped rather than stacked.
 
 ```text
 $Data = @(
@@ -92,7 +91,6 @@ $Data = @(
 )
 
 New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'state' -Height 500 -Width 1000 -MarginTop 50 -MarginRight 130 -MarginBottom 50 -MarginLeft 60 -Padding 0.3 -GroupMode grouped
-        
 ```
 
 ![Grouped bar chart](../../../.gitbook/assets/image%20%2811%29.png)
@@ -127,6 +125,4 @@ New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'sta
 ```
 
 ![Horizontal Layout](../../../.gitbook/assets/image%20%282%29.png)
-
-
 

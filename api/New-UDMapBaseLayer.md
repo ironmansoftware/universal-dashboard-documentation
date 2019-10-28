@@ -13,7 +13,7 @@ The base layer for the map.
 ## SYNTAX
 
 ```
-New-UDMapBaseLayer [[-Id] <String>] [-Name] <String> [-Content] <ScriptBlock> [-Checked]
+New-UDMapBaseLayer [[-Id] <String>] [-Name] <String> [-Content] <ScriptBlock> [-Checked] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -92,10 +92,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

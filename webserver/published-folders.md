@@ -2,7 +2,7 @@
 
 ## Publishing a folder
 
-You can publish a folder by specifying the path to the folder. The RequestPath is the path that the web server will server the files. 
+You can publish a folder by specifying the path to the folder. The RequestPath is the path that the web server will server the files.
 
 ```text
 $Folder = Publish-UDFolder -Path C:\data\ -RequestPath "/config"

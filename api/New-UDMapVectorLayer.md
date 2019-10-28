@@ -16,32 +16,34 @@ Creates a vector layer to display polylines, polygons, circles or rectangles.
 ```
 New-UDMapVectorLayer [-Id <String>] [-Color <DashboardColor>] [-FillColor <DashboardColor>]
  [-FillOpacity <Double>] [-Weight <Int32>] [-Opacity <Double>] [-Circle] -Latitude <Double> -Longitude <Double>
- -Radius <Int32> [-Popup <Object>]
+ -Radius <Int32> [-Popup <Object>] [<CommonParameters>]
 ```
 
 ### Polyline
 ```
 New-UDMapVectorLayer [-Id <String>] [-Color <DashboardColor>] [-FillColor <DashboardColor>]
  [-FillOpacity <Double>] [-Weight <Int32>] [-Opacity <Double>] [-Polyline] -Positions <Object>
+ [<CommonParameters>]
 ```
 
 ### Polygon
 ```
 New-UDMapVectorLayer [-Id <String>] [-Color <DashboardColor>] [-FillColor <DashboardColor>]
  [-FillOpacity <Double>] [-Weight <Int32>] [-Opacity <Double>] [-Polygon] -Positions <Object>
+ [<CommonParameters>]
 ```
 
 ### Rectangle
 ```
 New-UDMapVectorLayer [-Id <String>] [-Color <DashboardColor>] [-FillColor <DashboardColor>]
  [-FillOpacity <Double>] [-Weight <Int32>] [-Opacity <Double>] [-Rectangle] -LatitudeTopLeft <Double>
- -LongitudeTopLeft <Double> -LatitudeBottomRight <Double> -LongitudeBottomRight <Double>
+ -LongitudeTopLeft <Double> -LatitudeBottomRight <Double> -LongitudeBottomRight <Double> [<CommonParameters>]
 ```
 
 ### GeoJSON
 ```
 New-UDMapVectorLayer [-Id <String>] [-Color <DashboardColor>] [-FillColor <DashboardColor>]
- [-FillOpacity <Double>] [-Weight <Int32>] [-Opacity <Double>] -GeoJSON <String>
+ [-FillOpacity <Double>] [-Weight <Int32>] [-Opacity <Double>] -GeoJSON <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +53,7 @@ Creates a vector layer to display polylines, polygons, circles or rectangles. Th
 
 ### Example 1
 ```
-New-UDMapVectorLayer -Circle -Latitude 59.505 -Longitude -0.99 -Radius 10 -Color Blue -FillColor Blue 
+New-UDMapVectorLayer -Circle -Latitude 59.505 -Longitude -0.99 -Radius 10 -Color Blue -FillColor Blue
 ```
 
 Creates a blue circle vector at 59.505/-0.99 with a radius of 10.
@@ -358,10 +360,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

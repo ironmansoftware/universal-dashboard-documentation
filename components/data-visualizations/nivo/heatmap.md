@@ -1,6 +1,6 @@
 # Heatmap
 
-A heat map shows a set of data in a grid in line with other vectors of data. You will need to define an array of hashtables. One axis will be the property to index by while the other vector will be a set of keys as defined by other properties of the hash table. 
+A heat map shows a set of data in a grid in line with other vectors of data. You will need to define an array of hashtables. One axis will be the property to index by while the other vector will be a set of keys as defined by other properties of the hash table.
 
 ```text
 $Data = @(
@@ -33,11 +33,8 @@ $Data = @(
         bears = 2349772
     }
 )
-New-UDNivoChart -Heatmap -Data $Data -IndexBy 'state' -keys @('cats', 'dogs', 'moose', 'bears')  -Height 500 -Width 1000 -MarginTop 50 -MarginRight 130 -MarginBottom 50 -MarginLeft 60 
-
+New-UDNivoChart -Heatmap -Data $Data -IndexBy 'state' -keys @('cats', 'dogs', 'moose', 'bears')  -Height 500 -Width 1000 -MarginTop 50 -MarginRight 130 -MarginBottom 50 -MarginLeft 60
 ```
 
 ![Heatmap](../../../.gitbook/assets/image%20%2825%29.png)
-
-
 

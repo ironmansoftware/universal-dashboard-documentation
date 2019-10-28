@@ -1,7 +1,7 @@
 ---
-external help file: UniversalDashboard.Community-help.xml
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -14,8 +14,10 @@ Creates a new login page.
 
 ```
 New-UDLoginPage -AuthenticationMethod <AuthenticationMethod[]> [-LoginFormFontColor <DashboardColor>]
- [-LoginFormBackgroundColor <DashboardColor>] [-PageBackgroundColor <DashboardColor>] [-Logo <Element>]
- [-WelcomeText <String>] [-LoadingText <String>] [<CommonParameters>]
+ [-LoginFormBackgroundColor <DashboardColor>] [-PageBackgroundColor <DashboardColor>]
+ [-LoginButtonFontColor <DashboardColor>] [-LoginButtonBackgroundColor <DashboardColor>] [-Logo <Element>]
+ [-WelcomeText <String>] [-LoadingText <String>] [-AuthorizationPolicy <AuthorizationPolicy[]>]
+ [-Title <String>] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,9 +40,24 @@ An array of authentication methods to use.
 ```yaml
 Type: AuthenticationMethod[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthorizationPolicy
+Authorization policies that can be assigned to endpoints and pages. 
+
+```yaml
+Type: AuthorizationPolicy[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -53,7 +70,37 @@ Text to display after the user clicks the login button. This is useful for login
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoginButtonBackgroundColor
+Background color of the login button. 
+
+```yaml
+Type: DashboardColor
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoginButtonFontColor
+Font color of the login button.
+
+```yaml
+Type: DashboardColor
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
@@ -68,7 +115,7 @@ Color of the login form background.
 ```yaml
 Type: DashboardColor
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -83,7 +130,7 @@ Login form font color.
 ```yaml
 Type: DashboardColor
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -98,7 +145,7 @@ An image used as a logo on the login page. Use New-UDImage to generate this logo
 ```yaml
 Type: Element
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -113,7 +160,37 @@ The login page background color.
 ```yaml
 Type: DashboardColor
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Pass through authentication for the login page. If OAuth is used, no button click is required. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Title
+The title of the login page. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
@@ -128,7 +205,7 @@ Text to display above the login.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -151,3 +228,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

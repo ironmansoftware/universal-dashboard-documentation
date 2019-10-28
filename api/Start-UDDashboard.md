@@ -1,6 +1,7 @@
 ---
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -13,26 +14,29 @@ Starts a dashboard defined by New-UDDashboard.
 
 ### Dashboard (Default)
 ```
-Start-UDDashboard [-Dashboard <Dashboard>] [-Endpoint <Endpoint[]>] [-Name <String>] [-Port <Int32>] [-Wait]
- [-AutoReload] [-Certificate <X509Certificate2>] [-CertificateFile <String>]
- [-CertificateFilePassword <SecureString>] [-UpdateToken <String>] [-PublishedFolder <PublishedFolder[]>]
- [-Design] [<CommonParameters>]
+Start-UDDashboard [-Dashboard <Dashboard>] [-Endpoint <Endpoint[]>] [-Name <String>] [-Port <Int32>]
+ [-HttpsPort <Int32>] [-Wait] [-AutoReload] [-Certificate <X509Certificate2>] [-CertificateFile <String>]
+ [-CertificateFilePassword <SecureString>] [-AdminMode] [-UpdateToken <String>] [-AllowHttpForLogin]
+ [-PublishedFolder <PublishedFolder[]>] [-Force] [-ListenAddress <IPAddress>] [-DisableTelemetry]
+ [<CommonParameters>]
 ```
 
 ### Content
 ```
-Start-UDDashboard [-Content <ScriptBlock>] [-Endpoint <Endpoint[]>] [-Name <String>] [-Port <Int32>] [-Wait]
- [-AutoReload] [-Certificate <X509Certificate2>] [-CertificateFile <String>]
- [-CertificateFilePassword <SecureString>] [-UpdateToken <String>] [-PublishedFolder <PublishedFolder[]>]
- [-Design] [<CommonParameters>]
+Start-UDDashboard [-Content <ScriptBlock>] [-Endpoint <Endpoint[]>] [-Name <String>] [-Port <Int32>]
+ [-HttpsPort <Int32>] [-Wait] [-AutoReload] [-Certificate <X509Certificate2>] [-CertificateFile <String>]
+ [-CertificateFilePassword <SecureString>] [-AdminMode] [-UpdateToken <String>] [-AllowHttpForLogin]
+ [-PublishedFolder <PublishedFolder[]>] [-Force] [-ListenAddress <IPAddress>] [-DisableTelemetry]
+ [<CommonParameters>]
 ```
 
 ### DashboardFile
 ```
-Start-UDDashboard [-FilePath <String>] [-Endpoint <Endpoint[]>] [-Name <String>] [-Port <Int32>] [-Wait]
- [-AutoReload] [-Certificate <X509Certificate2>] [-CertificateFile <String>]
- [-CertificateFilePassword <SecureString>] [-UpdateToken <String>] [-PublishedFolder <PublishedFolder[]>]
- [-Design] [<CommonParameters>]
+Start-UDDashboard [-FilePath <String>] [-Endpoint <Endpoint[]>] [-Name <String>] [-Port <Int32>]
+ [-HttpsPort <Int32>] [-Wait] [-AutoReload] [-Certificate <X509Certificate2>] [-CertificateFile <String>]
+ [-CertificateFilePassword <SecureString>] [-AdminMode] [-UpdateToken <String>] [-AllowHttpForLogin]
+ [-PublishedFolder <PublishedFolder[]>] [-Force] [-ListenAddress <IPAddress>] [-DisableTelemetry]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,13 +72,28 @@ Starts a new dashboard with the name "MyDashboard".
 
 ## PARAMETERS
 
+### -AdminMode
+Enables admin mode. Admin mode enables the admin terminal, licensing page and diagnostics page. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: Design
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowHttpForLogin
 Allows HTTP for login. A warning will be shown. 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -173,8 +192,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Design
-Puts the dashboard in design mode. This will enable the design console. 
+### -DisableTelemetry
+{{Fill DisableTelemetry Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -209,6 +228,51 @@ The path to a file that returns a dashboard. This file should return a dashboard
 ```yaml
 Type: String
 Parameter Sets: DashboardFile
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Starts a dashboard and stops any dashboard running on the same port.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpsPort
+The HTTPS port to listen on.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListenAddress
+The IP Addresses to listen on.
+
+```yaml
+Type: IPAddress
+Parameter Sets: (All)
 Aliases: 
 
 Required: False
@@ -307,6 +371,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

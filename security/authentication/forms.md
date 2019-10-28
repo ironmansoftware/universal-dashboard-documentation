@@ -1,7 +1,7 @@
 # Forms
 
 {% hint style="info" %}
-Not available in Community Edition. 
+Not available in Community Edition.
 {% endhint %}
 
 Forms authentication is accomplished using the New-UDAuthenticationMethod cmdlet paired with the AuthenticationMethod parameter of the New-UDLoginPage cmdlet. Use the Endpoint parameter of New-UDAuthenticationMethod to specify an endpoint to be executed when a user attempts to login to the dashboard. The param block of the Endpoint script block show contain a $Credential parameter to accept the credentials of the user.

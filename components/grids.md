@@ -4,7 +4,7 @@ Grids output data similar to tables but allow for paging and sorting the data in
 
 ## Simple Grid
 
-To create a simple grid, pass data from a cmdlet to Out-UDGridData from within the New-UDGrid's Endpoint script block. 
+To create a simple grid, pass data from a cmdlet to Out-UDGridData from within the New-UDGrid's Endpoint script block.
 
 ```text
 New-UdGrid -Title "Processes" -Endpoint {
@@ -14,7 +14,7 @@ New-UdGrid -Title "Processes" -Endpoint {
 
 ## Custom Headers
 
-To specify custom headers, use the -Headers parameter of New-UDGrid. 
+To specify custom headers, use the -Headers parameter of New-UDGrid.
 
 The below script selects the Name, Id, WorkingSet and CPU of ProcessInfo objects returned by Get-Process. The gird auto refreshes every minute.
 

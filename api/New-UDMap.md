@@ -15,7 +15,7 @@ Creates a map.
 ```
 New-UDMap [[-Id] <String>] [[-Longitude] <Single>] [[-Latitude] <Single>] [[-Zoom] <Int32>]
  [[-Height] <String>] [[-Width] <String>] [-Endpoint] <Object> [[-ZoomControlPosition] <String>]
- [[-ScaleControlPosition] <String>] [-Animate] [[-MaxZoom] <Int32>]
+ [[-ScaleControlPosition] <String>] [-Animate] [[-MaxZoom] <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +28,7 @@ Creates a map. Maps can contain markers, polylines, polygons, layers, heatmaps a
 New-UDMap -Endpoint {
     New-UDMapRasterLayer -TileServer 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png' 
     New-UDMapMarker -Latitude 51.505 -Longitude -0.09 
-} -Latitude 51.505 -Longitude -0.09 -Zoom 13 -Height '100vh' 
+} -Latitude 51.505 -Longitude -0.09 -Zoom 13 -Height '100vh'
 ```
 
 Creates a basic map with a marker.
@@ -50,7 +50,7 @@ New-UDMap -Endpoint {
             New-UDMapMarker -Latitude 51.555 -Longitude -0.00 
         } -Checked
     }
-} -Latitude 51.505 -Longitude -0.09 -Zoom 13 -Height '100vh' 
+} -Latitude 51.505 -Longitude -0.09 -Zoom 13 -Height '100vh'
 ```
 
 Creates a map with a layer control to toggle the base layers and overlays. 
@@ -74,7 +74,7 @@ New-UDMap -Endpoint {
         @(-37.9242924167, 175.4289432833, "47"),
         @(-37.8986079833, 175.3685293333, "801")
     )
-} -Height '100vh'  
+} -Height '100vh'
 ```
 
 Creates a heatmap and zooms the map into where the heatmap is located.
@@ -97,7 +97,7 @@ Creates 100 random markers and clusters them together using a cluster layer.
 
 ### Interative Maps
 ```
- New-UDButton -Text 'Add Circle' -OnClick {
+New-UDButton -Text 'Add Circle' -OnClick {
     Add-UDElement -ParentId 'Feature-Group' -Content {
         New-UDMapVectorLayer -Id 'Vectors' -Circle -Latitude 51.505 -Longitude -0.09 -Radius 500 -Color blue -FillColor blue -FillOpacity .5 
     }
@@ -396,10 +396,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

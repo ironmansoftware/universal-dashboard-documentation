@@ -15,7 +15,7 @@ Mini charts that are good for tables and grids.
 ```
 New-UDSparklines [[-Id] <String>] [-Data] <Single[]> [[-Type] <String>] [[-Width] <Int32>] [[-Height] <Int32>]
  [[-Margin] <Int32>] [[-Minimum] <Single>] [[-Maximum] <Single>] [[-Color] <DashboardColor>]
- [[-Style] <Hashtable>]
+ [[-Style] <Hashtable>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -190,10 +190,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

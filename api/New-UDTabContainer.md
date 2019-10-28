@@ -1,7 +1,7 @@
 ---
-external help file: UniversalDashboard.Community-help.xml
-Module Name: UniversalDashboard.Community
-online version:https://github.com/ironmansoftware/universal-dashboard/blob/master/src/UniversalDashboard/Help/New-UDTabContainer.md
+external help file: UniversalDashboard-help.xml
+Module Name: UniversalDashboard
+online version: https://github.com/ironmansoftware/universal-dashboard/blob/master/src/UniversalDashboard/Help/New-UDTabContainer.md
 schema: 2.0.0
 ---
 
@@ -22,7 +22,7 @@ Creates a tab container. Use New-UDTab to create tabs within the tab container.
 ## EXAMPLES
 
 ### Basic Tabs
-```powershell
+```
 New-UDTabContainer -Tabs {
     New-UDTab -Text 'Tab 1' -Content { New-UDHeading -Text 'Tab 1 Content' }
     New-UDTab -Text 'Tab 2' -Content { New-UDHeading -Text 'Tab 2 Content' }
@@ -40,7 +40,7 @@ ID of this component.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -55,7 +55,7 @@ The tabs for this container. Use New-UDTab to create the tabs.
 ```yaml
 Type: ScriptBlock
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -74,6 +74,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+

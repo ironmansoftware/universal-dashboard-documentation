@@ -1,6 +1,7 @@
 ---
+external help file: UniversalDashboard.dll-Help.xml
 Module Name: UniversalDashboard
-online version:
+online version: 
 schema: 2.0.0
 ---
 
@@ -12,7 +13,7 @@ Configuration options for the footer.
 ## SYNTAX
 
 ```
-New-UDFooter [-Links <Link[]>] [-Copyright <String>] [-BackgroundColor <DashboardColor>]
+New-UDFooter [-Links <Hashtable[]>] [-Copyright <String>] [-BackgroundColor <DashboardColor>]
  [-FontColor <DashboardColor>] [-Endpoint <ScriptBlock>] [-ArgumentList <Object[]>] [-AutoRefresh]
  [-RefreshInterval <Int32>] [-Id <String>] [<CommonParameters>]
 ```
@@ -141,7 +142,7 @@ Accept wildcard characters: False
 Links to display in the footer. Use New-UDLink to generate a link. 
 
 ```yaml
-Type: Link[]
+Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -181,6 +182,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
 

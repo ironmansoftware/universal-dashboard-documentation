@@ -22,7 +22,7 @@ Creates a new authorization policy for a page or endpoint.
 ## EXAMPLES
 
 ### Example 1
-```powershell
+```
 PS C:\> $Policy = New-UDAuthorizationPolicy -Name "Policy" -Endpoint {
             param($User)
 
@@ -48,7 +48,7 @@ The endpoint that is invoked when a page is loaded to evaluate whether the user 
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -63,7 +63,7 @@ The name of the policy. This is the name that should be provided to REST endpoin
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -73,8 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -83,6 +82,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
