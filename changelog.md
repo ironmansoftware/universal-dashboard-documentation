@@ -1,8 +1,12 @@
 # Docs Changelog
 
+11/11/2019
+
+* Added [Footer page](components/footer.md)
+
 10/24/2019
 
-* Added [UDStudio page](./udstudio/README.md)
+* Added [UDStudio page](udstudio.md)
 
 10/23/2019
 

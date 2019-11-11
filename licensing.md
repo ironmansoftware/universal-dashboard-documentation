@@ -14,7 +14,7 @@ Set-UDLicense -License (Get-Content .\license.txt -Raw)
 
 ## Install via Environment Variable
 
-If you set the `%UDLICENSE%` environment variable, UD will load the license from it. This is good for cloud-based deployments. 
+If you set the `%UDLICENSE%` environment variable, UD will load the license from it. This is good for cloud-based deployments.
 
 ```text
 $Env:UDLICENSE = (Get-Content .\license.txt -Raw)

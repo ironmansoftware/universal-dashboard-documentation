@@ -123,8 +123,8 @@ Finally, we can write the PowerShell script to create these components. The firs
 
 Now you can create a function that users will call. The function should return a hashtable. Make sure to set `isPlugin` to `$true` and `assetId` to the value you received when registering your script.
 
-{% code-tabs %}
-{% code-tabs-item title="sparklines.psm1" %}
+{% tabs %}
+{% tab title="sparklines.psm1" %}
 ```text
 $JsFiles = Get-ChildItem "$PSScriptRoot\*.bundle.js"
 $SparklinesFile = $JsFiles | Where-Object { $_.FullName.Contains("sparklines")}
@@ -149,8 +149,8 @@ function New-UDSparkline {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Distribution
 
