@@ -129,10 +129,13 @@ REST APIs support uploading files. You need to enable file uploads via the `New-
 
 In this example, we upload a file and save it to disk using `Set-Content`.
 
+Note: file upload is only avaliable using contenttype `file/*` or `image/*` where * is a wildcard.
+The original filename is not transfered, and the wildcard is the only metadata avaliable other than the bytearray.
+
 ```text
  New-UDEndpoint -Url "project" -Method "POST" -AcceptFileUpload -Endpoint {
     param($File)
-    $filepath = "C:\temp\dev\testdash\"
+    $filepath = "C:\temp\"
     $filename = New-Item -Path $filepath -Name "$(get-random).txt"
 
     if (!($File)) {
