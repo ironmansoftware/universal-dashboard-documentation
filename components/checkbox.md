@@ -27,3 +27,11 @@ New-UDCheckbox -Id CheckBox -Label "Check me" -OnChange {
 }
 ```
 
+## Get the value of the Checkbox
+
+To get checkbox value ($true, $false), you can utilize the ``Get-UDElement`` cmdlet to retrieve the bool checked value.
+
+```text
+New-UDCheckbox -Id MyCheckBox -Label "Check me"
+$CheckboxValue = ((Get-UDElement -Id "MyCheckBox").Attributes["checked"])
+``
