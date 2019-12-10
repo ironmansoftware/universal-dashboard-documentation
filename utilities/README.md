@@ -22,10 +22,9 @@ New-UDButton -Text 'Open Google' -OnClick {
 
 ## Anchor / Focus
 
-You can focus an HTML by the ID selector using `Select-UDElement`. This will help the tab-heavy users navigate your site, and allows for dynamic moving of focus. 
+You can focus an HTML by the ID selector using `Select-UDElement`. This will help the tab-heavy users navigate your site, and allows for dynamic moving of focus.
 
-If you specify the `-ScrollToElement` the browser will scroll the element into sight. 
-Example `To the top` button:
+If you specify the `-ScrollToElement` the browser will scroll the element into sight. Example `To the top` button:
 
 ```text
 New-UDButton -Text 'To the top' -OnClick {
@@ -33,4 +32,5 @@ New-UDButton -Text 'To the top' -OnClick {
 }
 ```
 
-Where "FirstRow" is the ID of any element in the top. Any HTML element with a specified ID can be used as an anchor. 
+Where "FirstRow" is the ID of any element in the top. Any HTML element with a specified ID can be used as an anchor.
+
