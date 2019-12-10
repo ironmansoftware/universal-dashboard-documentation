@@ -57,6 +57,7 @@
   * [Themes](look-and-feel/themes.md)
 * [Security](security/README.md)
   * [Authentication](security/authentication/README.md)
+    * [OpenID Connect](security/authentication/openid-connect.md)
     * [OAuth](security/authentication/oauth/README.md)
       * [Facebook](security/authentication/oauth/facebook.md)
       * [Google](security/authentication/oauth/google.md)
