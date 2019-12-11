@@ -75,6 +75,7 @@
 * [REST APIs](rest-apis.md)
 * [UDStudio](udstudio.md)
 * [Utilities](utilities/README.md)
+  * [Invoke JavaScript](utilities/invoke-javascript.md)
   * [UDForge](utilities/udforge.md)
 * [Web Server](webserver/README.md)
   * [Published Folders](webserver/published-folders.md)
