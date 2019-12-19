@@ -4,6 +4,7 @@
 
 * Added [Tabs page](components/tabs.md)
 * Fixed URL in example on [REST API Authentication page](security/rest-api-authentication.md)
+* Updated [Endpoints page ](endpoints/#getting-started-with-endpoints)to match the current version of UD
 
 12/11/2019
 
