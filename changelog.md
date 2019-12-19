@@ -4,6 +4,12 @@
 
 * Added [Tabs page](components/tabs.md)
 
+12/11/2019
+
+* Added [Open ID Connect page](security/authentication/openid-connect.md)
+* Added [Invoking JavaScript page](utilities/invoke-javascript.md)
+* Created [2.7 version](updates/v2.7.0.md)
+
 11/11/2019
 
 * Added [Footer page](components/footer.md)
