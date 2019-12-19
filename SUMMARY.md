@@ -39,6 +39,7 @@
   * [Navigation](components/navigation.md)
   * [Pages](components/pages.md)
   * [Tables](components/tables.md)
+  * [Tabs](components/tabs.md)
   * [Material UI](components/material-ui/README.md)
     * [Avatar](components/material-ui/avatar.md)
     * [Button](components/material-ui/button.md)

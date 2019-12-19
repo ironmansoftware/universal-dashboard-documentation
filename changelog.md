@@ -1,5 +1,9 @@
 # Docs Changelog
 
+12/19/2019
+
+* Added [Tabs page](components/tabs.md)
+
 11/11/2019
 
 * Added [Footer page](components/footer.md)
