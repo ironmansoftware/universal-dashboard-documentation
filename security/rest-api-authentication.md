@@ -74,7 +74,7 @@ $Server = Start-UDRestApi -Port 10001 -Endpoint @(
 From there, users can authenticate again `/login` to retrieve a token and then use it on subsequent requests.
 
 ```text
-$Token = Invoke-RestMethod -Uri http://localhost:10001/login -Method POST -Body @{ UserName = "Adam"; Password = "Test" } 
+$Token = Invoke-RestMethod -Uri http://localhost:10001/api/login -Method POST -Body @{ UserName = "Adam"; Password = "Test" } 
 $users = Invoke-RestMethod -Uri http://localhost:10001/api/user/me -Headers @{ Authorization = "Bearer $($Token.Token)" }
 ```
 

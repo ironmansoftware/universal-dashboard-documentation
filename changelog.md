@@ -3,6 +3,7 @@
 12/19/2019
 
 * Added [Tabs page](components/tabs.md)
+* Fixed URL in example on [REST API Authentication page](security/rest-api-authentication.md)
 
 12/11/2019
 
