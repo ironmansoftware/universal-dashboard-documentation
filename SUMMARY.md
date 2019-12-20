@@ -90,6 +90,7 @@
 * [Licensing](licensing.md)
 * [Cmdlet Help](https://github.com/ironmansoftware/universal-dashboard-documentation/blob/master/api)
 * [Updates](updates/README.md)
+  * [v2.8.1](updates/v2.8.1.md)
   * [v2.8.0](updates/v2.8.0.md)
   * [v2.7.0](updates/v2.7.0.md)
   * [v2.6.2](updates/v2.6.2.md)
