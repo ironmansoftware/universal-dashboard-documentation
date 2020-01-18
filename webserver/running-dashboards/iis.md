@@ -13,6 +13,13 @@ Note: You will need to: Install.Net 4.72 on the computer hosting IIS Enable the 
 * Hide-UDModal
 * AutoRefresh on Start-UDDashboard
 
+#### OS limitations
+
+It's important to note the difference between client OS and server OS:
+
+- Client OS: have a max on concurrent connections, as it's limited to 10 max.
+- Server OS: have no limitation. (except standard defined by IIS)
+
 ## Configuring a site for Universal Dashboard
 
 For this example we will look at the Default Web Site. In IIS Manager, right click on your Web Site and click Explore.
