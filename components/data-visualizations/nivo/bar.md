@@ -60,7 +60,7 @@ $Data = @(
 New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'state' -Height 500 -Width 1000 -MarginTop 50 -MarginRight 130 -MarginBottom 50 -MarginLeft 60 -Padding 0.3
 ```
 
-![Bar chart with multiple data keys](../../../.gitbook/assets/image%20%2828%29.png)
+![Bar chart with multiple data keys](../../../.gitbook/assets/image%20%2831%29.png)
 
 ## Grouped Layout
 

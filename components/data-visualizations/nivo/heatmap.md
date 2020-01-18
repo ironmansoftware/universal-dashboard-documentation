@@ -36,5 +36,5 @@ $Data = @(
 New-UDNivoChart -Heatmap -Data $Data -IndexBy 'state' -keys @('cats', 'dogs', 'moose', 'bears')  -Height 500 -Width 1000 -MarginTop 50 -MarginRight 130 -MarginBottom 50 -MarginLeft 60
 ```
 
-![Heatmap](../../../.gitbook/assets/image%20%2825%29.png)
+![Heatmap](../../../.gitbook/assets/image%20%2827%29.png)
 
