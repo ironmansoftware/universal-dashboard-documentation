@@ -40,6 +40,7 @@
   * [Pages](components/pages.md)
   * [Tables](components/tables.md)
   * [Tabs](components/tabs.md)
+  * [Toasts](components/toasts.md)
   * [Material UI](components/material-ui/README.md)
     * [Avatar](components/material-ui/avatar.md)
     * [Button](components/material-ui/button.md)

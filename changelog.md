@@ -1,5 +1,10 @@
 # Docs Changelog
 
+1/18/2019
+
+* Updated Tabs Page to include changes for 2.8.2
+* Added Toasts Page
+
 12/19/2019
 
 * Added [Tabs page](components/tabs.md)
