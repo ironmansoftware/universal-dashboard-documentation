@@ -108,5 +108,5 @@ You can set the `type` property of the a dataset created with `New-UDChartDatase
 }
 ```
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2867%29.png)
 
