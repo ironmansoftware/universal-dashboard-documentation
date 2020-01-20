@@ -16,7 +16,7 @@ New-UDButton -Text "Show Modal" -OnClick {
 
 Clicking the button will bring up a modal that looks like this.
 
-![Modal with a Heading in the Content](../.gitbook/assets/image%20%2868%29.png)
+![Modal with a Heading in the Content](../.gitbook/assets/image%20%2869%29.png)
 
 ## Hiding Modals
 
