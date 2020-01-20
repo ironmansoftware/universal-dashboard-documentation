@@ -10,7 +10,7 @@ New-UDCounter -Title "Basic" -Endpoint {
 }
 ```
 
-![](../.gitbook/assets/image%20%2859%29.png)
+![](../.gitbook/assets/image%20%2860%29.png)
 
 ## Auto refreshing a counter
 
