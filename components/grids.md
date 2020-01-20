@@ -43,18 +43,18 @@ New-UdGrid -Title "Files" -Headers @("Name", "Last Write Time") -Properties @("N
 In addition to passing raw data down to a grid, you can also include links. Use the `New-UDLink` cmdlet to add links into columns.
 
 ```text
-$Data = @(
+$Dashboard = New-UDDashboard -Title "Grids - Custom Columns" -Content {
+    New-UDGrid -Title "Animals" -Headers @("Animal", "Order", "Wikipedia") -Properties @("Animal", "Order", "Article") -Endpoint {
+    $Data = @(
     [PSCustomObject]@{Animal="Frog";Order="Anura";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Frog")}
     [PSCustomObject]@{Animal="Tiger";Order="Carnivora";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Tiger")}
     [PSCustomObject]@{Animal="Bat";Order="Chiroptera";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Bat")}
     [PSCustomObject]@{Animal="Fox";Order="Carnivora";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Fox")}
 )
-
-$Dashboard = New-UDDashboard -Title "Grids - Custom Columns" -Content {
-    New-UDGrid -Title "Animals" -Headers @("Animal", "Order", "Wikipedia") -Properties @("Animal", "Order", "Article") -Endpoint {
         $Data | Out-UDGridData
     }
 }
+Start-UDDashboard -Dashboard $Dashboard
 ```
 
 ## Server Side Processing
@@ -69,3 +69,36 @@ When the `-ServerSideProcessing` parameter is specified, it calls the `Endpoint`
 | $SortAscending | Whether to sort ascending, otherwise descending. | string |
 | $FilterText | The text to filter items or records by. | string |
 
+
+```text
+$Dashboard = New-UDDashboard -Title "Grids - Custom Columns" -Content {
+    $Headers = @("Animal", "Order", "Wikipedia")
+    $Properties = @("Animal", "Order", "Article")
+    New-UDGrid -Title "Animals" -ServerSideProcessing -PageSize 5 -Headers $Headers -Properties $Properties -Endpoint {
+    $Data = @(
+    [PSCustomObject]@{Animal="Frog";Order="Anura";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Frog")}
+    [PSCustomObject]@{Animal="Tiger";Order="Carnivora";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Tiger")}
+    [PSCustomObject]@{Animal="Bat";Order="Chiroptera";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Bat")}
+    [PSCustomObject]@{Animal="Fox";Order="Carnivora";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Fox")}
+    [PSCustomObject]@{Animal="Lion";Order="Carnivora";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Lion")}
+    [PSCustomObject]@{Animal="Leopard";Order="Carnivora";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Leopard")}
+    [PSCustomObject]@{Animal="Cat";Order="Carnivora";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Cat")}
+    [PSCustomObject]@{Animal="Goldfish";Order="Cypriniformes";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Goldfish")}
+    [PSCustomObject]@{Animal="Eel";Order="Anguilliformes";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Eel")}
+    [PSCustomObject]@{Animal="Parrot";Order="Anguilliformes";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Parrot")}
+    [PSCustomObject]@{Animal="Crocodile";Order="Crocodilia";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Crocodile")}
+)
+        $FilteredAndSortedData = $Data | 
+            Where-Object Animal -like "*$filtertext*" |
+            Sort-Object $SortColumn -Descending:(!$SortAscending) 
+        
+        $FilteredAndSortedData | 
+            Select-Object -Skip $Skip -First $take |
+            Out-UDGridData -TotalItems $FilteredAndSortedData.Count
+    }
+}
+Start-UDDashboard -Dashboard $Dashboard
+```
+Important points here:
+- It's important to do the filter and sort before the paging with skip and first, as it will not behave as expected.
+- Totalitems need to be specified, else UD dont know how many pages there are, and it will not display the page info
