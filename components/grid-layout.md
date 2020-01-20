@@ -45,7 +45,7 @@ Start-UDDashboard -Dashboard $Dashboard -Port 10001 -AdminMode
 
 Now, when you start your dashboard, a floating action button in the bottom right of the dashboard will be shown. Adjust your page as you see fit and then click the Copy Layout button. This will store the JSON in the clipboard which you can copy to your script.
 
-![Copy Layout Button](../.gitbook/assets/image%20%2849%29.png)
+![Copy Layout Button](../.gitbook/assets/image%20%2850%29.png)
 
 To include the layout in your script, place the JSON string as a value to the `-Layout` property of `New-UDGridLayout`.
 
