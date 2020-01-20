@@ -69,3 +69,29 @@ When the `-ServerSideProcessing` parameter is specified, it calls the `Endpoint`
 | $SortAscending | Whether to sort ascending, otherwise descending. | string |
 | $FilterText | The text to filter items or records by. | string |
 
+
+```text
+$Data = @(
+    [PSCustomObject]@{Animal="Frog";Order="Anura";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Frog")}
+    [PSCustomObject]@{Animal="Tiger";Order="Carnivora";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Tiger")}
+    [PSCustomObject]@{Animal="Bat";Order="Chiroptera";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Bat")}
+    [PSCustomObject]@{Animal="Fox";Order="Carnivora";Article=(New-UDLink -Text "Wikipedia" -Url "https://en.wikipedia.org/wiki/Fox")}
+)
+
+$Dashboard = New-UDDashboard -Title "Grids - Custom Columns" -Content {
+    $Headers = @("Animal", "Order", "Wikipedia")
+    $Properties = @("Animal", "Order", "Article")
+    New-UDGrid -Title "Animals" -ServerSideProcessing -PageSize 10 -Headers $Headers -Properties $Properties -Endpoint {
+        $FilteredAndSortedData = $Data | 
+            Where-Object Animal -like "*$filtertext*" |
+            Sort-Object $SortColumn -Descending:(!$SortAscending) 
+        
+        $FilteredAndSortedData | 
+            Select-Object -Skip $Skip -First $take |
+            Out-UDGridData -TotalItems $FilteredData.Count
+    }
+}
+```
+Important points here:
+- It's important to do the filter and sort before the paging with skip and first, as it will not behave as expected.
+- Totalitems need to be specified, else UD dont know how many pages there are, and it will not display the page info
