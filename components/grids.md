@@ -69,7 +69,6 @@ When the `-ServerSideProcessing` parameter is specified, it calls the `Endpoint`
 | $SortAscending | Whether to sort ascending, otherwise descending. | string |
 | $FilterText | The text to filter items or records by. | string |
 
-
 ```text
 $Dashboard = New-UDDashboard -Title "Grids - Custom Columns" -Content {
     $Headers = @("Animal", "Order", "Wikipedia")
@@ -91,7 +90,7 @@ $Dashboard = New-UDDashboard -Title "Grids - Custom Columns" -Content {
         $FilteredAndSortedData = $Data | 
             Where-Object Animal -like "*$filtertext*" |
             Sort-Object $SortColumn -Descending:(!$SortAscending) 
-        
+
         $FilteredAndSortedData | 
             Select-Object -Skip $Skip -First $take |
             Out-UDGridData -TotalItems $FilteredAndSortedData.Count
@@ -99,6 +98,9 @@ $Dashboard = New-UDDashboard -Title "Grids - Custom Columns" -Content {
 }
 Start-UDDashboard -Dashboard $Dashboard
 ```
+
 Important points here:
-- It's important to do the filter and sort before the paging with skip and first, as it will not behave as expected.
-- Totalitems need to be specified, else UD dont know how many pages there are, and it will not display the page info
+
+* It's important to do the filter and sort before the paging with skip and first, as it will not behave as expected.
+* Totalitems need to be specified, else UD dont know how many pages there are, and it will not display the page info
+
