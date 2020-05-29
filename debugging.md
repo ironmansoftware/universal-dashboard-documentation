@@ -36,17 +36,17 @@ If I ran a `Get-Runspace` call, I would see that I have a couple runspaces and o
 
 To debug an endpoint in VS Code, you can use the PowerShell Attach to Host Process debug configuration. From the debug pane, create a new debug configuration if you do not have one.
 
-![Adding a launch configuration](.gitbook/assets/image%20%2829%29.png)
+![Adding a launch configuration](.gitbook/assets/image%20%2826%29.png)
 
 Once you have a launch.json file created, you can then setup the configuration to connect to the remote runspace that is currently InBreakpoint. You will need the process ID of the PowerShell process running UD. You can find this by evaluating the `$PID` variable in the PowerShell console.
 
 The next step is to set the runspaceId to the runspace that is currently InBreakpoint. In the `launch.json` file, edit the PowerShell Attach to Host Process configuration's runspaceId property to contain the runspace ID listed in the console.
 
-![Setting the Runspace ID](.gitbook/assets/image%20%2874%29.png)
+![Setting the Runspace ID](.gitbook/assets/image%20%2866%29.png)
 
 After this is done, press F5 to start a debugging session. A select box will allow you to pick the PowerShell process. Select the process running UD.
 
-![Selecting the PowerShell Process](.gitbook/assets/image%20%2841%29.png)
+![Selecting the PowerShell Process](.gitbook/assets/image%20%2837%29.png)
 
 After selecting the process, VS Code will break into the endpoint's script block.
 
@@ -54,7 +54,7 @@ After selecting the process, VS Code will break into the endpoint's script block
 
 From here, you'll be able to step through the script, evaluate variables and run any command in the integrated terminal from within the endpoint's runspace.
 
-![Evaluating the $Request Variable](.gitbook/assets/image%20%2875%29.png)
+![Evaluating the $Request Variable](.gitbook/assets/image%20%2867%29.png)
 
 **Attaching via the Console**
 

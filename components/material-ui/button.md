@@ -6,7 +6,7 @@
 New-UDMuButton -Text 'Submit' -Variant contained
 ```
 
-![Contained Button](../../.gitbook/assets/image%20%2853%29.png)
+![Contained Button](../../.gitbook/assets/image%20%2847%29.png)
 
 ## Flat
 
@@ -22,7 +22,7 @@ New-UDMuButton -Text 'Submit' -Variant flat
 New-UDMuButton -Text 'Submit' -Variant outlined
 ```
 
-![Outlined Button](../../.gitbook/assets/image%20%2842%29.png)
+![Outlined Button](../../.gitbook/assets/image%20%2838%29.png)
 
 ## Icons
 
@@ -30,7 +30,7 @@ New-UDMuButton -Text 'Submit' -Variant outlined
 New-UDMuButton -Text 'Buy' -Variant contained -Icon (New-UDMuIcon -Icon bitcoin -Size '4x')
 ```
 
-![Icon Button](../../.gitbook/assets/image%20%2873%29.png)
+![Icon Button](../../.gitbook/assets/image%20%2865%29.png)
 
 ## Full Width
 
@@ -38,7 +38,7 @@ New-UDMuButton -Text 'Buy' -Variant contained -Icon (New-UDMuIcon -Icon bitcoin 
 New-UDMuButton -Text 'Submit' -Variant contained -FullWidth
 ```
 
-![Full Width Button](../../.gitbook/assets/image%20%2854%29.png)
+![Full Width Button](../../.gitbook/assets/image%20%2848%29.png)
 
 ## OnClick Handler
 
@@ -56,5 +56,5 @@ New-UDMuButton -Text 'Submit' -Variant contained -OnClick {
 New-UDMuButton -Text 'Submit' -Variant contained -Style @{ backgroundColor = "blue"; color = "white" }
 ```
 
-![Colored Button](../../.gitbook/assets/image%20%2839%29.png)
+![Colored Button](../../.gitbook/assets/image%20%2835%29%20%281%29.png)
 

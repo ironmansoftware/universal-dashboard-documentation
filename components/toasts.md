@@ -20,7 +20,7 @@ New-UDButton -Text "Show Toast" -OnClick {
 }
 ```
 
-![Custom Colors](../.gitbook/assets/image%20%2859%29.png)
+![Custom Colors](../.gitbook/assets/image%20%2858%29.png)
 
 ## Toast Title
 

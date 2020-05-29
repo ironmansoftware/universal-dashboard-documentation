@@ -20,7 +20,7 @@ New-UDTabContainer -Tabs {
 }
 ```
 
-![Tabs](../.gitbook/assets/image%20%2861%29.png)
+![Tabs](../.gitbook/assets/image%20%2854%29.png)
 
 ## Creating a Tab Container that only Renders Tabs When Active
 
