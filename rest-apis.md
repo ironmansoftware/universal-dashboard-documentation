@@ -74,7 +74,7 @@ $Endpoint = New-UDEndpoint -Url "/process" -Method "POST" -Endpoint {
 
      $Parameters = $Body | ConvertFrom-Json
 
-     Start-Process -FilePath $Body.FilePath -Arguments $Body.Arguments
+     Start-Process -FilePath $Parameters.FilePath -Arguments $Parameters.Arguments
 }
 Start-UDRestApi -Endpoint $Endpoint 
 
