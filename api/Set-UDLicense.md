@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-UDLicense
 
 ## SYNOPSIS
-Installs a PowerShell Pro Tools license
+Installs a Universal Dashboard license
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Set-UDLicense [-License] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Installs a PowerShell Pro Tools license
+Installs a Universal Dashboard license
 
 ## EXAMPLES
 
@@ -26,7 +26,7 @@ Installs a PowerShell Pro Tools license
 PS C:\> Set-UDLicense -License "<License>sdfadfasdf</License>"
 ```
 
-Installs a PowerShell Pro Tools license
+Installs a Universal Dashboard license
 
 ## PARAMETERS
 
