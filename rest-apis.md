@@ -40,11 +40,15 @@ New-UDEndpoint -Url "/process/:id" -Method "GET" -Endpoint {
 Instead of simple variables, you can instead use RegEx expressions to match URL patterns. This is handy for integration with systems like the DSC PullServer that provides complex URL patterns. Named groups will be passed to the endpoint as parameters. You'll need to include the `-EvaluateUrlAsRegex` parameter to `New-UDEndpoint`.
 
 ```text
-New-UDEndpoint -Url "Nodes\(AgentId='(?<AgentId>.*)'\)" -Method PUT -Endpoint {
-    param (
-        $AgentId
-    )
+$Endpoint = New-UDEndpoint -Url "nodes\(AgentId=(?<AgentId>[0-9]*)\)" -Method "PUT" -Endpoint {
+    param($AgentId)
+                
+    $AgentId | ConvertTo-Json
 } -EvaluateUrlAsRegex
+
+Start-UDRestApi -Endpoint $Endpoint -Force
+
+Invoke-RestMethod -Uri 'http://localhost:80/api/nodes(AgentId=1234)' -Method PUT
 ```
 
 ### Endpoints that take data from the HTTP request body
