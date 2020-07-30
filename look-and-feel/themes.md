@@ -99,8 +99,8 @@ In addition to the basic theme controls, you can also use CCS in your theme defi
 ```text
 $Theme = New-UDTheme -Name "Basic" -Definition @{
   '.ud-table' = @{
-      font-size = '20px'
-      font-style = 'italic'
+      'font-size' = '20px'
+      'font-style' = 'italic'
   }
 }
 ```
@@ -110,8 +110,8 @@ You can also mix and match the basic options with CSS.
 ```text
 $Theme = New-UDTheme -Name "Basic" -Definition @{
   '.ud-table' = @{
-      font-size = '20px'
-      font-style = 'italic'
+      'font-size' = '20px'
+      'font-style' = 'italic'
   }
   UDCard = @{
       BackgroundColor = 'red'
