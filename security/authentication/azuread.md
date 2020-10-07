@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# AzureAD
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# AzureAD
+## AzureAD
 
 {% hint style="info" %}
 Not available in Community Edition.
@@ -11,7 +12,7 @@ Not available in Community Edition.
 
 You can use `New-UDAuthenticationMethod` to configure Azure Active Directory authentication.
 
-## Registering Your Application
+### Registering Your Application
 
 You'll first need to register your application in the portal. In your directory settings, click App registrations.
 
@@ -33,13 +34,13 @@ The tenant ID is in the URL of all the endpoints.
 
 ![](../../.gitbook/assets/azuread-tenant-id.png)
 
-## Returning group claims from AzureAD
+### Returning group claims from AzureAD
 
 To return group claims from AzureAD, you will need to set the groupMembershipClaims property within the application manifest.
 
 ![groupMembershipClaims in manifest](../../.gitbook/assets/image%20%285%29.png)
 
-## Configuring UD for AzureAD
+### Configuring UD for AzureAD
 
 All you need to do is provide the above information to `New-UDAuthenticationMethod`.
 
@@ -49,6 +50,4 @@ $AuthenticationMethod = New-UDAuthenticationMethod -ClientId '000000-000-0000-00
 
 $LoginPage = New-UDLoginPage -AuthenticationMethod $AuthenticationMethod
 ```
-
-
 

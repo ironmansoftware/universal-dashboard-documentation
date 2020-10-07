@@ -1,13 +1,14 @@
-﻿{% hint style="info" %}
+# Event Handler Endpoints
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Event Handler Endpoints
+## Event Handler Endpoints
 
 When ever you create an element that has an event handler, like UDButton's onClick handler, a new endpoint is generated on the server to run your PowerShell script. Because this script is a new endpoint, it will have different variable scoping depending on where it lives within the dashboard.
 
-## Automatic Variable Scoping
+### Automatic Variable Scoping
 
 {% hint style="info" %}
 Note that automatic variable scoping can be problematic. See manual variable scoping for better control of variable scopes within event handlers.
@@ -37,7 +38,7 @@ foreach($item in $list) {
 
 To work around this limitation, you can use manual variable scoping.
 
-## Manual Variable Scoping
+### Manual Variable Scoping
 
 Manual variable scoping takes advantage of the `-ArgumentList` parameter of components that provide event handlers. Instead of passing a script block to the event handler parameter, pass a new UDEndpoint to the parameter instead.
 
@@ -50,6 +51,4 @@ foreach($item in $list) {
 ```
 
 Pass any variables you'd like to see within the endpoint through the `-ArgumentList` parameter. Within the endpoint you can access this list of variables via the `$ArgumentList` variable.
-
-
 

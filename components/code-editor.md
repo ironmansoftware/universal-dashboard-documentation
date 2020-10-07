@@ -1,13 +1,12 @@
-﻿{% hint style="info" %}
+# Code Editor
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
+### description: Documentation for the Code Editor component.
 
----
-description: Documentation for the Code Editor component.
----
-
-# Code Editor
+## Code Editor
 
 {% hint style="info" %}
 This component requires a [Universal Dashboard Enterprise License](https://ironmansoftware.com/powershell-universal-dashboard/).
@@ -15,7 +14,7 @@ This component requires a [Universal Dashboard Enterprise License](https://ironm
 
 ![Code Editor Control in Universal Dashboard.](../.gitbook/assets/image%20%2856%29.png)
 
-## Installation
+### Installation
 
 The Code Editor component is published to the PowerShell Gallery. You can install it with the following command line.
 
@@ -23,7 +22,7 @@ The Code Editor component is published to the PowerShell Gallery. You can instal
 Install-Module UniversalDashboard.CodeEditor -AllowPrerelease
 ```
 
-## Usage
+### Usage
 
 Creating an editor
 
@@ -67,6 +66,4 @@ New-UDCodeEditor -Id 'editor' -Language 'powershell' -Height '100ch' -Width '100
     }
 }
 ```
-
-
 

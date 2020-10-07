@@ -1,11 +1,12 @@
-﻿{% hint style="info" %}
+# Published Folders
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
+## Published Folders
 
-# Published Folders
-
-## Publishing a folder
+### Publishing a folder
 
 You can publish a folder by specifying the path to the folder. The RequestPath is the path that the web server will server the files.
 
@@ -35,6 +36,4 @@ RawContent        : HTTP/1.1 200 OK
                     Last-Modified: Sat, 03 Nov 2018 03:15:31 GMT
                     Server: ...
 ```
-
-
 

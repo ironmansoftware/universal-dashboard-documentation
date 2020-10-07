@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# Scheduled Endpoints
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Scheduled Endpoints
+## Scheduled Endpoints
 
 {% hint style="info" %}
 Required Version: 1.6.0 or later
@@ -11,7 +12,7 @@ Required Version: 1.6.0 or later
 
 Scheduled endpoints allow you to run PowerShell script blocks on an interval. You can easily run a job every minute, hour or day. You can also got as far as you want and specify a schedule using a CRON expression.
 
-## Uses for scheduling
+### Uses for scheduling
 
 Scheduling can be useful for collecting data from monitored systems. This data can be stored in a database or within a cache variable. This can greatly improve the performance of your dashboard. Rather than looking up the data when the user visits the dashboard, the data is collected in the background and loaded from the cache.
 
@@ -77,7 +78,7 @@ TotalSeconds      : 775.2531632
 TotalMilliseconds : 775253.1632
 ```
 
-## Defining a schedule
+### Defining a schedule
 
 To define a schedule, use the `New-UDEndpointSchedule` cmdlet. A simple schedule to run every 10 minutes could be defined as follows.
 
@@ -99,7 +100,7 @@ For example, this CRON expression runs at 10:15am every Monday, Tuesday, Wednesd
 New-UDEndpointSchedule -Cron '0 15 10 ? * MON-FRI'
 ```
 
-## Creating a scheduled endpoint
+### Creating a scheduled endpoint
 
 The `New-UDEndpoint` cmdlet has a `-Schedule` parameter that accepts the object created by `New-UDEndpointSchedule`.
 
@@ -121,6 +122,4 @@ Finally, you need to pass the `$Endpoint` into the `-Endpoint` parameter of `Sta
 ```text
 Start-UDDashboard -Endpoint $Endpoint -Dashboard $Dashboard
 ```
-
-
 

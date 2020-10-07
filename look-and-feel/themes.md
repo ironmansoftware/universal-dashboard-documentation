@@ -1,15 +1,16 @@
-﻿{% hint style="info" %}
+# Themes
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Themes
+## Themes
 
 _Required Version: 1.4.0 or later_
 
 Themes are used to define colors for a dashboard without having to pass colors to each component. Themes can easily be defined as a hashtable and passed into `New-UDTheme`. Component and property names can be defined in a theme as well as CSS classes and attributes.
 
-## Creating a basic theme
+### Creating a basic theme
 
 To create a basic theme, use `New-UDTheme`. Values for any of the attributes can be any valid CSS definition.
 
@@ -24,11 +25,11 @@ $Theme = New-UDTheme -Name "Basic" -Definition @{
 
 Themes can then be passed into the `-Theme` parameter of `New-UDDashboard`.
 
-## Finding pre-defined themes
+### Finding pre-defined themes
 
 Universal Dashboard includes pre-defined themes. These themes can be found using the `Get-UDTheme` cmdlet. You can use these themes as parents to other themes.
 
-## Creating child themes
+### Creating child themes
 
 You can create child themes of pre-existing themes returned by `Get-UDTheme`. To create a child theme, pass the name of the parent theme to the `Parent` parameter of `New-UDTheme`.
 
@@ -43,7 +44,7 @@ $Theme = New-UDTheme -Name "Basic" -Definition @{
 
 When defining a child theme, any properties that are defined in the child will override the parent. Any properties that are not overriden, will remain the same as the parent.
 
-## Available Properties
+### Available Properties
 
 Themes support a basic set of defined properties. These properties are translated to CSS classes and attributes for you.
 
@@ -92,7 +93,7 @@ $Theme = New-UDTheme -Name "Basic" -Definition @{
 }
 ```
 
-## Using Raw CSS
+### Using Raw CSS
 
 In addition to the basic theme controls, you can also use CCS in your theme definitions. Both the key and values are translated to CSS selectors and properties.
 
@@ -118,6 +119,4 @@ $Theme = New-UDTheme -Name "Basic" -Definition @{
   }
 }
 ```
-
-
 

@@ -1,9 +1,8 @@
-﻿# Table of contents
+# Table of contents
 
 * [Introduction](README.md)
 * [Getting Started](getting-started.md)
 * [System Requirements](system-requirements.md)
-* [Feature Comparison](feature-comparison.md)
 * [Concepts](concepts.md)
 * [Contributing](contributing.md)
 * [Admin Mode](admin-mode.md)
@@ -126,6 +125,4 @@
 * [How to](how-to/README.md)
   * [Get the user email address when using OAuth](how-to/get-the-user-email-address-when-using-oauth.md)
 * [Docs Changelog](changelog.md)
-
-
 

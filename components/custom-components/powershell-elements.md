@@ -1,11 +1,12 @@
-﻿{% hint style="info" %}
+# PowerShell Elements
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
+## PowerShell Elements
 
-# PowerShell Elements
-
-## Static Elements
+### Static Elements
 
 The `New-UDElement` cmdlet can be used to create HTML tags that define the markdown for a custom component. `New-UDElement` can be nested and attributes can be added.
 
@@ -42,7 +43,7 @@ New-UDElement -Tag "div" -Attributes @{ className = "determinate"; style=@{width
 
 For some examples of custom components, visit [GitHub](https://github.com/ironmansoftware/ud-material-design/blob/master/UniversalDashboard.MaterialDesign.psm1).
 
-## Dynamic Elements
+### Dynamic Elements
 
 All elements created with `New-UDElement` can be managed within any endpoint or event handler. In order to manage a component you need to specify an Id.
 
@@ -52,7 +53,7 @@ New-UDElement -Tag span -Id "targetSpan" -Content { "My Span" }
 
 The above span could now be managed within any endpoint. You can use the following cmdlets to get data, update elements, add children or remove the element entirely.
 
-### Getting data from an element
+#### Getting data from an element
 
 To get data from an element, use the `Get-UDElement` cmdlet to return the state of the element. You will receive the attributes and content of that element. The content may be another element or a string.
 
@@ -64,7 +65,7 @@ New-UDCounter -Title "Value of text box" -AutoRefresh -Endpoint {
 }
 ```
 
-### Setting data on an element
+#### Setting data on an element
 
 From any endpoint, you can call `Set-UDElement` to update the attributes and content of an element. You need to specify the Id and the values you would like to update.
 
@@ -82,7 +83,7 @@ Set-UDElement -Id "txtName" -Content {"Hello World"}
 
 The above call sets the content of an element to "Hello World"
 
-### Adding Child Elements
+#### Adding Child Elements
 
 You can add additional content to an existing element by using the `Add-UDElement` cmdlet. It appends the element to the current set of child elements for the specified parent.
 
@@ -104,7 +105,7 @@ Add-UDElement -ParentId parentDiv -Content {
 }
 ```
 
-### Clearing Child Elements
+#### Clearing Child Elements
 
 You can clear the child elements of a parent by using the `Clear-UDElement` cmdlet.
 
@@ -124,7 +125,7 @@ In an endpoint, you can add an element, such as a new paragraph, using `Add-UDEl
 Clear-UDElement -Id parentDiv
 ```
 
-### Removing elements
+#### Removing elements
 
 You can remove an element completely by using the `Remove-UDElement` cmdlet.
 
@@ -134,11 +135,9 @@ You simply need to pass in the Id of the target element to remove in order to re
 Remove-UDElement -Id elementToRemove
 ```
 
-### Broadcasting updates to all connected clients
+#### Broadcasting updates to all connected clients
 
 When a user uses a Universal Dashboard application, a websocket is opened between the client and the server. Each web socket maintains a connection ID. When using the element cmdlets to update the client UI, the connection ID is used to identify which client to send UI updates to.
 
 Sometimes, like in a chatroom when a user posts a message, there is a need to update the UI for all connected clients. All of the element cmdlets support a `-Broadcast` parameter to perform the UI update across all connected clients.
-
-
 

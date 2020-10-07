@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# Claims-Based
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Claims-Based
+## Claims-Based
 
 {% hint style="info" %}
 Not available in Community Edition.
@@ -33,7 +34,7 @@ You could then assign the policy to a page. The policy would be evaluated when t
 
 This works well with authentication methods that provide claims, like Azure Active Directory. You can then manage your users claims, like group membership, from within Azure rather than changing the code of your dashboard.
 
-## Hiding Controls based on Policies
+### Hiding Controls based on Policies
 
 You can use the `Get-UDAuthorizationPolicy` cmdlet to return the list of policies that a user has been granted.
 
@@ -46,6 +47,4 @@ New-UDCard -Title "Authorized Card" -Endpoint {
     }
 }
 ```
-
-
 

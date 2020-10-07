@@ -1,13 +1,14 @@
-﻿{% hint style="info" %}
+# Inputs
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Inputs
+## Inputs
 
 New-UDInput allows you to create cards on the dashboard that take user input. The input can then be processed on the server and an action can be presented to the user on the dashboard.
 
-## Creating a new input
+### Creating a new input
 
 To create a new input, use New-UDInput and specify the Endpoint parameter. The input on the form will automatically be generated based on the Param block within the Endpoint script block.
 
@@ -38,7 +39,7 @@ New-UDInput -Title "Module Info Locator" -Endpoint {
 }
 ```
 
-## Validating Input
+### Validating Input
 
 You can validate input by using any of the PowerShell [validation attributes](https://docs.microsoft.com/en-us/powershell/developer/cmdlet/validating-parameter-input). To enforce client-side validation, use the `-Validation` parameter of `New-UDInput` and specify a param block with valiation attributes on the parameters in your block.
 
@@ -60,11 +61,11 @@ The `UniversalDashboard.ValidationErrorMessage` is used to provide a custom erro
 
 ![](../.gitbook/assets/898df26f11ef22bed97a32cc2d1b87c9987456ca.gif)
 
-## Returning Actions to the User
+### Returning Actions to the User
 
 There are three actions you can return to the user. They include sending a toast message, redirecting to a URL and replacing the Input card's content with different content.
 
-### Sending a toast message
+#### Sending a toast message
 
 To send a toast message, simply call New-UDInputAction with the -Toast parameter and pass in text you would like to toast the user with.
 
@@ -79,7 +80,7 @@ New-UDInput -Title "Find module version" -Endpoint {
 }
 ```
 
-### Redirecting to a URL
+#### Redirecting to a URL
 
 To redirect to a URL, use the RedirectUrl parameter of New-UDInputAction.
 
@@ -107,7 +108,7 @@ New-UDInput -Title "Find module version" -Endpoint {
 }
 ```
 
-### Replacing the contents of the input card
+#### Replacing the contents of the input card
 
 You can replace the contents of the input card with different content by using the Content parameter and returning one or more components.
 
@@ -125,7 +126,7 @@ New-UDInput -Title "Module Info Locator" -Endpoint {
 }
 ```
 
-## Custom Inputs
+### Custom Inputs
 
 ![](../.gitbook/assets/custom-inputs.png)
 
@@ -156,6 +157,4 @@ Supported controls include:
 New-UDInputField requires the Name parameter. This is used to specify the name of the parameter that will be passed into the Endpoint for New-UDInput. For example, in the above script, when the user enters their email address into the first text box, the value of that will be passed into $Email when they click the submit button.
 
 The endpoint works the same as any other input and you can return New-UDInputActions from it.
-
-
 

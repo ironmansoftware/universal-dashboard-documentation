@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# JavaScript Elements
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# JavaScript Elements
+## JavaScript Elements
 
 With Universal Dashboard 2.3 and later you can now define JavaScript elements without having to use `New-UDElement`. You can define your own objects and cmdlets without writing any C\# code.
 
@@ -155,9 +156,7 @@ function New-UDSparkline {
 ```
 {% endcode %}
 
-## Distribution
+### Distribution
 
 At a minimum you will need to include the bundled JavaScript file and PSM1 file in a module. Users can then load this module into UD for use.
-
-
 

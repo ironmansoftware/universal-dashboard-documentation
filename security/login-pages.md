@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# Login Pages
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Login Pages
+## Login Pages
 
 {% hint style="info" %}
 Not available in Community Edition.
@@ -19,7 +20,7 @@ $Dashboard = New-UDDashboard -LoginPage $LoginPage -Page @(
 
 ![](https://github.com/adamdriscoll/universal-dashboard-documentation/tree/af4316e3e00472681e93b097c7d9de94f48e4d60/security/.gitbook/assets/login-page.png)
 
-## Authentication Methods
+### Authentication Methods
 
 You can use one or more authentication methods for a login page. UD currently supports the following authentication methods.
 
@@ -61,7 +62,7 @@ $AuthenticationMethod += New-UDAuthenticationMethod -Endpoint {
 $LoginPage = New-UDLoginPage -AuthenticationMethod $AuthenticationMethod
 ```
 
-## Customizing a Login Page
+### Customizing a Login Page
 
 There are several aspects of the login page you can customize to meet your branding and color preferences.
 
@@ -71,11 +72,9 @@ There are several aspects of the login page you can customize to meet your brand
 * LoginFormFontColor - The font color of the login form. This can be any hex color. 
 * LoadingText - The loading text to show while authentication is in progress
 
-## Accessing the User name in a Dashboard
+### Accessing the User name in a Dashboard
 
 In any Endpoint script block, you can access the user name. This means that Charts, Dynamic Pages, Tables and other controls can access the $User variable to get the current logged in user name.
 
 See [Variables Defined in Endpoints](../endpoints/variables-defined-in-endpoints.md) for more information.
-
-
 

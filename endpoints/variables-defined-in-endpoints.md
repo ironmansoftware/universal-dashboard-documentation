@@ -1,11 +1,12 @@
-﻿{% hint style="info" %}
+# Variables Defined in Endpoints
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Variables Defined in Endpoints
-
 ## Variables Defined in Endpoints
+
+### Variables Defined in Endpoints
 
 | Name | Description | Type |
 | :--- | :--- | :--- |
@@ -16,9 +17,9 @@ Universal Dashboard is now a part of PowerShell Universal. This documentation is
 | $Cache | Memory cache used by the dashboard server | [IMemoryCache](https://docs.microsoft.com/aspnet/core/api/microsoft.extensions.caching.memory.imemorycache) |
 | $ClaimsPrincipal | The entire ClaimsPrincipal object for a user. Only available when authentication is used | [ClaimsPrincip](https://msdn.microsoft.com/en-us/library/system.security.claims.claimsprincipal%28v=vs.110%29.aspx)al |
 
-## Types available
+### Types available
 
-### Location
+#### Location
 
 ```text
 @{
@@ -34,6 +35,4 @@ Universal Dashboard is now a part of PowerShell Universal. This documentation is
     timestamp
 }
 ```
-
-
 

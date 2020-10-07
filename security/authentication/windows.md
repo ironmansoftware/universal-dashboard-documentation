@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# Windows
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Windows
+## Windows
 
 {% hint style="info" %}
 Not available in Community Edition.
@@ -47,7 +48,7 @@ Start-UDDashboard -Content {
 } -Wait -AllowHttpForLogin
 ```
 
-## Claims-Based Authorization with Windows Authentication
+### Claims-Based Authorization with Windows Authentication
 
 You can use claims-based authorization with Windows Authentication by use the `$UserPrincipal.HasClaims()` method. There are several claims that will be provided by Windows to the Universal Dashboard authorization system. You can find a [list here](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/technical-reference/the-role-of-claims).
 
@@ -79,6 +80,4 @@ $Dashboard = New-UDDashboard -LoginPage $LoginPage -Title "Hi" -Pages @($AdminPa
 
 Start-UDDashboard -Wait -Dashboard $Dashboard -AllowHttpForLogin
 ```
-
-
 

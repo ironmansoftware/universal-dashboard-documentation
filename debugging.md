@@ -1,17 +1,18 @@
-﻿{% hint style="info" %}
+# Debugging
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Debugging
+## Debugging
 
 When developing a dashboard it may become necessary to debug an endpoint. Endpoints are run within the Universal Dashboard server in a different runspace than the runspace you used to start the dashboard. Because of this, it can become difficult to determine an error that may be preventing data from appearing in your dashboard. Terminating errors should result in the UD card displaying the error message but non-terminating errors or unexpected behavior may not be reflected at all in the user interface.
 
-## Logging
+### Logging
 
 You can enable logging using `Enable-UDLogging`. Logging will output the internals of Universal Dashboard. If you set the log level to `Verbose` you will see all output from all the Endpoint script blocks that you run within Universal Dashboard.
 
-## Debugging Endpoints
+### Debugging Endpoints
 
 Since Endpoints run in a different runspace than the runspace used to start the dashboard, it can be difficult to see what is going on. The best way to debug endpoints is to include a call to `Wait-Debugger` within your endpoint.
 
@@ -37,7 +38,7 @@ If I ran a `Get-Runspace` call, I would see that I have a couple runspaces and o
  12 Runspace12      localhost       Local         Opened        InBreakpoint
 ```
 
-### **Debugging in VS Code**
+#### **Debugging in VS Code**
 
 To debug an endpoint in VS Code, you can use the PowerShell Attach to Host Process debug configuration. From the debug pane, create a new debug configuration if you do not have one.
 
@@ -79,17 +80,17 @@ At line:3 char:17
 
 I can now run standard debugging operations like stepping over and into as well as running other cmdlets and viewing variable values within that runspace. Entering `c` will allow the endpoint to continue.
 
-## Debugging the return value of an endpoint from the browser
+### Debugging the return value of an endpoint from the browser
 
 Sometimes the serialization of an object may not go as expected. To see what is returned by the server to the web browser, you can specify the endpoint URL in the browser address bar or use the F12 developer tools in your browser.
 
-### Finding the correct URL
+#### Finding the correct URL
 
 Assuming we have a UDCounter, we can determine the result of that counter by finding the request in the browser developer tools.
 
 The easiest way to find a URL is to ensure that is has an easy to find ID. If the ID isn't specified then the component's ID is a randomly generated GUID. It will remain the same for the duration of the execution of the UDDashboard but recreating a dashboard via New-UDDashboard will regenerate this GUID.
 
-### Debugging an endpoint from the browser
+#### Debugging an endpoint from the browser
 
 Here's an example of specifying an ID.
 
@@ -120,6 +121,4 @@ Each type of component has a different endpoint. Below is a list of component en
 * UDRow - /component/row/&lt;id&gt;
 * UDColumn - /component/column/&lt;id&gt;
 * UDGrid - /component/grid/&lt;id&gt;
-
-
 

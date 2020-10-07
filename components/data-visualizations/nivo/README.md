@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# Nivo
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Nivo
+## Nivo
 
 {% hint style="info" %}
 Not available in Community Edition
@@ -11,7 +12,7 @@ Not available in Community Edition
 Requires 2.2.0-beta2
 {% endhint %}
 
-## About Nivo
+### About Nivo
 
 Nivo provides a rich set of dataviz components, built on top of the awesome D3 and React libraries.
 
@@ -23,7 +24,7 @@ The Universal Dashboard Nivo implementation exposes numerous different types of 
 
 You can play with all the different charts over on the [Nivo website](https://nivo.rocks/components).
 
-## Creating a Nivo chart
+### Creating a Nivo chart
 
 Nivo charts are created with the `New-UDNivoChart` cmdlet. You can provide data and customize the chart in tons of different ways. Let's create a simple line chart.
 
@@ -48,7 +49,7 @@ The above code produces the following chart.
 
 As you can see the data needs to be a particular format for each type of chart. The documentation for each chart will provide the data structure you should use. For Example: the "Calendar" requires an object containing HashTables whereas some charts may accept JSON or PowerShell objects.
 
-## Colors
+### Colors
 
 Nivo comes with numerous color palettes out of the box. You can select [one of the color palettes](https://nivo.rocks/guides/colors) by name using the `-Colors` property.
 
@@ -80,7 +81,7 @@ The above script produces the following chart.
 
 ![Bar chart with the dark2 color palette](../../../.gitbook/assets/image%20%2822%29.png)
 
-## Patterns
+### Patterns
 
 You can also define patterns to use with your charts. You can use lines, dots or squares to provide extra emphasis to particular vectors of a series.
 
@@ -132,7 +133,7 @@ The above script results in the following chart.
 
 ![Bar chart with a pattern](../../../.gitbook/assets/image%20%2821%29.png)
 
-## Interactive Charts
+### Interactive Charts
 
 Nivo charts support `OnClick` event handlers. You can provide a script block to the `-OnClick` parameter of `New-UDNivoChart` to create an event handler. When a user clicks the chart, your script block will be invoked and the `$EventData` property will be populated with the JSON from the Nivo chart. The event data contains the data point as well as positional information.
 
@@ -166,7 +167,7 @@ The above script produces the following chart.
 
 ![Interactive Nivo Chart](../../../.gitbook/assets/interactive%20%281%29.gif)
 
-## Auto-Reloading Charts
+### Auto-Reloading Charts
 
 Rather than implementing an endpoint parameter directly, the Nivo charts rely on their parent to refresh. The easiest way to accomplish this is to place a Nivo chart in a UDColumn that auto refreshes. Make sure to specify the `-Id` parameter for the chart as React will not know to update the chart data unless there is a persistent Id specified.
 
@@ -206,6 +207,4 @@ The resulting chart looks like this.
 ![Autorefresh Nivo Chart](../../../.gitbook/assets/autorefresh%20%281%29.gif)
 
 You can also control the animations by either disabling them with `-DisableAnimation` or change the damping and stiffness with `-MotionDamping` and `-MotionStiffness`.
-
-
 

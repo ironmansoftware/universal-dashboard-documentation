@@ -1,13 +1,14 @@
-﻿{% hint style="info" %}
+# Grids
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Grids
+## Grids
 
 Grids output data similar to tables but allow for paging and sorting the data in the grid. Grids are produced using the [Griddle ](https://griddlegriddle.github.io/Griddle/docs/)library. Grids are created with the New-UDGrid cmdlet and data for the grid is output using the Out-UDGridData cmdlet.
 
-## Simple Grid
+### Simple Grid
 
 To create a simple grid, pass data from a cmdlet to Out-UDGridData from within the New-UDGrid's Endpoint script block.
 
@@ -17,7 +18,7 @@ New-UdGrid -Title "Processes" -Endpoint {
 }
 ```
 
-## Custom Headers
+### Custom Headers
 
 To specify custom headers, use the -Headers parameter of New-UDGrid.
 
@@ -33,7 +34,7 @@ The above script produces the following grid.
 
 ![](../.gitbook/assets/griddle.png)
 
-## Formatting DateTimes on the client
+### Formatting DateTimes on the client
 
 If your data set includes a System.DateTime object as one of the properties, the UDGrid component will format the DateTime is the user's browsers local time zone settings. It uses [MomentJS](https://momentjs.com/docs/#/displaying/) to format the date time into a readable string. By default, it uses the `lll` format which yields a date time such as `Sep 4, 1986 8:30 PM`. You can customize the date time format by specifying the `-DateTimeFormat` on `New-UDGrid`.
 
@@ -43,7 +44,7 @@ New-UdGrid -Title "Files" -Headers @("Name", "Last Write Time") -Properties @("N
 } -DateTimeFormat 'LLLL'
 ```
 
-## Including links in columns
+### Including links in columns
 
 In addition to passing raw data down to a grid, you can also include links. Use the `New-UDLink` cmdlet to add links into columns.
 
@@ -62,7 +63,7 @@ $Dashboard = New-UDDashboard -Title "Grids - Custom Columns" -Content {
 Start-UDDashboard -Dashboard $Dashboard
 ```
 
-## Server Side Processing
+### Server Side Processing
 
 When the `-ServerSideProcessing` parameter is specified, it calls the `Endpoint` script block to perform the paging, filtering and sorting. To allow for this, there are several variables that are provided when the `Endpoint` script block is executed.
 
@@ -108,6 +109,4 @@ Important points here:
 
 * It's important to do the filter and sort before the paging with skip and first, as it will not behave as expected.
 * Totalitems need to be specified, else UD dont know how many pages there are, and it will not display the page info
-
-
 

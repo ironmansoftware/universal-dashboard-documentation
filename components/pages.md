@@ -1,11 +1,12 @@
-﻿{% hint style="info" %}
+# Pages
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
+## Pages
 
-# Pages
-
-## Creating a dashboard with multiple pages
+### Creating a dashboard with multiple pages
 
 Dashboards can be broken down into multiple pages by using the New-UDPage cmdlet along with New-UDDashboard's Pages parameter. Each page can have a name and icon. The name provides both the name of the page in the navigation bar but also the URL for the page. The icon is displayed in the navigation bar along side the name.
 
@@ -17,7 +18,7 @@ $Page2 = New-UDPage -Name "Links" -Icon link -Content { New-UDCard }
 New-UDDashboard -Pages @($Page1, $Page2)
 ```
 
-## Navigating Between Pages
+### Navigating Between Pages
 
 Once you have created your multi-page dashboard, you will now have a hamburger menu icon available in the bottom left corner of the dashboard. Click the icon will pop out the dashboard navigation pane. Clicking the links will take you to the different pages of your dashboard.
 
@@ -25,11 +26,11 @@ Once you have created your multi-page dashboard, you will now have a hamburger m
 
 ![](../.gitbook/assets/navigation.png)
 
-## Automatically Cycling Through Pages
+### Automatically Cycling Through Pages
 
 Since dashboards may often be used for display purposes only, you can also enable auto-cycling of pages. On New-UDDashboard, specify the CyclePages and CyclePagesInterval parameters. CyclePagesInterval is the number of seconds to wait while displaying a dashboard page.
 
-## Dynamic Pages
+### Dynamic Pages
 
 Dynamic pages are created by specifying a page URL and an Endpoint. Unlike static pages, a dynamic page is generated every time the URL is hit. This means there is a slight performance penalty to a dynamic page but unlimited options of what you can do on that page. To create a basic dynamic page, use New-UDPage and the URL and Endpoint parameters.
 
@@ -56,6 +57,4 @@ New-UDPage -Url "/myPage/:number/:number2" -Endpoint {
 You must have a single static page to serve as a home page or visiting you dashboard's home page will simply display a warning message.
 
 New-UDInputAction can be used to redirect to a dynamic page. See the documentation on [Inputs ](https://github.com/adamdriscoll/universal-dashboard-documentation/tree/89087727c84b163ffad4ab000df1b69ba54f36bc/powershell-pro-tools-documentation/inputs.md)for more information.
-
-
 

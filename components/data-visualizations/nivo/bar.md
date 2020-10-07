@@ -1,11 +1,12 @@
-﻿{% hint style="info" %}
+# Bar
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
+## Bar
 
-# Bar
-
-## Simple Bar Chart
+### Simple Bar Chart
 
 This is a simple Nivo bar chart. The data must be in a key value format such as the one defined below. This particular chart is indexed by state and the y-axis is the population.
 
@@ -34,7 +35,7 @@ New-UDNivoChart -Bar -Data $Data -Keys 'population' -IndexBy 'state' -Height 500
 
 ![Simple bar chart](../../../.gitbook/assets/image%20%286%29.png)
 
-## Multiple Data Keys
+### Multiple Data Keys
 
 This bar chart provides multiple data points per indexed bar.
 
@@ -67,7 +68,7 @@ New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'sta
 
 ![Bar chart with multiple data keys](../../../.gitbook/assets/image%20%2828%29%20%281%29.png)
 
-## Grouped Layout
+### Grouped Layout
 
 This bar chart is grouped rather than stacked.
 
@@ -100,7 +101,7 @@ New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'sta
 
 ![Grouped bar chart](../../../.gitbook/assets/image%20%2811%29.png)
 
-## Horizontal Layout
+### Horizontal Layout
 
 ```text
 $Data = @(
@@ -130,6 +131,4 @@ New-UDNivoChart -Bar -Data $Data -Keys @('programmers', 'farmers') -IndexBy 'sta
 ```
 
 ![Horizontal Layout](../../../.gitbook/assets/image%20%282%29.png)
-
-
 

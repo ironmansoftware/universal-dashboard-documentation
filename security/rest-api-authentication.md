@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# REST API Authentication
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# REST API Authentication
+## REST API Authentication
 
 Updated: 3/3/2018 Required Version: 1.5.0
 
@@ -11,13 +12,13 @@ Updated: 3/3/2018 Required Version: 1.5.0
 Not available in Community Edition.
 {% endhint %}
 
-## JSON Web Tokens
+### JSON Web Tokens
 
 REST API authentication takes advantage of JSON web tokens to provide a mechanism to authentication users and applications again a REST API. Tokens can be granted on the command line or through an endpoint and then provided as part of the Authorization header when making future requests.
 
 Visit [JWT.IO](https://jwt.io/) to learn more about JSON web tokens
 
-## Basic Authentication
+### Basic Authentication
 
 To setup basic authentication, you can use `New-UDAuthenticationMethod` with `Start-UDRestApi`. Simply pass a new authentication method to the `-AuthenticationMethod` parameter of `Start-UDRestApi`.
 
@@ -38,7 +39,7 @@ The token can then be used with `Invoke-RestMethod` or another HTTP tool as part
 Invoke-RestMethod -Headers @{ Authorization = "Bearer $Token" }
 ```
 
-## Configuration Authentication
+### Configuration Authentication
 
 `New-UDAuthenticationMethod` offers several configuration options that provide additional security when configuring the protection for a REST API. You will want to override the `-SigningKey` parameter. It defaults to `default_signing_key`. Changing this value ensures that the signing key is unique for your REST API.
 
@@ -53,7 +54,7 @@ When changing the signing key, audience or issuer, make sure to specify the same
 $Token = Grant-UDJsonWebToken -UserName 'Adam' -SigningKey "SuperSecretKey"
 ```
 
-## Enabling Authentication through the REST API
+### Enabling Authentication through the REST API
 
 To enable authentication through the REST API, you can specify an endpoint based authentication method with `New-UDAuthenticationMethod`. When you specify the result of `New-UDAuthenticationResult` you can include a token that the user can then use for Bearer authentication for other REST API calls. The endpoint will receive a `PSCredential` object that you can then use to authenticate in whatever means is necessary.
 
@@ -83,7 +84,7 @@ $Token = Invoke-RestMethod -Uri http://localhost:10001/api/login -Method POST -B
 $users = Invoke-RestMethod -Uri http://localhost:10001/api/user/me -Headers @{ Authorization = "Bearer $($Token.Token)" }
 ```
 
-## Configuring Tokens
+### Configuring Tokens
 
 `Grant-UDJsonWebToken` provides several configuration options for tokens. You can specify expiration as well as user names. Default expiration is 1 year. User names are available within UDEndpoints that by using the `$User` variable.
 
@@ -150,6 +151,4 @@ iss                                                        poshud.com
 aud                                                        UniversalDashboard
 Account                                                    Billing
 ```
-
-
 

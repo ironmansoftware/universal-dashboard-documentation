@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# Navigation
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Navigation
+## Navigation
 
 {% hint style="info" %}
 Requires Universal Dashboard 2.3 or later
@@ -11,7 +12,7 @@ Requires Universal Dashboard 2.3 or later
 
 By default, when new [Pages](pages.md) are added to a dashboard, a navigation menu will be created that provides access to all the static pages. Dynamic pages will not show up in the navigation menu.
 
-## Customizing Navigation
+### Customizing Navigation
 
 To customize navigation, you can use the `New-UDSideNav` and `New-UDSideNavItem` cmdlets for full control over the navigation pane. In the simplest form, you can add items to the side navigation and the provide the side nav to the dashboard.
 
@@ -28,7 +29,7 @@ $Navigation = New-UDSideNav -Content {
 $Dashboard = New-UDDashboard -Title "Navigation" -Pages @($Page1, $Page2) -Navigation $Navigation
 ```
 
-## Hiding the Side Navigation and Hamburger Menu Button
+### Hiding the Side Navigation and Hamburger Menu Button
 
 You can hide the side navigation completely by using the `-None` parameter of `New-UDSideNav` .
 
@@ -41,7 +42,7 @@ $Navigation = New-UDSideNav -None
 New-UDDashboard -Title "Navigation" -Pages @($Page1, $Page2) -Navigation $Navigation
 ```
 
-## Creating Nested Menu Structures
+### Creating Nested Menu Structures
 
 To create nested menu structures in the side navigation menu, use the `-Children` parameter of `New-UDSideNavItem` to provide the child nodes for the menu.
 
@@ -59,7 +60,7 @@ $Navigation = New-UDSideNav -Content {
 New-UDDashboard -Title "Navigation" -Pages @($Page1, $Page2) -Navigation $Navigation
 ```
 
-## Including Dividers and Subheaders
+### Including Dividers and Subheaders
 
 Menus can include dividers and subheaders. Both of these items can be created using the `New-UDSideNavItem` cmdlet.
 
@@ -78,7 +79,7 @@ $Navigation = New-UDSideNav -Content {
 New-UDDashboard -Title "Navigation" -Pages @($Page1, $Page2) -Navigation $Navigation
 ```
 
-## Dynamically Building Menus
+### Dynamically Building Menus
 
 Menus can be built dynamically by providing an endpoint script block to `New-UDSideNav` . This script block will be called the first time a user loads the dashboard and on page refreshes.
 
@@ -92,6 +93,4 @@ $Navigation = New-UDSideNav -Endpoint {
 
 New-UDDashboard -Title "Navigation" -Pages @($Page1, $Page2) -Navigation $Navigation
 ```
-
-
 

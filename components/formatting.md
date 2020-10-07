@@ -1,11 +1,12 @@
-﻿{% hint style="info" %}
+# Formatting
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
+## Formatting
 
-# Formatting
-
-## Formatting with Layouts
+### Formatting with Layouts
 
 Layouts provide a simple way to format dashboards into columns and rows. The New-UDLayout cmdlet has a Columns parameter to specify the number of columns in the layout. Based on the content of the layout, rows will be added whenever there are more items than columns.
 
@@ -40,7 +41,7 @@ New-UDLayout -Columns 3 -Content {
 | :--- | :--- | :--- |
 |  |  |  |
 
-## Formatting with Rows and Columns
+### Formatting with Rows and Columns
 
 For more control over the format of your dashboard, you can use the New-UDRow and New-UDColumn cmdlets. The row and column system is a PowerShell implementation of the Grid system found in [Materialize](http://materializecss.com/grid.html). Each row is broken down into 12 equally size areas. Each column can be 1-12 in size.
 
@@ -87,6 +88,4 @@ New-UDColumn -Size 12 {
 }                
 }
 ```
-
-
 

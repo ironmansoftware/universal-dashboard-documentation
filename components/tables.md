@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# Tables
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Tables
+## Tables
 
 Tables are simple controls that output data in an HTML table. Tables are created with the New-UDTable cmdlet and endpoint data is output using the Out-UDTableData cmdlet.
 
@@ -23,6 +24,4 @@ New-UDTable -Title "Server Information" -Headers @(" ", " ") -Endpoint {
 The above script produces the following HTML control.
 
 ![](../.gitbook/assets/new-table-example-image.png)
-
-
 

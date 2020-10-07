@@ -1,13 +1,14 @@
-﻿{% hint style="info" %}
+# Charts
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Charts
+## Charts
 
 Charts can be created with the New-UDChart cmdlet. Charts can be either bar, line, doughnut or pie. Chart data is supplied via a server-side PowerShell snippet. Charts can be extensively customized. This includes colors, borders and any option that the [ChartJS](http://www.chartjs.org/) library provides.
 
-## Creating a basic chart
+### Creating a basic chart
 
 A basic chart can be created by specifying the Title, Type and Endpoint.
 
@@ -29,7 +30,7 @@ The data in the chart is the number of threads per process name. Chart data is r
 
 Additional options can be supplied to the chart control via the Options parameter. It should be a hashtable with [ChartJS options](http://www.chartjs.org/docs/latest/charts/line.html#disable-animations) for the specified chart. Charts can also AutoRefresh at a specified interval. The RefreshInterval is the number of seconds between refreshes.
 
-## Chart Colors
+### Chart Colors
 
 Chart colors can be configured using the options defined on the `Out-UDChartData` cmdlet. You can specify colors for the background, border, hover background and hover border.
 
@@ -44,7 +45,7 @@ New-UDChart -Type Bar -Endpoint {
 
 ![](../../.gitbook/assets/image%20%2814%29.png)
 
-## Creating charts with multiple datasets
+### Creating charts with multiple datasets
 
 To create charts with multiple datasets, use the Out-UDChartData parameter set that accepts an array of datasets created by New-UDChartData set. Each dataset selects a different dimension of data from the supplied object. An example would be selecting the Total Size and Free Space from the disk drives on a computer.
 
@@ -65,7 +66,7 @@ The New-UDChartDataset cmdlet expects the DataProperty and Label of the dataset 
 
 ![](../../.gitbook/assets/drive_space_example.png)
 
-## Stacked Bar Charts
+### Stacked Bar Charts
 
 To create a stacked bar chart, use the `-Options` parameter and specify the options hashtable below.
 
@@ -96,7 +97,7 @@ New-UDChart -Type Bar -Endpoint {
 
 ![Stacked Bar Chart](../../.gitbook/assets/image%20%2843%29.png)
 
-## Chart with multiple datasets with different chart types
+### Chart with multiple datasets with different chart types
 
 You can set the `type` property of the a dataset created with `New-UDChartDataset` to adjust the chart type per dataset.
 
@@ -114,6 +115,4 @@ You can set the `type` property of the a dataset created with `New-UDChartDatase
 ```
 
 ![](../../.gitbook/assets/image%20%2859%29.png)
-
-
 

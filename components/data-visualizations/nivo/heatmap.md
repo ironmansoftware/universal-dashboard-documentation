@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# Heatmap
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Heatmap
+## Heatmap
 
 A heat map shows a set of data in a grid in line with other vectors of data. You will need to define an array of hashtables. One axis will be the property to index by while the other vector will be a set of keys as defined by other properties of the hash table.
 
@@ -42,6 +43,4 @@ New-UDNivoChart -Heatmap -Data $Data -IndexBy 'state' -keys @('cats', 'dogs', 'm
 ```
 
 ![Heatmap](../../../.gitbook/assets/image%20%2825%29.png)
-
-
 

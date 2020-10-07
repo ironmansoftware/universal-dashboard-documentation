@@ -1,31 +1,32 @@
-﻿{% hint style="info" %}
+# IIS
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
+## IIS
 
-# IIS
-
-To run a dashboard in IIS, you will need to configure an application pool and website just as you would with any other IIS web application. 
+To run a dashboard in IIS, you will need to configure an application pool and website just as you would with any other IIS web application.
 
 In addition to the standard IIS configuration, you will need the following.
 
 * [ASP.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-aspnetcore-2.2.8-windows-hosting-bundle-installer)
 * [WebSocket Protocol](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-websocket-protocol-support)
 
-#### OS limitations
+**OS limitations**
 
 It's important to note the difference between client OS and server OS:
 
 * Client OS: have a max on concurrent connections, as it's limited to 10 max.
 * Server OS: have no limitation. \(except standard defined by IIS\)
 
-## Configuring a site for Universal Dashboard
+### Configuring a site for Universal Dashboard
 
-To host a Universal Dashboard website, you'll want to install the UniversalDashboard module to a location that the ApplicationPool user has access to. The default application pool user will not be able to access anything outside of wwwroot. You will need to either install Universal Dashboard to that location or provide additional access to an alternate folder for that user. 
+To host a Universal Dashboard website, you'll want to install the UniversalDashboard module to a location that the ApplicationPool user has access to. The default application pool user will not be able to access anything outside of wwwroot. You will need to either install Universal Dashboard to that location or provide additional access to an alternate folder for that user.
 
 The recommended approach is provide a location on the `$Env:PSModulePath` that enables the user to load modules from. For example, you could have all your modules stored in `C:\PowerShellModules\` and then you would add that path to the `$Env:PSModulePath` environment variable. If you configure it in this manner, you'll be able to upgrade Universal Dashboard in a single place and all your websites will load the new module.
 
-Once you have the UniversalDashboard module installed, you will need copy the `web.config` file included with UD as well as your script to the websites folder. You can click Explore to view this folder. 
+Once you have the UniversalDashboard module installed, you will need copy the `web.config` file included with UD as well as your script to the websites folder. You can click Explore to view this folder.
 
 ![](../../.gitbook/assets/explore-iis.png)
 
@@ -45,7 +46,7 @@ Create a `.ps1` file and place it in the `wwwroot` folder. The dashboard should 
 )
 ```
 
-Your website directory should now contain a `web.config` file and a PowerShell script that will execute when accessing the website. 
+Your website directory should now contain a `web.config` file and a PowerShell script that will execute when accessing the website.
 
 ![](../../.gitbook/assets/image%20%2849%29.png)
 
@@ -53,7 +54,7 @@ Navigate to the IIS website in your browser and you should see Universal Dashboa
 
 ![](../../.gitbook/assets/iis-running.png)
 
-## Creating Nested IIS Sites
+### Creating Nested IIS Sites
 
 {% hint style="info" %}
 Requires Universal Dashboard 2.3 or later
@@ -82,13 +83,13 @@ An example `index.html` looks like this.
 </html>
 ```
 
-## Licensing
+### Licensing
 
 The license should be named license.lic and placed in the `net472` or the `netstandard2.0` folder within the module installation directory. This will ensure that the license is persistent throughout restarts.
 
-## Troubleshooting
+### Troubleshooting
 
-Check the Application Log in the Event Viewer for .NET runtime errors. You can also run your script from the command line to view errors that may be present when starting the dashboard that may be preventing it from loading in IIS. 
+Check the Application Log in the Event Viewer for .NET runtime errors. You can also run your script from the command line to view errors that may be present when starting the dashboard that may be preventing it from loading in IIS.
 
 Some other tips from the community:
 
@@ -96,7 +97,7 @@ Some other tips from the community:
 2. Build Verbose Error Logging **AND** handling into your solution
 3. Ensure that your final syntax is correct. There are some nuances that yield different results when running as a script vs interactively.
 
-### Logging
+#### Logging
 
 You can enable logging by specifying a path in the `web.config` file. You can change the `stdoutLogFile` path to a location that IIS has the permissions to write to. You can then add `Enable-UDLogging` to the top of your `dashboard.ps1` file to turn on console logging for Universal Dashboard. This is a complete `web.config` example
 
@@ -124,6 +125,4 @@ You can enable logging by specifying a path in the `web.config` file. You can ch
 ```
 
 Log files will then be written and timestamped to the directory and name you select.
-
-
 

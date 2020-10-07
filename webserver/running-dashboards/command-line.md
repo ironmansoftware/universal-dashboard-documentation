@@ -1,11 +1,12 @@
-﻿{% hint style="info" %}
+# Command Line
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
+## Command Line
 
-# Command Line
-
-## Starting a Dashboard
+### Starting a Dashboard
 
 Dashboards can be run from the command line by using the `Start-UDDashboard` cmdlet. This cmdlet accepts a port and dashboard to run. The port can be any valid port number not currently being used by the system. Multiple dashboards can be run in the same PowerShell session on different ports.
 
@@ -21,7 +22,7 @@ Start-UDDashboard -Port 1000 -Dashboard $MyDashboard
 
 You should be able to view your dashboard by visiting [http://localhost:1000](http://localhost:1000)
 
-## Getting Running Dashboards
+### Getting Running Dashboards
 
 Using `Get-UDDashboard`, you can return all the dashboards running in the current PowerShell session. This does not list dashboards in different processes. It only lists dashboards running in the current process.
 
@@ -33,7 +34,7 @@ Name       Port Running
 Dashboard0 1000    True
 ```
 
-## Stopping Dashboards
+### Stopping Dashboards
 
 Dashboards can be stopped with `Stop-UDDashboard`. This cmdlet will stop the ASP.NET web service and release the port that the dashboard is listening on. To stop all running dashboards for a process, you can pipe from `Get-UDDashboard`.
 
@@ -41,7 +42,7 @@ Dashboards can be stopped with `Stop-UDDashboard`. This cmdlet will stop the ASP
 Get-UDDashboard | Stop-UDDashboard
 ```
 
-### Auto Reload
+#### Auto Reload
 
 Auto-reloading a dashboard allows for faster dashboard development. When you have a script that contains `Start-UDDashboard` and specify the `-AutoReload` parameter, the dashboard will reload automatically when changes are made to the script. Simply save your script and the running dashboard will refresh. If you have a webpage open to your dashboard, it will reload automatically. It provides instant feedback with changes to your dashboard.
 
@@ -84,9 +85,7 @@ PS> $MyDashboard = New-UDDashboard -Title "Hello, World" -Content {
 PS> Start-UDDashboard -Port 1000 -Dashboard $MyDashboard
 ```
 
-### Wait
+#### Wait
 
 The Wait parameter is specified if you would like the current PowerShell execution to block while the dashboard is running. This parameter is required for running in Azure and IIS.
-
-
 

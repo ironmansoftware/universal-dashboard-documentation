@@ -1,13 +1,14 @@
-﻿{% hint style="info" %}
+# Azure
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Azure
+## Azure
 
 To host a dashboard in Azure, you will need to deploy the entire module to your WebApp.
 
-## Manually creating an Azure WebApp
+### Manually creating an Azure WebApp
 
 First, create an Azure WebApp.
 
@@ -47,9 +48,7 @@ Now you should be able to navigate to your WebApp. When ever you need to update 
 
 ![](../../.gitbook/assets/hello-azure.png)
 
-## Licensing
+### Licensing
 
 The license should be named license.lic and also placed in net472 directory. This will ensure that the license is persistent throughout restarts.
-
-
 

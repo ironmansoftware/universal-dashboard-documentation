@@ -1,15 +1,16 @@
-﻿{% hint style="info" %}
+# Colors
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Colors
-
 ## Colors
+
+### Colors
 
 Many controls offer the ability to change colors like the font and background colors. You can specify colors in a couple of different ways thanks to the DashboardColor class.
 
-## Named Colors
+### Named Colors
 
 You can use any of the named colors found in the [.NET Color struct](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.color?view=netframework-4.7.2).
 
@@ -17,7 +18,7 @@ You can use any of the named colors found in the [.NET Color struct](https://doc
 New-UDCard -BackgroundColor 'red'
 ```
 
-## HEX Colors
+### HEX Colors
 
 You can use standard HEX color specifiers.
 
@@ -31,13 +32,11 @@ You can also include an alpha channel value.
 New-UDCard -BackgroundColor "#E82C0CFA"
 ```
 
-## RGB Colors
+### RGB Colors
 
 You can also specify colors using an ARGB value.
 
 ```text
 New-UDCard -BackgroundColor 16777215
 ```
-
-
 

@@ -1,15 +1,16 @@
-﻿{% hint style="info" %}
+# Tabs
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
+## Tabs
 
-# Tabs
+A standard tab control that allows you to specify multiple tabs with a title and content. You can place any UD element within the content.
 
-A standard tab control that allows you to specify multiple tabs with a title and content. You can place any UD element within the content. 
+### Creating a Tab Container and Tabs
 
-## Creating a Tab Container and Tabs
-
-You'll need to create an outer tab container and then include one or more tabs within the container. Each tab needs a Text for the title and a Content script block. 
+You'll need to create an outer tab container and then include one or more tabs within the container. Each tab needs a Text for the title and a Content script block.
 
 ```text
 New-UDTabContainer -Tabs {
@@ -27,9 +28,9 @@ New-UDTabContainer -Tabs {
 
 ![Tabs](../.gitbook/assets/image%20%2854%29.png)
 
-## Creating a Tab Container that only Renders Tabs When Active
+### Creating a Tab Container that only Renders Tabs When Active
 
-For performance reasons, you may not want a tab to render it's content unless it's displayed. This is helpful for auto-refreshing tables or grids that may be displayed in tabs but not visible by default. The default behavior of tabs is to render all the tabs but hide them when not show. 
+For performance reasons, you may not want a tab to render it's content unless it's displayed. This is helpful for auto-refreshing tables or grids that may be displayed in tabs but not visible by default. The default behavior of tabs is to render all the tabs but hide them when not show.
 
 ```text
 New-UDTabContainer -Tabs {
@@ -45,9 +46,9 @@ New-UDTabContainer -Tabs {
 } -RenderWhenActive
 ```
 
-## Dynamic Tab Content 
+### Dynamic Tab Content
 
-To load content when the dashboard is loaded by the end user, is the `-Dynamic` switch. 
+To load content when the dashboard is loaded by the end user, is the `-Dynamic` switch.
 
 ```text
 New-UDTabContainer -Tabs {
@@ -62,6 +63,4 @@ New-UDTabContainer -Tabs {
     }
 }
 ```
-
-
 

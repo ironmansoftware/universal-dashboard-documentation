@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# Google
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Google
+## Google
 
 {% hint style="info" %}
 Not available in Community Edition.
@@ -21,6 +22,4 @@ Next, you need to call New-UDAuthenticationMethod and specify the AppId, AppSecr
 $Method = New-UDAuthenticationMethod -AppId 1234 -AppSecret Abc123 -Provider Google
 $LoginPage = New-UDLoginPage -AuthenticationMethod $Method
 ```
-
-
 

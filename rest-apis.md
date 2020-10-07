@@ -1,13 +1,14 @@
-﻿{% hint style="info" %}
+# REST APIs
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# REST APIs
+## REST APIs
 
 Using the same web hosting platform as the rest of Universal Dashboard, you can create REST APIs that have no user interface component. You can accept input from the user from URLs and HTTP request bodies and accept four different HTTP methods.
 
-## Creating new endpoints
+### Creating new endpoints
 
 To create a new endpoint, you will use the New-UDEndpoint cmdlet. This cmdlet lets you specify the URL, the HTTP method and the Endpoint Script Block that will process the data.
 
@@ -26,7 +27,7 @@ This endpoint could be invoked with Invoke-RestMethod like so. Notice that all U
 Invoke-RestMethod -Uri http://localhost:80/api/process
 ```
 
-### Endpoints with variables in the URL
+#### Endpoints with variables in the URL
 
 In REST, resources are identified by the variables in the path of the URL. Universal Dashboard, supports variables by specifying a colon \(:\) in the URL path. These variables are then passed to the script block of the endpoint.
 
@@ -40,14 +41,14 @@ New-UDEndpoint -Url "/process/:id" -Method "GET" -Endpoint {
 }
 ```
 
-### Using RegEx in Endpoint URLs
+#### Using RegEx in Endpoint URLs
 
 Instead of simple variables, you can instead use RegEx expressions to match URL patterns. This is handy for integration with systems like the DSC PullServer that provides complex URL patterns. Named groups will be passed to the endpoint as parameters. You'll need to include the `-EvaluateUrlAsRegex` parameter to `New-UDEndpoint`.
 
 ```text
 $Endpoint = New-UDEndpoint -Url "nodes\(AgentId=(?<AgentId>[0-9]*)\)" -Method "PUT" -Endpoint {
     param($AgentId)
-                
+
     $AgentId | ConvertTo-Json
 } -EvaluateUrlAsRegex
 
@@ -56,7 +57,7 @@ Start-UDRestApi -Endpoint $Endpoint -Force
 Invoke-RestMethod -Uri 'http://localhost:80/api/nodes(AgentId=1234)' -Method PUT
 ```
 
-### Endpoints that take data from the HTTP request body
+#### Endpoints that take data from the HTTP request body
 
 HTTP methods like POST take data from the request body. UD supports form data and string data. Form data will automatically be parsed and provided to the script block via parameters.
 
@@ -86,7 +87,7 @@ Start-UDRestApi -Endpoint $Endpoint
 Invoke-RestMethod -Uri http://localhost:80/api/process -Method POST -Body (@{FilePath = "code"; Arguments = "script.ps1" } | ConvertTo-Json)
 ```
 
-## Managing the REST API Servers
+### Managing the REST API Servers
 
 Endpoints will need to be passed to Start-UDRestApi to create a new REST API server. Start-UDRestApi has all the same hosting options as Start-UDDashboard. It supports HTTPS and can be hosted in Azure and IIS.
 
@@ -106,7 +107,7 @@ You can also add REST API endpoints to existing dashboards with the Endpoint par
 Start-UDDashboard -Endpoint $MyEndpoints -Dashboard $MyDashboard
 ```
 
-## Returning XML
+### Returning XML
 
 By default, REST API endpoints set the Content-Type HTTP header to application/json. Any web-client consuming your endpoint will assume the content returned is formatted as JSON. In order to return content as XML, you can use the Set-UDContentType cmdlet to set the content type to application/xml.
 
@@ -132,7 +133,7 @@ New-UDEndpoint -Url "project" -Method "GET" -Endpoint {
 }
 ```
 
-## Uploading Files
+### Uploading Files
 
 REST APIs support uploading files. You need to enable file uploads via the `New-UDEndpoint` cmdlet. Be careful when accepting files as it can pose a security risk. The file is provided to an endpoint as an array of bytes that you can then output and process how ever you like. You should accept a `$File` parameter to gain access to the upload byte array.
 
@@ -153,6 +154,4 @@ Note: file upload is only avaliable using contenttype `file/*` or `image/*` wher
     Set-Content -Path $filename -Value $File -Encoding Byte
  }
 ```
-
-
 

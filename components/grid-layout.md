@@ -1,13 +1,14 @@
-﻿{% hint style="info" %}
+# Grid Layout
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Grid Layout
+## Grid Layout
 
 The `New-UDGridLayout` provides the ability to layout controls on your UD page using JSON instead of deeply nesting controls in `New-UDRow` and `New-UDColumn` controls. It also provides the ability to drag and drop the layout of the page. This eliminates the need to write as much code and provides a much cleaner looking dashboard.
 
-## Getting Started with New-UDGridLayout
+### Getting Started with New-UDGridLayout
 
 To use `New-UDGridLayout`, simply put components you'd like to layout in the `-Content` script block. It is required that all components you wish to layout have an ID set.
 
@@ -29,7 +30,7 @@ You can move the cards using the handles in the top right corner of each card. T
 
 You can use the `-Persist` cmdlet to store the layout in the browser's local storage.
 
-## Saving Layouts
+### Saving Layouts
 
 {% hint style="info" %}
 AdminMode mode is only available in the Enterprise Version
@@ -68,6 +69,4 @@ Start-UDDashboard -Dashboard $Dashboard -Port 10001 -AdminMode
 Once you are satisfied with your layout, you can remove the AdminMe switch.The controls will be laid out as you have defined and the handles will no longer be visible.
 
 ![](../.gitbook/assets/image%20%2817%29.png)
-
-
 

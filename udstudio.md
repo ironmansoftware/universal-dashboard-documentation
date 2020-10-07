@@ -1,13 +1,14 @@
-﻿{% hint style="info" %}
+# UDStudio
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# UDStudio
+## UDStudio
 
 UDStudio is a development environment for Universal Dashboard. It provides tools to make developing tools with Universal Dashboard easier. UDStudio ships as a [Visual Studio Code](https://code.visualstudio.com/) extension and requires a [Universal Dashboard Premium or Enterprise license](https://ironmansoftware.com/powershell-universal-dashboard/).
 
-## Installation
+### Installation
 
 You can install UDStudio from the extension pane in Visual Studio Code. Search for "PowerShell UDStudio" and install the extension. The extension requires that you have the PowerShell extension installed as well.
 
@@ -19,19 +20,19 @@ UDStudio requires Universal Dashboard 2.7 or later. If you are not running Unive
 
 ![](.gitbook/assets/udstudio-upgrade-ud.png)
 
-## UDStudio Activity Pane
+### UDStudio Activity Pane
 
 UDStudio provides an activity pane tree view with helpful tools for developing Universal Dashboard interfaces. The pane provides features such as debugging, module version information, license information and links to useful resources. Click the UD logo to view the UDStudio Activity Pane.
 
 ![](.gitbook/assets/udstudio-activity-pane.png)
 
-## View Dashboard Resources
+### View Dashboard Resources
 
 When you start a dashboard in VS Code, UDStudio will automatically display information about the dashboard. This information includes dashboards, endpoints, sessions, authorization policies, authentication policies and cache varaibles.
 
 ![](.gitbook/assets/udstudio-resources.png)
 
-## Debugging Endpoints
+### Debugging Endpoints
 
 Using UDStudio, you can easily debug any type of endpoint in Universal Dashboard. This includes endpoints, session-based endpoints, REST API endpoints, scheduled endpoints, authorization policy endpoints and form-based authentication endpoints.
 
@@ -51,17 +52,15 @@ The breakpoint will continue to be hit until you clear the breakpoint.
 
 ![](.gitbook/assets/udstudio-clear-breakpoint.png)
 
-## Viewing Endpoint Code
+### Viewing Endpoint Code
 
 You can view any endpoints code by clicking the View Code button for the endpoint.
 
 ![](.gitbook/assets/udstduio-view-endpoint-code.png)
 
-## Toggling Admin Mode
+### Toggling Admin Mode
 
 You can toggle Admin Mode on and off without adjusting your dashboard script by clicking the Enable Admin Mode button on the dashboard node.
 
 ![](.gitbook/assets/udstudio-enable-admin-mode.png)
-
-
 

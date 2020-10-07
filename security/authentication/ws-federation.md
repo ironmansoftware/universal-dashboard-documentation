@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# WS-Federation
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# WS-Federation
+## WS-Federation
 
 {% hint style="info" %}
 This feature is not supported in Community Edition
@@ -13,15 +14,15 @@ WS-Federation supports both Active Directory Federation Services and Azure Activ
 
 You first need to configure ADFS or AzureAD to support Universal Dashboard.
 
-## Configuring ADFS for Universal Dashboard
+### Configuring ADFS for Universal Dashboard
 
-### Service Settings
+#### Service Settings
 
 These are the current Federation Service settings for our domain.
 
 ![](../../.gitbook/assets/image%20%2849%29%20%281%29.png)
 
-### Relying Parties
+#### Relying Parties
 
 You need to configure the following Relying Parties settings for Universal Dashboard. On the Identifiers tab, provide the URL to the Universal Dashboard website. HTTPS is required.
 
@@ -37,11 +38,11 @@ Finally, you'll need to configure a Claim Issuance Policy for the Relying Party 
 
 You can configure additional claims you'd like to use if you are using Claims-based Authorization in Universal Dashboard.
 
-## Configuring For Azure Active Directory
+### Configuring For Azure Active Directory
 
 Follow the documentation for the Azure Active Directory configuration found on this [Microsoft Document](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/ws-federation?view=aspnetcore-2.2#azure-active-directory).
 
-## Configuring Universal Dashboard
+### Configuring Universal Dashboard
 
 After configuring ADFS or AAD, you can now use the `New-UDAuthenticationMethod` cmdlet to connect to your WS-Fed instance. For our ADFS instance, this is the authentication method configuration we are using.
 
@@ -53,6 +54,4 @@ $LoginPage = New-UDLoginPage -AuthenticationMethod $Authentication
 When running your dashboard, you should now be prompted for your credentials either via the Internet Explorer single-sign system or you will be forwarded to the WS-Fed login page.
 
 ![](../../.gitbook/assets/image%20%2839%29.png)
-
-
 

@@ -1,9 +1,10 @@
-﻿{% hint style="info" %}
+# Map
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Map
+## Map
 
 {% hint style="info" %}
 This component is only available in [Premium](https://ironmansoftware.com/product/powershell-universal-dashboard/)
@@ -11,7 +12,7 @@ This component is only available in [Premium](https://ironmansoftware.com/produc
 
 UDMap is a component to display interactive maps with all kinds of customizations. Youâ€™ll be able to add markers, draw routes and other polygons, toggle layers and even create heatmaps.
 
-## Map Features
+### Map Features
 
 To create a map, youâ€™ll use the `New-UDMap` cmdlet and then define different features of that map. Maps support interactively adding and removing features so you can integrate into other Universal Dashboard components. Below are some of the components available in a map.
 
@@ -156,6 +157,4 @@ The UDMap components support many of the standard UD interactivity cmdlets. You 
         )
     } -Height '100ch'
 ```
-
-
 

@@ -1,13 +1,14 @@
-﻿{% hint style="info" %}
+# Icons
+
+{% hint style="info" %}
 Universal Dashboard is now a part of PowerShell Universal. This documentation is for reference to the v2 version of Universal Dashboard and is no longer maintained. PowerShell Universal Documentation can be found [here](https://docs.ironmansoftware.com).
 {% endhint %}
 
-
-# Icons
+## Icons
 
 Universal Dashboard uses the [Font Awesome](https://fontawesome.com/icons?from=io) library to provide icons throughout the product. Many controls accept icons and you can create stand alone icons with `New-UDIcon`.
 
-## Basic Icon
+### Basic Icon
 
 You can specify an icon name. Tab complete is available for icon names.
 
@@ -20,7 +21,7 @@ New-UDIcon -Icon apple -Size 5x
 
 ![](../.gitbook/assets/image%20%2827%29.png)
 
-## Size
+### Size
 
 Many icon sizes are available. You can create larger icons by specifying sizes from 2x to 10x.
 
@@ -32,7 +33,7 @@ Many icon sizes are available. You can create larger icons by specifying sizes f
 
 ![Icon Sizes](../.gitbook/assets/image%20%2851%29.png)
 
-## Colors
+### Colors
 
 You can use standard HTML and color names for colors.
 
@@ -42,7 +43,7 @@ New-UDIcon -Icon socks -Size 5x -Color red
 
 ![](../.gitbook/assets/image%20%2818%29%20%281%29.png)
 
-## Spinning Icons
+### Spinning Icons
 
 You can create spinning icons. These can be useful as loading icons.
 
@@ -51,6 +52,4 @@ New-UDIcon -Spin -Icon linux -Size 5x
 ```
 
 ![](../.gitbook/assets/image%20%2813%29.png)
-
-
 
